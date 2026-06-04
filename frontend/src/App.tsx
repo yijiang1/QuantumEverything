@@ -1,0 +1,44 @@
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { Atom, FileText, Newspaper } from 'lucide-react'
+import Analyze from './pages/Analyze'
+import Papers from './pages/Papers'
+import News from './pages/News'
+
+export default function App() {
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
+    `flex items-center gap-1.5 text-sm transition-colors ${
+      isActive ? 'text-violet-400' : 'text-gray-400 hover:text-white'
+    }`
+
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-950 text-gray-100">
+        <nav className="border-b border-gray-800 bg-gray-900/80 backdrop-blur px-6 py-3 sticky top-0 z-10">
+          <div className="max-w-5xl mx-auto flex items-center gap-8">
+            <div className="flex items-center gap-2 mr-4">
+              <Atom className="w-5 h-5 text-violet-400" />
+              <span className="font-semibold text-white">Quantum Everything</span>
+            </div>
+            <NavLink to="/" end className={linkClass}>
+              <Atom className="w-4 h-4" /> Analyze
+            </NavLink>
+            <NavLink to="/papers" className={linkClass}>
+              <FileText className="w-4 h-4" /> Papers
+            </NavLink>
+            <NavLink to="/news" className={linkClass}>
+              <Newspaper className="w-4 h-4" /> News
+            </NavLink>
+          </div>
+        </nav>
+
+        <main className="max-w-5xl mx-auto px-6 py-8">
+          <Routes>
+            <Route path="/" element={<Analyze />} />
+            <Route path="/papers" element={<Papers />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  )
+}

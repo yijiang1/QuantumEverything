@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Markdown prose styles (no plugin needed) */
+.prose h1, .prose h2, .prose h3 { @apply font-semibold text-white mb-2 mt-4; }
+.prose h1 { @apply text-xl; }
+.prose h2 { @apply text-lg; }
+.prose h3 { @apply text-base; }
+.prose p { @apply text-gray-300 mb-3 leading-relaxed; }
+.prose ul { @apply list-disc list-inside text-gray-300 mb-3 space-y-1; }
+.prose ol { @apply list-decimal list-inside text-gray-300 mb-3 space-y-1; }
+.prose strong { @apply text-white font-semibold; }
+.prose code { @apply bg-gray-800 text-violet-300 px-1 py-0.5 rounded text-sm; }
+.prose a { @apply text-violet-400 hover:text-violet-300 underline; }
+.prose blockquote { @apply border-l-2 border-violet-500 pl-4 text-gray-400 italic; }
