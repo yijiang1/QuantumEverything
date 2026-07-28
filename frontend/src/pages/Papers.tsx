@@ -170,26 +170,26 @@ export default function Papers() {
     <div className="space-y-5">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-white">Quantum Paper Database</h1>
-        <p className="text-gray-400 text-sm">Curated knowledge base of quantum computing research</p>
+        <h1 className="text-2xl font-bold text-gray-900">Quantum Paper Database</h1>
+        <p className="text-gray-500 text-sm">Curated knowledge base of quantum computing research</p>
       </div>
 
       {/* Stats */}
       <div className="flex gap-3 flex-wrap">
-        <StatBadge label="Total"    value={stats.total}    color="border-gray-700 text-gray-300" />
-        <StatBadge label="Pending"  value={stats.pending}  color="border-yellow-800 text-yellow-400" />
-        <StatBadge label="Approved" value={stats.approved} color="border-emerald-800 text-emerald-400" />
-        <StatBadge label="Skipped"  value={stats.skipped}  color="border-gray-800 text-gray-600" />
+        <StatBadge label="Total"    value={stats.total}    color="border-gray-300 text-gray-700" />
+        <StatBadge label="Pending"  value={stats.pending}  color="border-yellow-200 text-yellow-700" />
+        <StatBadge label="Approved" value={stats.approved} color="border-emerald-200 text-emerald-700" />
+        <StatBadge label="Skipped"  value={stats.skipped}  color="border-gray-200 text-gray-400" />
         <button
           onClick={() => { loadPapers(); loadStats() }}
-          className="ml-auto flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-300 transition-colors"
+          className="ml-auto flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 transition-colors"
         >
           <RefreshCw className="w-4 h-4" /> Refresh
         </button>
       </div>
 
       {/* Fetch controls */}
-      <div className="bg-gray-900 border border-gray-800 rounded-xl p-4 space-y-3">
+      <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-3">
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wider">Fetch Papers</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="flex gap-2">
@@ -197,12 +197,12 @@ export default function Papers() {
               value={arxivQuery}
               onChange={e => setArxivQuery(e.target.value)}
               placeholder="arXiv query (blank = default quantum queries)"
-              className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-violet-500"
+              className="flex-1 bg-gray-100 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-teal-500"
             />
             <button
               onClick={handleFetchArxiv}
               disabled={fetching === 'arxiv'}
-              className="flex items-center gap-1.5 bg-gray-700 hover:bg-gray-600 disabled:opacity-50 px-3 py-2 rounded-lg text-sm transition-colors whitespace-nowrap"
+              className="flex items-center gap-1.5 bg-gray-200 hover:bg-gray-300 disabled:opacity-50 px-3 py-2 rounded-lg text-sm transition-colors whitespace-nowrap"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${fetching === 'arxiv' ? 'animate-spin' : ''}`} />
               arXiv
@@ -213,12 +213,12 @@ export default function Papers() {
               value={oaKeyword}
               onChange={e => setOaKeyword(e.target.value)}
               placeholder="OpenAlex keyword (blank = default queries)"
-              className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-violet-500"
+              className="flex-1 bg-gray-100 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-teal-500"
             />
             <button
               onClick={handleFetchOpenAlex}
               disabled={fetching === 'openalex'}
-              className="flex items-center gap-1.5 bg-gray-700 hover:bg-gray-600 disabled:opacity-50 px-3 py-2 rounded-lg text-sm transition-colors whitespace-nowrap"
+              className="flex items-center gap-1.5 bg-gray-200 hover:bg-gray-300 disabled:opacity-50 px-3 py-2 rounded-lg text-sm transition-colors whitespace-nowrap"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${fetching === 'openalex' ? 'animate-spin' : ''}`} />
               OpenAlex
@@ -230,12 +230,12 @@ export default function Papers() {
           <button
             onClick={handleClassify}
             disabled={classifying || pendingUnscored === 0}
-            className="flex items-center gap-1.5 bg-violet-700 hover:bg-violet-600 disabled:opacity-40 px-4 py-2 rounded-lg text-sm transition-colors"
+            className="flex items-center gap-1.5 bg-teal-600 hover:bg-teal-500 disabled:opacity-40 px-4 py-2 rounded-lg text-sm transition-colors"
           >
             <Brain className={`w-4 h-4 ${classifying ? 'animate-pulse' : ''}`} />
             {classifying ? 'Classifying…' : `Classify Pending (${pendingUnscored} unscored)`}
           </button>
-          <span className="text-xs text-gray-600">
+          <span className="text-xs text-gray-400">
             Uses Claude Haiku to score relevance, assign quantum area & paper type
           </span>
         </div>
@@ -243,7 +243,7 @@ export default function Papers() {
 
       {/* Toast */}
       {toast && (
-        <div className="bg-violet-950 border border-violet-700 text-violet-300 text-sm px-4 py-2 rounded-lg">
+        <div className="bg-teal-50 border border-teal-200 text-teal-700 text-sm px-4 py-2 rounded-lg">
           <Zap className="inline w-3.5 h-3.5 mr-1" />{toast}
         </div>
       )}
@@ -257,14 +257,14 @@ export default function Papers() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search title, authors, abstract, summary…"
-              className="w-full bg-gray-900 border border-gray-700 rounded-lg pl-9 pr-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500"
+              className="w-full bg-white border border-gray-300 rounded-lg pl-9 pr-4 py-2 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-teal-500"
             />
           </div>
           <div className="relative">
             <select
               value={sort}
               onChange={e => setSort(e.target.value)}
-              className="appearance-none bg-gray-900 border border-gray-700 rounded-lg pl-3 pr-8 py-2 text-sm text-gray-300 focus:outline-none focus:border-violet-500 cursor-pointer"
+              className="appearance-none bg-white border border-gray-300 rounded-lg pl-3 pr-8 py-2 text-sm text-gray-700 focus:outline-none focus:border-teal-500 cursor-pointer"
             >
               {SORT_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
@@ -281,14 +281,14 @@ export default function Papers() {
               onClick={() => setStatus(s)}
               className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
                 statusFilter === s
-                  ? 'border-violet-600 bg-violet-900/40 text-violet-300'
-                  : 'border-gray-700 text-gray-500 hover:border-gray-500'
+                  ? 'border-teal-300 bg-teal-50 text-teal-700'
+                  : 'border-gray-300 text-gray-500 hover:border-gray-400'
               }`}
             >
               {STATUS_LABELS[s] ?? s}
             </button>
           ))}
-          <span className="w-px bg-gray-800 mx-1" />
+          <span className="w-px bg-gray-200 mx-1" />
           {/* Area */}
           {AREA_OPTS.map(a => (
             <button
@@ -296,14 +296,14 @@ export default function Papers() {
               onClick={() => setArea(a)}
               className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
                 areaFilter === a
-                  ? 'border-violet-600 bg-violet-900/40 text-violet-300'
-                  : 'border-gray-700 text-gray-500 hover:border-gray-500'
+                  ? 'border-teal-300 bg-teal-50 text-teal-700'
+                  : 'border-gray-300 text-gray-500 hover:border-gray-400'
               }`}
             >
               {AREA_LABELS[a] ?? a}
             </button>
           ))}
-          <span className="w-px bg-gray-800 mx-1" />
+          <span className="w-px bg-gray-200 mx-1" />
           {/* Type */}
           {TYPE_OPTS.map(t => (
             <button
@@ -311,8 +311,8 @@ export default function Papers() {
               onClick={() => setType(t)}
               className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
                 typeFilter === t
-                  ? 'border-violet-600 bg-violet-900/40 text-violet-300'
-                  : 'border-gray-700 text-gray-500 hover:border-gray-500'
+                  ? 'border-teal-300 bg-teal-50 text-teal-700'
+                  : 'border-gray-300 text-gray-500 hover:border-gray-400'
               }`}
             >
               {TYPE_LABELS[t] ?? t}
@@ -341,7 +341,7 @@ export default function Papers() {
             />
           ))}
           {papers.length === 50 && (
-            <p className="text-center text-xs text-gray-600 pt-2">
+            <p className="text-center text-xs text-gray-400 pt-2">
               Showing first 50 results — use search or filters to narrow down
             </p>
           )}

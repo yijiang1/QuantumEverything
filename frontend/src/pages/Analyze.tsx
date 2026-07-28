@@ -33,18 +33,18 @@ interface StreamEvent {
 }
 
 const LEVEL_STYLES: Record<string, string> = {
-  'Low': 'text-gray-400 bg-gray-800 border-gray-700',
-  'Medium': 'text-yellow-400 bg-yellow-950 border-yellow-800',
-  'High': 'text-emerald-400 bg-emerald-950 border-emerald-800',
-  'Very High': 'text-violet-400 bg-violet-950 border-violet-700',
+  'Low': 'text-gray-500 bg-gray-100 border-gray-300',
+  'Medium': 'text-yellow-700 bg-yellow-50 border-yellow-200',
+  'High': 'text-emerald-700 bg-emerald-50 border-emerald-200',
+  'Very High': 'text-teal-600 bg-teal-50 border-teal-200',
 }
 
 const MATURITY_STYLES: Record<string, string> = {
-  'Theoretical': 'bg-gray-800 text-gray-400',
-  'Research': 'bg-blue-950 text-blue-400',
-  'Early Experiments': 'bg-indigo-950 text-indigo-400',
-  'NISQ-era': 'bg-amber-950 text-amber-400',
-  'Near-term': 'bg-emerald-950 text-emerald-400',
+  'Theoretical': 'bg-gray-100 text-gray-500',
+  'Research': 'bg-blue-50 text-blue-700',
+  'Early Experiments': 'bg-indigo-50 text-indigo-700',
+  'NISQ-era': 'bg-amber-50 text-amber-700',
+  'Near-term': 'bg-emerald-50 text-emerald-700',
 }
 
 const EXAMPLES = [
@@ -116,14 +116,14 @@ export default function Analyze() {
   }
 
   const levelStyle = result
-    ? LEVEL_STYLES[result.opportunity_level] ?? 'text-gray-400 bg-gray-800 border-gray-700'
+    ? LEVEL_STYLES[result.opportunity_level] ?? 'text-gray-500 bg-gray-100 border-gray-300'
     : ''
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-white mb-1">Quantum Opportunity Analyzer</h1>
-        <p className="text-gray-400 text-sm">Enter any topic or technology to discover quantum computing opportunities</p>
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">Quantum Opportunity Analyzer</h1>
+        <p className="text-gray-500 text-sm">Enter any topic or technology to discover quantum computing opportunities</p>
       </div>
 
       <div className="flex gap-3">
@@ -133,12 +133,12 @@ export default function Analyze() {
           onChange={e => setTopic(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && handleAnalyze()}
           placeholder="e.g., tomography reconstruction, drug discovery, logistics routing..."
-          className="flex-1 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-violet-500 transition-colors"
+          className="flex-1 bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-teal-500 transition-colors"
         />
         <button
           onClick={() => handleAnalyze()}
           disabled={loading || !topic.trim()}
-          className="flex items-center gap-2 bg-violet-600 hover:bg-violet-500 disabled:opacity-40 disabled:cursor-not-allowed px-6 py-3 rounded-lg font-medium transition-colors"
+          className="flex items-center gap-2 bg-teal-600 hover:bg-teal-500 disabled:opacity-40 disabled:cursor-not-allowed px-6 py-3 rounded-lg font-medium transition-colors"
         >
           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Search className="w-4 h-4" />}
           {loading ? 'Analyzing…' : 'Analyze'}
@@ -151,7 +151,7 @@ export default function Analyze() {
             <button
               key={ex}
               onClick={() => { setTopic(ex); handleAnalyze(ex) }}
-              className="text-xs px-3 py-1.5 bg-gray-900 border border-gray-700 rounded-full text-gray-400 hover:text-white hover:border-gray-500 transition-colors"
+              className="text-xs px-3 py-1.5 bg-white border border-gray-300 rounded-full text-gray-500 hover:text-gray-900 hover:border-gray-400 transition-colors"
             >
               {ex}
             </button>
@@ -161,34 +161,34 @@ export default function Analyze() {
 
       {/* Live events log */}
       {events.length > 0 && !result && (
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-4 space-y-2 font-mono text-sm">
+        <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-2 font-mono text-sm">
           {events.map((ev, i) => (
             <div key={i} className="flex items-start gap-2">
               {ev.type === 'status' && (
                 <>
-                  <Loader2 className="w-3.5 h-3.5 text-violet-400 mt-0.5 shrink-0 animate-spin" />
-                  <span className="text-gray-300">{ev.message}</span>
+                  <Loader2 className="w-3.5 h-3.5 text-teal-600 mt-0.5 shrink-0 animate-spin" />
+                  <span className="text-gray-700">{ev.message}</span>
                 </>
               )}
               {ev.type === 'tool_call' && (
                 <>
-                  <Zap className="w-3.5 h-3.5 text-yellow-400 mt-0.5 shrink-0" />
-                  <span className="text-gray-400">
-                    <span className="text-yellow-400">{ev.tool}</span>
-                    {ev.input && <span className="text-gray-600"> {JSON.stringify(ev.input)}</span>}
+                  <Zap className="w-3.5 h-3.5 text-yellow-700 mt-0.5 shrink-0" />
+                  <span className="text-gray-500">
+                    <span className="text-yellow-700">{ev.tool}</span>
+                    {ev.input && <span className="text-gray-400"> {JSON.stringify(ev.input)}</span>}
                   </span>
                 </>
               )}
               {ev.type === 'error' && (
                 <>
-                  <AlertCircle className="w-3.5 h-3.5 text-red-400 mt-0.5 shrink-0" />
-                  <span className="text-red-400">{ev.message}</span>
+                  <AlertCircle className="w-3.5 h-3.5 text-red-600 mt-0.5 shrink-0" />
+                  <span className="text-red-600">{ev.message}</span>
                 </>
               )}
             </div>
           ))}
           {loading && (
-            <div className="text-gray-600 pt-1">
+            <div className="text-gray-400 pt-1">
               <Loader2 className="w-3.5 h-3.5 inline animate-spin mr-1" />
               Synthesizing analysis…
             </div>
@@ -200,14 +200,14 @@ export default function Analyze() {
       {result && (
         <div className="space-y-4">
           {/* Summary card */}
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <div className="bg-white border border-gray-200 rounded-xl p-6">
             <div className="flex items-start justify-between gap-4 mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <Atom className="w-5 h-5 text-violet-400" />
-                  <h2 className="text-lg font-semibold text-white capitalize">{topic}</h2>
+                  <Atom className="w-5 h-5 text-teal-600" />
+                  <h2 className="text-lg font-semibold text-gray-900 capitalize">{topic}</h2>
                 </div>
-                <p className="text-gray-300">{result.summary}</p>
+                <p className="text-gray-700">{result.summary}</p>
               </div>
               <div className={`shrink-0 px-3 py-1.5 rounded-lg text-sm font-semibold border ${levelStyle}`}>
                 {result.opportunity_level}
@@ -218,9 +218,9 @@ export default function Analyze() {
                 <span>Quantum opportunity score</span>
                 <span>{Math.round(result.opportunity_score * 100)}%</span>
               </div>
-              <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+              <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full"
+                  className="h-full bg-gradient-to-r from-teal-600 to-teal-400 rounded-full"
                   style={{ width: `${result.opportunity_score * 100}%` }}
                 />
               </div>
@@ -229,16 +229,16 @@ export default function Analyze() {
 
           {/* Timeline + Challenges */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
               <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Timeline</h3>
-              <p className="text-gray-200 text-sm">{result.timeline || 'N/A'}</p>
+              <p className="text-gray-800 text-sm">{result.timeline || 'N/A'}</p>
             </div>
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-4">
+            <div className="bg-white border border-gray-200 rounded-xl p-4">
               <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Current Challenges</h3>
               <ul className="space-y-1">
                 {result.current_challenges.slice(0, 4).map((c, i) => (
-                  <li key={i} className="text-sm text-gray-300 flex gap-2">
-                    <span className="text-violet-500 shrink-0">›</span>{c}
+                  <li key={i} className="text-sm text-gray-700 flex gap-2">
+                    <span className="text-teal-600 shrink-0">›</span>{c}
                   </li>
                 ))}
               </ul>
@@ -247,19 +247,19 @@ export default function Analyze() {
 
           {/* Quantum Approaches */}
           {result.quantum_approaches.length > 0 && (
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-              <h3 className="text-base font-semibold text-white mb-3">Quantum Approaches</h3>
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="text-base font-semibold text-gray-900 mb-3">Quantum Approaches</h3>
               <div className="space-y-2">
                 {result.quantum_approaches.map((qa, i) => (
-                  <div key={i} className="border border-gray-800 rounded-lg overflow-hidden">
+                  <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
                     <button
-                      className="w-full flex items-center justify-between p-3.5 text-left hover:bg-gray-800/40 transition-colors"
+                      className="w-full flex items-center justify-between p-3.5 text-left hover:bg-gray-50 transition-colors"
                       onClick={() => setExpandedApproach(expandedApproach === i ? null : i)}
                     >
                       <div className="flex items-center gap-3 min-w-0">
-                        <Zap className="w-4 h-4 text-violet-400 shrink-0" />
-                        <span className="font-medium text-white truncate">{qa.name}</span>
-                        <span className={`text-xs px-2 py-0.5 rounded-full shrink-0 ${MATURITY_STYLES[qa.maturity] ?? 'bg-gray-800 text-gray-400'}`}>
+                        <Zap className="w-4 h-4 text-teal-600 shrink-0" />
+                        <span className="font-medium text-gray-900 truncate">{qa.name}</span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full shrink-0 ${MATURITY_STYLES[qa.maturity] ?? 'bg-gray-100 text-gray-500'}`}>
                           {qa.maturity}
                         </span>
                       </div>
@@ -268,11 +268,11 @@ export default function Analyze() {
                         : <ChevronDown className="w-4 h-4 text-gray-500 shrink-0" />}
                     </button>
                     {expandedApproach === i && (
-                      <div className="px-4 pb-4 border-t border-gray-800 pt-3 space-y-2.5">
-                        <p className="text-sm text-gray-300">{qa.description}</p>
+                      <div className="px-4 pb-4 border-t border-gray-200 pt-3 space-y-2.5">
+                        <p className="text-sm text-gray-700">{qa.description}</p>
                         <p className="text-sm">
-                          <span className="text-violet-400 font-medium">Advantage: </span>
-                          <span className="text-gray-300">{qa.advantage}</span>
+                          <span className="text-teal-600 font-medium">Advantage: </span>
+                          <span className="text-gray-700">{qa.advantage}</span>
                         </p>
                         {qa.relevant_papers.length > 0 && (
                           <p className="text-xs text-gray-500">
@@ -289,14 +289,14 @@ export default function Analyze() {
 
           {/* Key papers */}
           {result.key_papers.length > 0 && (
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-              <h3 className="text-base font-semibold text-white mb-3">Key Papers</h3>
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="text-base font-semibold text-gray-900 mb-3">Key Papers</h3>
               <div className="space-y-2">
                 {result.key_papers.map((p, i) => (
                   <div key={i} className="flex gap-3 text-sm">
-                    <span className="text-violet-500 shrink-0 mt-0.5">›</span>
+                    <span className="text-teal-600 shrink-0 mt-0.5">›</span>
                     <div>
-                      <span className="text-gray-200">{p.title}</span>
+                      <span className="text-gray-800">{p.title}</span>
                       {p.relevance && <span className="text-gray-500"> — {p.relevance}</span>}
                     </div>
                   </div>
@@ -307,12 +307,12 @@ export default function Analyze() {
 
           {/* Recommendations */}
           {result.recommendations.length > 0 && (
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-              <h3 className="text-base font-semibold text-white mb-3">Recommendations</h3>
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="text-base font-semibold text-gray-900 mb-3">Recommendations</h3>
               <ol className="space-y-2">
                 {result.recommendations.map((r, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-gray-300">
-                    <span className="text-violet-400 font-mono shrink-0">{i + 1}.</span>
+                  <li key={i} className="flex gap-3 text-sm text-gray-700">
+                    <span className="text-teal-600 font-mono shrink-0">{i + 1}.</span>
                     {r}
                   </li>
                 ))}
@@ -322,8 +322,8 @@ export default function Analyze() {
 
           {/* Full analysis */}
           {result.full_analysis && (
-            <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-              <h3 className="text-base font-semibold text-white mb-3">Detailed Analysis</h3>
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h3 className="text-base font-semibold text-gray-900 mb-3">Detailed Analysis</h3>
               <div className="prose">
                 <ReactMarkdown>{result.full_analysis}</ReactMarkdown>
               </div>
