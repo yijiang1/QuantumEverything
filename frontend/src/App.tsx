@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
-import { Atom, FileText, Newspaper, Library as LibraryIcon } from 'lucide-react'
+import { Atom, FileText, Newspaper, Library as LibraryIcon, Building2 } from 'lucide-react'
 import Analyze from './pages/Analyze'
 import Papers from './pages/Papers'
 import News from './pages/News'
 import Library from './pages/Library'
+import Companies from './pages/Companies'
+import CompanyDetail from './pages/CompanyDetail'
 
 export default function App() {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -26,6 +28,9 @@ export default function App() {
             <NavLink to="/papers" className={linkClass}>
               <FileText className="w-4 h-4" /> Papers
             </NavLink>
+            <NavLink to="/companies" className={linkClass}>
+              <Building2 className="w-4 h-4" /> Companies
+            </NavLink>
             <NavLink to="/library" className={linkClass}>
               <LibraryIcon className="w-4 h-4" /> Library
             </NavLink>
@@ -39,6 +44,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Analyze />} />
             <Route path="/papers" element={<Papers />} />
+            <Route path="/companies" element={<Companies />} />
+            <Route path="/companies/:slug" element={<CompanyDetail />} />
             <Route path="/library" element={<Library />} />
             <Route path="/news" element={<News />} />
           </Routes>

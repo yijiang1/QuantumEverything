@@ -260,3 +260,24 @@ def _row_to_paper(row) -> Paper:
         created_at=d.get("created_at", 0),
         updated_at=d.get("updated_at", 0),
     )
+
+
+def find_papers_mentioning(terms: list[str], limit: int = 500) -> list[Paper]:
+    """Non-skipped papers whose title, abstract, authors or summary contain any
+    of `terms` (case-insensitive substring). Callers refine with exact matching."""
+    terms = [t for t in terms if t.strip()]
+    if not terms:
+        return []
+    clauses, params = [], []
+    for t in terms:
+        s = f"%{t}%"
+        clauses.append("(title LIKE ? OR abstract LIKE ? OR authors LIKE ? OR summary LIKE ?)")
+        params.extend([s, s, s, s])
+    sql = (
+        "SELECT * FROM papers WHERE status != 'skipped' AND (" + " OR ".join(clauses) + ") "
+        "ORDER BY CASE WHEN date = '' THEN 1 ELSE 0 END, date DESC LIMIT ?"
+    )
+    params.append(limit)
+    with _get_conn() as conn:
+        rows = conn.execute(sql, params).fetchall()
+    return [_row_to_paper(r) for r in rows]
