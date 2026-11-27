@@ -1,26 +1,12 @@
-import { useMemo, useState } from 'react'
+import { Suspense, lazy, useCallback, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ExternalLink, MapPin, Building } from 'lucide-react'
 import { loadData, loadPolicy, useData, type CompanyRecord, type Facility } from '../lib/data'
 import { PLATFORM_LABELS } from '../lib/companies'
+import { FACILITY_TYPES, TypeLabel } from '../components/FacilityType'
 
-// Fixed categorical order (validated for colorblind separation as a 3-hue set).
-// The label always sits next to the dot, so type never rests on color alone.
-export const FACILITY_TYPES: Record<Facility['type'], { label: string; color: string }> = {
-  government: { label: 'Government lab or center', color: '#257de0' },
-  university: { label: 'University institute', color: '#f47230' },
-  company: { label: 'Company site', color: '#00b894' },
-}
-
-export function TypeLabel({ type }: { type: Facility['type'] }) {
-  const t = FACILITY_TYPES[type]
-  return (
-    <span className="inline-flex items-center gap-1.5 text-xs text-gray-600">
-      <span className="w-2 h-2 rounded-full" style={{ background: t.color }} aria-hidden="true" />
-      {t.label}
-    </span>
-  )
-}
+// Leaflet is only needed on this page, so load it in its own chunk.
+const FacilitiesMap = lazy(() => import('../components/FacilitiesMap'))
 
 function FacilityCard({ f, names, programs }: {
   f: Facility
@@ -28,7 +14,7 @@ function FacilityCard({ f, names, programs }: {
   programs: Map<string, string>
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col gap-2">
+    <div id={`facility-${f.slug}`} className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col gap-2 scroll-mt-20 transition-shadow">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <h3 className="font-medium text-gray-900 leading-snug">{f.name}</h3>
@@ -87,8 +73,16 @@ export default function Facilities() {
 
   const all = data?.[0] ?? []
   const countries = useMemo(() => [...new Set(all.map(f => f.country))].sort(), [all])
-  const shown = all.filter(f =>
-    (!type || f.type === type) && (!openOnly || f.open_access) && (!country || f.country === country))
+  const shown = useMemo(() => all.filter(f =>
+    (!type || f.type === type) && (!openOnly || f.open_access) && (!country || f.country === country)),
+  [all, type, openOnly, country])
+  const select = useCallback((slug: string) => {
+    const card = document.getElementById(`facility-${slug}`)
+    if (!card) return
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    card.classList.add('ring-2', 'ring-teal-500')
+    setTimeout(() => card.classList.remove('ring-2', 'ring-teal-500'), 1600)
+  }, [])
   const byCountry = useMemo(() => {
     const m = new Map<string, Facility[]>()
     for (const f of shown) m.set(f.country, [...(m.get(f.country) ?? []), f])
@@ -150,6 +144,16 @@ export default function Facilities() {
           Open to outside researchers
         </label>
         <span className="text-xs text-gray-400 ml-auto">{shown.length} of {all.length}</span>
+      </div>
+
+      <div className="space-y-2">
+        <div className="flex flex-wrap gap-x-4 gap-y-1" aria-label="Map legend">
+          {(Object.keys(FACILITY_TYPES) as Facility['type'][]).map(t => <TypeLabel key={t} type={t} />)}
+        </div>
+        <Suspense fallback={<div className="h-72 sm:h-96 rounded-xl border border-gray-200 bg-gray-100" />}>
+          <FacilitiesMap facilities={shown} onSelect={select} />
+        </Suspense>
+        <p className="text-xs text-gray-400">Pins mark the town or campus, not the exact building. Click a pin to jump to its entry.</p>
       </div>
 
       {shown.length === 0 ? (

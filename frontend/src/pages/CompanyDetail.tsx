@@ -7,7 +7,7 @@ import {
   loadData, loadPapers, loadPolicy, loadStocks, useData,
   type CompanyRecord, type Facility, type NewsItem, type PolicyData, type StockTicker,
 } from '../lib/data'
-import { TypeLabel } from './Facilities'
+import { TypeLabel } from '../components/FacilityType'
 import {
   Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
 } from '../components/StockChart'

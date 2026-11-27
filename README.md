@@ -13,7 +13,7 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Companies | 68 quantum companies with profiles, linked to the papers and news that mention them | `backend/app/companies/seed_companies.json` (curated) |
 | Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
 | Policy | National quantum programs and budgets, US bills and their status, US laws and executive orders, Federal Register rules and notices | `backend/app/policy/*.json` (curated), bill status from govinfo.gov, Federal Register API (both free, no key) |
-| Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs | `backend/app/facilities/facilities.json` (curated) |
+| Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs, on a world map | `backend/app/facilities/facilities.json` (curated); map tiles from OpenStreetMap |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
 | Analyses | Research reports on quantum opportunities in a field | The Claude research agent, run on request |
 | Reading list | Hand-picked papers | `frontend/public/data/reading_list.json` (edit by hand) |
@@ -89,7 +89,7 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 
 - **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
 - **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action.
-- **Facilities:** edit `backend/app/facilities/facilities.json`. `companies` holds company slugs and `program` a slug from `programs.json`. `lat` and `lon` are kept for a future map. Set `confirmed` to false for an entry you haven't checked against a source.
+- **Facilities:** edit `backend/app/facilities/facilities.json`. `companies` holds company slugs and `program` a slug from `programs.json`. `lat` and `lon` place the pin on the map (town or campus level is fine). Set `confirmed` to false for an entry you haven't checked against a source.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.
 - **Paper searches:** edit `QUANTUM_QUERIES` in `backend/app/knowledge_base/arxiv_fetcher.py` and `QUANTUM_KEYWORDS` in `backend/app/knowledge_base/openalex_fetcher.py`.
