@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route, NavLink, Link } from 'react-router-dom'
-import { Atom, FileText, Newspaper, Building2, LayoutGrid, BookOpen, Sparkles, LineChart, Landmark } from 'lucide-react'
+import { Atom, FileText, Newspaper, Building2, LayoutGrid, BookOpen, Sparkles, LineChart, Landmark, MapPin } from 'lucide-react'
 import Overview from './pages/Overview'
 import Papers from './pages/Papers'
 import News from './pages/News'
@@ -7,6 +7,7 @@ import Companies from './pages/Companies'
 import CompanyDetail from './pages/CompanyDetail'
 import Stocks from './pages/Stocks'
 import Policy from './pages/Policy'
+import Facilities from './pages/Facilities'
 import ReadingList from './pages/ReadingList'
 import { AnalysesList, AnalysisDetail } from './pages/Analyses'
 
@@ -16,6 +17,7 @@ const NAV = [
   { to: '/companies', label: 'Companies', icon: Building2 },
   { to: '/stocks', label: 'Stocks', icon: LineChart },
   { to: '/policy', label: 'Policy', icon: Landmark },
+  { to: '/facilities', label: 'Facilities', icon: MapPin },
   { to: '/news', label: 'News', icon: Newspaper },
   { to: '/analyses', label: 'Analyses', icon: Sparkles },
   { to: '/reading-list', label: 'Reading list', icon: BookOpen },
@@ -56,6 +58,7 @@ export default function App() {
             <Route path="/companies/:slug" element={<CompanyDetail />} />
             <Route path="/stocks" element={<Stocks />} />
             <Route path="/policy" element={<Policy />} />
+            <Route path="/facilities" element={<Facilities />} />
             <Route path="/news" element={<News />} />
             <Route path="/analyses" element={<AnalysesList />} />
             <Route path="/analyses/:slug" element={<AnalysisDetail />} />

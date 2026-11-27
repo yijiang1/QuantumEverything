@@ -5,8 +5,9 @@ import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
   loadData, loadPapers, loadPolicy, loadStocks, useData,
-  type CompanyRecord, type NewsItem, type PolicyData, type StockTicker,
+  type CompanyRecord, type Facility, type NewsItem, type PolicyData, type StockTicker,
 } from '../lib/data'
+import { TypeLabel } from './Facilities'
 import {
   Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
 } from '../components/StockChart'
@@ -117,6 +118,7 @@ export default function CompanyDetail() {
       loadData<NewsItem[]>('news.json'),
       loadStocks(),
       loadPolicy(),
+      loadData<Facility[]>('facilities.json').catch(() => [] as Facility[]),
     ]),
   )
 
@@ -237,6 +239,24 @@ export default function CompanyDetail() {
       {company.ticker && <PriceCard stock={stock} ticker={company.ticker} example={example} />}
 
       {all && <PolicyCard company={company} policy={all[4]} />}
+
+      {all && all[5].some(f => f.companies.includes(company!.slug)) && (
+        <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-2">
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-sm font-medium text-gray-500">Facilities</h2>
+            <Link to="/facilities" className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">
+              All facilities <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+          {all[5].filter(f => f.companies.includes(company!.slug)).map(f => (
+            <div key={f.slug} className="text-sm">
+              <div className="text-gray-900 font-medium">{f.name} <span className="text-gray-400 font-normal">· {f.city}</span></div>
+              <TypeLabel type={f.type} />
+              <p className="text-gray-600">{f.focus}</p>
+            </div>
+          ))}
+        </section>
+      )}
 
       {/* Mentions */}
       <div className="space-y-3">

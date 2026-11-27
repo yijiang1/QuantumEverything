@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T03:04:37+00:00",
+ "generated_at": "2026-11-27T03:08:44+00:00",
  "counts": {
   "papers": 0,
   "papers_scored": 0,
@@ -9,7 +9,8 @@
   "stocks_priced": 0,
   "policy_programs": 11,
   "policy_us_actions": 11,
-  "federal_register": 0
+  "federal_register": 0,
+  "facilities": 22
  },
  "last_run": {
   "news_fetched": 0,

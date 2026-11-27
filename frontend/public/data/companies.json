@@ -15,7 +15,7 @@
   "aliases": [
    "1QBit"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -36,7 +36,7 @@
   "aliases": [
    "Agnostiq"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -57,7 +57,7 @@
   "aliases": [
    "Algorithmiq"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -82,7 +82,7 @@
    "Alice & Bob",
    "Alice&Bob"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -104,7 +104,7 @@
    "Aliro Quantum",
    "Aliro"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -128,7 +128,7 @@
    "Alpine Quantum Technologies",
    "AQT"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -155,7 +155,7 @@
    "Amazon Web Services",
    "AWS"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -176,7 +176,7 @@
   "aliases": [
    "Arqit"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -199,7 +199,7 @@
   "aliases": [
    "Atom Computing"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -221,7 +221,7 @@
    "Bluefors",
    "BlueFors"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -242,7 +242,7 @@
   "aliases": [
    "Classiq"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -266,7 +266,7 @@
   "aliases": [
    "D-Wave"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -289,7 +289,7 @@
   "aliases": [
    "Diraq"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -312,7 +312,7 @@
   "aliases": [
    "eleQtron"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -335,7 +335,7 @@
   "aliases": [
    "Equal1"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -358,7 +358,7 @@
   "aliases": [
    "Fujitsu"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -384,7 +384,7 @@
    "Willow processor",
    "Sycamore processor"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -407,7 +407,7 @@
   "aliases": [
    "Honeywell"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -428,7 +428,7 @@
   "aliases": [
    "Horizon Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -453,7 +453,7 @@
    "IBM",
    "Qiskit"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -475,7 +475,7 @@
    "ID Quantique",
    "IDQ"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -499,7 +499,7 @@
    "Infleqtion",
    "ColdQuanta"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -523,7 +523,7 @@
    "Intel",
    "Tunnel Falls"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -546,7 +546,7 @@
   "aliases": [
    "IonQ"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -570,7 +570,7 @@
    "IQM Quantum Computers",
    "IQM"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -596,7 +596,7 @@
    "Microsoft",
    "Majorana 1"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -617,7 +617,7 @@
   "aliases": [
    "Multiverse Computing"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -641,7 +641,7 @@
   "aliases": [
    "Nord Quantique"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -664,7 +664,7 @@
    "CUDA-Q",
    "cuQuantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -687,7 +687,7 @@
   "aliases": [
    "ORCA Computing"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -710,7 +710,7 @@
   "aliases": [
    "Origin Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -731,7 +731,7 @@
   "aliases": [
    "Oxford Instruments"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -754,7 +754,7 @@
   "aliases": [
    "Oxford Ionics"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -778,7 +778,7 @@
    "Oxford Quantum Circuits",
    "OQC"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -802,7 +802,7 @@
    "Pasqal",
    "PASQAL"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -823,7 +823,7 @@
   "aliases": [
    "Phasecraft"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -848,7 +848,7 @@
    "Photonic Inc",
    "Photonic Inc."
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -871,7 +871,7 @@
   "aliases": [
    "planqc"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -892,7 +892,7 @@
   "aliases": [
    "PQShield"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -915,7 +915,7 @@
   "aliases": [
    "PsiQuantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -936,7 +936,7 @@
   "aliases": [
    "Q-CTRL"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -957,7 +957,7 @@
   "aliases": [
    "Qblox"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -978,7 +978,7 @@
   "aliases": [
    "QC Ware"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -999,7 +999,7 @@
   "aliases": [
    "Qedma"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1022,7 +1022,7 @@
   "aliases": [
    "Qnami"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1045,7 +1045,7 @@
   "aliases": [
    "Quandela"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1070,7 +1070,7 @@
    "Honeywell Quantum Solutions",
    "Cambridge Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -1093,7 +1093,7 @@
   "aliases": [
    "Quantum Art"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1116,7 +1116,7 @@
   "aliases": [
    "Quantum Brilliance"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1141,7 +1141,7 @@
    "Quantum Circuits Inc",
    "Quantum Circuits, Inc"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1165,7 +1165,7 @@
    "Quantum Computing Inc",
    "QCi"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -1186,7 +1186,7 @@
   "aliases": [
    "Quantum Machines"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1209,7 +1209,7 @@
   "aliases": [
    "Quantum Motion"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1232,7 +1232,7 @@
   "aliases": [
    "QuEra"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1255,7 +1255,7 @@
   "aliases": [
    "QuiX Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1276,7 +1276,7 @@
   "aliases": [
    "Qunnect"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1297,7 +1297,7 @@
   "aliases": [
    "QuSecure"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1320,7 +1320,7 @@
   "aliases": [
    "Rigetti"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -1341,7 +1341,7 @@
   "aliases": [
    "Riverlane"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1363,7 +1363,7 @@
    "SandboxAQ",
    "Sandbox AQ"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1386,7 +1386,7 @@
   "aliases": [
    "SEEQC"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1409,7 +1409,7 @@
   "aliases": [
    "Silicon Quantum Computing"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1430,7 +1430,7 @@
   "aliases": [
    "Strangeworks"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1451,7 +1451,7 @@
   "aliases": [
    "Terra Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1472,7 +1472,7 @@
   "aliases": [
    "Toshiba"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1495,7 +1495,7 @@
   "aliases": [
    "Universal Quantum"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []
@@ -1519,7 +1519,7 @@
    "Xanadu",
    "PennyLane"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": true,
   "paper_ids": [],
   "news_ids": []
@@ -1540,7 +1540,7 @@
   "aliases": [
    "Zurich Instruments"
   ],
-  "updated_at": 1795748677.1464374,
+  "updated_at": 1795748924.424131,
   "is_public": false,
   "paper_ids": [],
   "news_ids": []

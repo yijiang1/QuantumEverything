@@ -148,6 +148,26 @@ export function billLabel(a: UsAction) {
   return `${prefix} ${a.number}`
 }
 
+export interface Facility {
+  slug: string
+  name: string
+  type: 'government' | 'university' | 'company'
+  open_access: boolean      // outside researchers can get time on its hardware
+  operator: string
+  city: string
+  country: string
+  lat: number
+  lon: number
+  focus: string
+  platforms: string[]
+  companies: string[]       // company slugs
+  program: string           // national program slug, or ''
+  url: string
+  source_url: string
+  confirmed: boolean
+  note?: string
+}
+
 export interface AnalysisSummary {
   slug: string
   topic: string

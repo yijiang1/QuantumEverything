@@ -15,6 +15,7 @@ company matching, then writes JSON back for the site:
     companies.json  company directory with paper and news links
     stocks.json     daily share prices and a quantum stock index (see stocks.py)
     policy.json     national programs, US actions and Federal Register items (see policy.py)
+    facilities.json labs, testbeds, institutes and company sites (curated)
     meta.json       when the data was built and what each source returned
 
 A GitHub Actions workflow runs this on a schedule and commits the changes.
@@ -194,6 +195,28 @@ def export_companies(news: list[dict]) -> list[dict]:
     return out
 
 
+# ── Facilities ────────────────────────────────────────────────────────────────
+
+FACILITIES_PATH = REPO_ROOT / "backend" / "app" / "facilities" / "facilities.json"
+
+
+def export_facilities(companies: list[dict], programs: list[dict]) -> list[dict]:
+    """Copy the curated facilities list, dropping links to unknown companies or programs."""
+    with open(FACILITIES_PATH, encoding="utf-8") as f:
+        rows = json.load(f)
+    slugs = {c["slug"] for c in companies}
+    program_slugs = {p["slug"] for p in programs}
+    for r in rows:
+        bad = [s for s in r.get("companies", []) if s not in slugs]
+        if bad:
+            print(f"facilities: {r['slug']} links unknown companies {bad}", file=sys.stderr)
+        r["companies"] = [s for s in r.get("companies", []) if s in slugs]
+        if r.get("program") and r["program"] not in program_slugs:
+            print(f"facilities: {r['slug']} links unknown program {r['program']}", file=sys.stderr)
+            r["program"] = ""
+    return rows
+
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 async def main(offline: bool) -> None:
@@ -209,6 +232,7 @@ async def main(offline: bool) -> None:
     companies = export_companies(news)
     stock_data, status["stocks"] = stocks.refresh(companies, _read("stocks.json", {}), offline)
     policy_data, status["policy"] = policy.refresh(companies, _read("policy.json", {}), offline)
+    facilities = export_facilities(companies, policy_data["programs"])
 
     visible = [p for p in papers if p["status"] != "skipped"]
     meta = {
@@ -223,6 +247,7 @@ async def main(offline: bool) -> None:
             "policy_programs": len(policy_data["programs"]),
             "policy_us_actions": len(policy_data["us_actions"]),
             "federal_register": len(policy_data["federal_register"]),
+            "facilities": len(facilities),
         },
         "last_run": status,
     }
@@ -232,6 +257,7 @@ async def main(offline: bool) -> None:
     _write("companies.json", companies)
     _write("stocks.json", stock_data)
     _write("policy.json", policy_data)
+    _write("facilities.json", facilities)
     _write("meta.json", meta)
     print(json.dumps(meta, indent=1))
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ExternalLink, Landmark, ScrollText, Gavel, Globe2 } from 'lucide-react'
 import {
   loadData, loadPolicy, useData, billLabel,
-  type BillStage, type CompanyRecord, type FederalRegisterDoc, type PolicyProgram, type UsAction,
+  type BillStage, type CompanyRecord, type Facility, type FederalRegisterDoc, type PolicyProgram, type UsAction,
 } from '../lib/data'
 import { formatDay } from '../components/StockChart'
 
@@ -66,8 +66,9 @@ function SectionTitle({ icon: Icon, title, note }: { icon: typeof Landmark; titl
   )
 }
 
-function ProgramCard({ p, companies }: { p: PolicyProgram; companies: CompanyRecord[] }) {
+function ProgramCard({ p, companies, facilities }: { p: PolicyProgram; companies: CompanyRecord[]; facilities: Facility[] }) {
   const local = companies.filter(c => p.countries.includes(c.country))
+  const sites = facilities.filter(f => f.program === p.slug)
   const shown = local.slice(0, 6)
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col gap-2">
@@ -98,6 +99,12 @@ function ProgramCard({ p, companies }: { p: PolicyProgram; companies: CompanyRec
               </Link>
             )}
           </div>
+        </div>
+      )}
+      {sites.length > 0 && (
+        <div className="text-xs text-gray-500">
+          <Link to="/facilities" className="text-gray-400 hover:text-teal-700">Facilities:</Link>{' '}
+          {sites.map(f => f.name).join('; ')}
         </div>
       )}
       <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="mt-auto pt-1 text-xs text-teal-700 hover:text-teal-800 inline-flex items-center gap-1">
@@ -178,10 +185,14 @@ function FederalRegisterList({ docs, names }: { docs: FederalRegisterDoc[]; name
 }
 
 export default function Policy() {
-  const { data, error } = useData(() => Promise.all([loadPolicy(), loadData<CompanyRecord[]>('companies.json')]))
+  const { data, error } = useData(() => Promise.all([
+    loadPolicy(),
+    loadData<CompanyRecord[]>('companies.json'),
+    loadData<Facility[]>('facilities.json').catch(() => [] as Facility[]),
+  ]))
   if (error) return <p className="text-center text-gray-500 py-12">{error}</p>
   if (!data) return <p className="text-center text-gray-500 py-12">Loading…</p>
-  const [policy, companies] = data
+  const [policy, companies, facilities] = data
   const names = new Map(companies.map(c => [c.slug, c.name]))
   const bills = policy.us_actions
     .filter(a => a.kind === 'bill')
@@ -209,7 +220,7 @@ export default function Policy() {
           note="Announced public funding in each program's own currency. Periods and what counts as funding differ, so compare with care."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {policy.programs.map(p => <ProgramCard key={p.slug} p={p} companies={companies} />)}
+          {policy.programs.map(p => <ProgramCard key={p.slug} p={p} companies={companies} facilities={facilities} />)}
         </div>
       </section>
 
