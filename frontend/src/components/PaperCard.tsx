@@ -126,9 +126,11 @@ export default function PaperCard({ paper, onApprove, onSkip }: Props) {
               {paper.journal && paper.journal !== 'arXiv' && (
                 <><span>·</span><span className="italic truncate max-w-[180px]">{paper.journal}</span></>
               )}
-              <span className={`px-1.5 py-0.5 rounded text-xs ${STATUS_STYLES[paper.status] ?? ''}`}>
-                {paper.status}
-              </span>
+              {(onApprove || onSkip) && (
+                <span className={`px-1.5 py-0.5 rounded text-xs ${STATUS_STYLES[paper.status] ?? ''}`}>
+                  {paper.status}
+                </span>
+              )}
               {paper.source && (
                 <span className="text-gray-700">{paper.source}</span>
               )}
@@ -234,7 +236,7 @@ export default function PaperCard({ paper, onApprove, onSkip }: Props) {
                 <X className="w-3.5 h-3.5" /> Skip
               </button>
             )}
-            {paper.status === 'approved' && (
+            {paper.status === 'approved' && (onApprove || onSkip) && (
               <span className="flex items-center gap-1 text-xs text-emerald-600">
                 <Zap className="w-3.5 h-3.5" /> In search index
               </span>

@@ -1,0 +1,8 @@
+# Dependencies for the static-site data pipeline (GitHub Actions).
+# The FastAPI server's full list is in ../requirements.txt.
+anthropic>=0.40.0
+arxiv>=2.1.0
+feedparser>=6.0.11
+httpx>=0.27.0
+python-dotenv>=1.0.1
+duckduckgo-search>=6.3.0

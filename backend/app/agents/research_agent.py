@@ -5,10 +5,14 @@ from typing import AsyncGenerator
 import anthropic
 from duckduckgo_search import DDGS
 
-from app.knowledge_base.vector_store import search_papers
 from app.config import ANTHROPIC_API_KEY
 
 client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
+
+# Optional override for the knowledge-base search, used by the static-site
+# pipeline, which searches papers.json instead of the ChromaDB index.
+# Signature: (query, n_results) -> list of {"text": str, "metadata": dict}.
+knowledge_base_search = None
 
 TOOLS = [
     {
@@ -94,7 +98,11 @@ def _search_web(query: str) -> str:
 
 def _search_knowledge_base(query: str) -> str:
     try:
-        results = search_papers(query, n_results=5)
+        if knowledge_base_search is not None:
+            results = knowledge_base_search(query, 5)
+        else:
+            from app.knowledge_base.vector_store import search_papers
+            results = search_papers(query, n_results=5)
         if not results:
             return "No relevant papers found in knowledge base. (Run arXiv sync from the Papers page to populate it.)"
         parts = []

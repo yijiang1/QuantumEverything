@@ -1,0 +1,40 @@
+{
+ "generated_at": "2026-11-27T05:00:34+00:00",
+ "counts": {
+  "papers": 0,
+  "papers_scored": 0,
+  "news": 0,
+  "companies": 68,
+  "public_companies": 18,
+  "stocks_priced": 0,
+  "policy_programs": 21,
+  "policy_us_actions": 11,
+  "federal_register": 0,
+  "facilities": 40,
+  "deals": 79,
+  "machines": 43,
+  "events": 32,
+  "learn": 70,
+  "trend_points": 144,
+  "jobs": 0
+ },
+ "last_run": {
+  "news_fetched": 0,
+  "stocks": {
+   "fetched": 0,
+   "kept_old": 0,
+   "failed": [],
+   "sources": {}
+  },
+  "policy": {
+   "bills_refreshed": 0,
+   "bills_failed": [],
+   "federal_register_fetched": null,
+   "federal_register_error": null
+  },
+  "jobs": {
+   "boards_fetched": 0,
+   "boards_failed": []
+  }
+ }
+}
