@@ -4,7 +4,8 @@ import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
   loadData, loadPapers, loadPolicy, loadStocks, useData, formatDate, billLabel,
-  type CompanyRecord, type NewsItem, type Meta, type AnalysisSummary,
+  type CompanyRecord, type NewsItem, type Meta, type AnalysisSummary, type Deal, type EventItem,
+  formatMonthOrDay,
 } from '../lib/data'
 import { Change, ExampleNotice, Sparkline, formatDay, formatPrice, sliceRange } from '../components/StockChart'
 
@@ -41,10 +42,13 @@ export default function Overview() {
     loadData<AnalysisSummary[]>('analyses/index.json').catch(() => [] as AnalysisSummary[]),
     loadStocks(),
     loadPolicy(),
+    loadData<Deal[]>('deals.json').catch(() => [] as Deal[]),
+    loadData<EventItem[]>('events.json').catch(() => [] as EventItem[]),
   ]))
 
   if (!data) return <p className="text-center text-gray-500 py-12">Loading…</p>
-  const [meta, papers, news, companies, analyses, stocks, policy] = data
+  const [meta, papers, news, companies, analyses, stocks, policy, deals, events] = data
+  const dealNames = new Map(companies.map(c => [c.slug, c.name]))
   const policyItems = [
     ...policy.us_actions.map(a => ({
       id: a.id,
@@ -137,6 +141,34 @@ export default function Overview() {
                   {c.paper_ids.length} papers · {c.news_ids.length} news
                 </span>
               </Link>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {deals.length > 0 && (
+        <Section title="Latest deals" to="/funding">
+          <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
+            {deals.slice(0, 5).map(d => (
+              <Link key={d.id} to={`/companies/${d.company}`} className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{formatMonthOrDay(d.date)}</span>
+                <span className="text-sm text-gray-900 min-w-0 flex-1">{dealNames.get(d.company) ?? d.company}: {d.title}</span>
+                <span className="text-xs text-gray-600 shrink-0 tabular-nums">{d.amount_text}</span>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {events.length > 0 && (
+        <Section title="Upcoming events" to="/events">
+          <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
+            {events.slice(0, 4).map(e => (
+              <a key={e.id} href={e.url || e.source_url} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{formatDay(e.start)}</span>
+                <span className="text-sm text-gray-900 min-w-0 flex-1">{e.name}</span>
+                <span className="text-xs text-gray-400 shrink-0 hidden sm:inline">{[e.city, e.country].filter(Boolean).join(', ')}</span>
+              </a>
             ))}
           </div>
         </Section>

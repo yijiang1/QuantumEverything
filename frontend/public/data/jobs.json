@@ -1,0 +1,286 @@
+{
+ "generated_at": "2026-11-27T04:10:50+00:00",
+ "boards": [
+  {
+   "company": "ionq",
+   "ats": "greenhouse",
+   "careers_url": "https://ionq.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quantinuum",
+   "ats": "lever",
+   "careers_url": "https://www.quantinuum.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "rigetti",
+   "ats": "lever",
+   "careers_url": "https://www.rigetti.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "d-wave",
+   "ats": "other",
+   "careers_url": "https://www.dwavequantum.com/careers/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "psiquantum",
+   "ats": "greenhouse",
+   "careers_url": "https://www.psiquantum.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "xanadu",
+   "ats": "other",
+   "careers_url": "https://xanadu.ai/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quera",
+   "ats": "greenhouse",
+   "careers_url": "https://www.quera.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "pasqal",
+   "ats": "other",
+   "careers_url": "https://www.pasqal.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "atom-computing",
+   "ats": "lever",
+   "careers_url": "https://atom-computing.com/careers/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "infleqtion",
+   "ats": "other",
+   "careers_url": "https://www.infleqtion.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "iqm",
+   "ats": "other",
+   "careers_url": "https://meetiqm.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "alice-and-bob",
+   "ats": "lever",
+   "careers_url": "https://alice-bob.com/careers/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "oqc",
+   "ats": "other",
+   "careers_url": "https://oqc.tech",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quantum-circuits-inc",
+   "ats": "other",
+   "careers_url": "https://quantumcircuits.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "seeqc",
+   "ats": "other",
+   "careers_url": "https://seeqc.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quandela",
+   "ats": "other",
+   "careers_url": "https://www.quandela.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "orca",
+   "ats": "other",
+   "careers_url": "https://orcacomputing.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "diraq",
+   "ats": "unknown",
+   "careers_url": "https://diraq.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "silicon-quantum-computing",
+   "ats": "greenhouse",
+   "careers_url": "https://sqc.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quantum-motion",
+   "ats": "other",
+   "careers_url": "https://quantummotion.tech",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "photonic-inc",
+   "ats": "other",
+   "careers_url": "https://photonic.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "nord-quantique",
+   "ats": "unknown",
+   "careers_url": "https://nordquantique.ca",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "classiq",
+   "ats": "other",
+   "careers_url": "https://www.classiq.io",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "q-ctrl",
+   "ats": "lever",
+   "careers_url": "https://q-ctrl.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "riverlane",
+   "ats": "greenhouse",
+   "careers_url": "https://www.riverlane.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "phasecraft",
+   "ats": "other",
+   "careers_url": "https://www.phasecraft.io",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "algorithmiq",
+   "ats": "unknown",
+   "careers_url": "https://algorithmiq.fi",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "multiverse-computing",
+   "ats": "other",
+   "careers_url": "https://multiversecomputing.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "sandboxaq",
+   "ats": "ashby",
+   "careers_url": "https://www.sandboxaq.com/careers",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "horizon-quantum",
+   "ats": "other",
+   "careers_url": "https://www.horizonquantum.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "qedma",
+   "ats": "unknown",
+   "careers_url": "https://www.qedma.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quantum-machines",
+   "ats": "other",
+   "careers_url": "https://www.quantum-machines.co",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "qblox",
+   "ats": "other",
+   "careers_url": "https://www.qblox.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "bluefors",
+   "ats": "other",
+   "careers_url": "https://bluefors.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "zurich-instruments",
+   "ats": "lever",
+   "careers_url": "https://www.zhinst.com/en/company/careers/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "pqshield",
+   "ats": "greenhouse",
+   "careers_url": "https://pqshield.com/careers/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "qunnect",
+   "ats": "unknown",
+   "careers_url": "https://www.qunnect.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "quantum-computing-inc",
+   "ats": "other",
+   "careers_url": "https://quantumcomputinginc.com",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "1qbit",
+   "ats": "other",
+   "careers_url": "https://1qbit.com/careers/current-openings/",
+   "open_roles": null,
+   "checked": ""
+  },
+  {
+   "company": "strangeworks",
+   "ats": "unknown",
+   "careers_url": "https://strangeworks.com",
+   "open_roles": null,
+   "checked": ""
+  }
+ ],
+ "jobs": []
+}

@@ -14,6 +14,9 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
 | Policy | National quantum programs and budgets, US bills and their status, US laws and executive orders, Federal Register rules and notices | `backend/app/policy/*.json` (curated), bill status from govinfo.gov, Federal Register API (both free, no key) |
 | Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs, on a world map | `backend/app/facilities/facilities.json` (curated); map tiles from OpenStreetMap |
+| Funding | Funding rounds, share offerings, IPOs, SPAC mergers and acquisitions, with a yearly total, linked to company profiles | `backend/app/funding/deals.json` (curated, each with a source) |
+| Hardware | Quantum computers with qubit counts and two-qubit fidelities, a qubits-over-time chart, and companies' published roadmap targets | `backend/app/hardware/hardware.json` (curated, each with a source) |
+| Events & jobs | Upcoming quantum conferences, and open roles at quantum companies | `backend/app/events/events.json` (curated); jobs from Greenhouse, Lever and Ashby public job-board APIs (free, no key), set up in `backend/app/jobs/job_boards.json` |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
 | Analyses | Research reports on quantum opportunities in a field | The Claude research agent, run on request |
 | Reading list | Hand-picked papers | `frontend/public/data/reading_list.json` (edit by hand) |
@@ -90,6 +93,10 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 - **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
 - **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action. For a country with no official total (China, Japan), give the reported figure or range and set `funding_basis` to `estimate`; use `proposed` for a recommended figure not yet allocated. A `note` shows under the card.
 - **Facilities:** edit `backend/app/facilities/facilities.json`. `companies` holds company slugs and `program` a slug from `programs.json`. `lat` and `lon` place the pin on the map (town or campus level is fine). Set `confirmed` to false for an entry you haven't checked against a source.
+- **Funding:** edit `backend/app/funding/deals.json`. `company` is the slug of the company that raised money or was bought; `amount` is in millions of `currency` (leave it null to keep a deal out of the yearly total).
+- **Hardware:** edit `backend/app/hardware/hardware.json`. Each entry is a `machine` (qubits, fidelity as stated) or a roadmap `milestone` (target year and goal).
+- **Events:** edit `backend/app/events/events.json`. Events drop off the site after their end date.
+- **Jobs:** add a company to `backend/app/jobs/job_boards.json` with `ats` set to `greenhouse`, `lever` or `ashby` and its board `token` (for Lever's EU host, add `"region": "eu"`). Companies on other systems are listed with a link to their careers page.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.
 - **Paper searches:** edit `QUANTUM_QUERIES` in `backend/app/knowledge_base/arxiv_fetcher.py` and `QUANTUM_KEYWORDS` in `backend/app/knowledge_base/openalex_fetcher.py`.

@@ -179,6 +179,113 @@ export interface AnalysisSummary {
   summary: string
 }
 
+export type DealKind = 'venture' | 'acquisition' | 'spac' | 'ipo' | 'public_offering' | 'grant'
+
+export interface Deal {
+  id: string
+  date: string               // YYYY-MM-DD or YYYY-MM
+  kind: DealKind
+  company: string            // slug
+  counterparty: string       // acquirer: a slug or a plain name
+  counterparty_slug: string  // set when counterparty is a known company
+  title: string
+  amount: number | null      // millions of `currency`
+  currency: string
+  amount_text: string
+  valuation_text: string
+  lead_investors: string[]
+  source_url: string
+  source_name: string
+  confirmed: boolean
+  note?: string
+}
+
+export interface Machine {
+  id: string
+  kind: 'machine'
+  company: string
+  builder: string
+  name: string
+  date: string               // YYYY-MM
+  status: 'available' | 'announced' | 'research'
+  platform: string
+  qubits: number | null
+  logical_qubits: number | null
+  two_qubit_fidelity: number | null  // percent
+  fidelity_text: string
+  highlight: string
+  source_url: string
+  source_name: string
+  confirmed: boolean
+  note?: string
+}
+
+export interface Milestone {
+  id: string
+  kind: 'milestone'
+  company: string
+  builder: string
+  year: number
+  target: string
+  logical_qubits: number | null
+  qubits: number | null
+  source_url: string
+  source_name: string
+  confirmed: boolean
+  note?: string
+}
+
+export type HardwareRecord = Machine | Milestone
+
+export interface EventItem {
+  id: string
+  name: string
+  start: string
+  end: string
+  city: string
+  country: string
+  format: 'in_person' | 'hybrid' | 'online'
+  kind: 'academic' | 'industry' | 'government'
+  url: string
+  source_url: string
+  confirmed: boolean
+  note?: string
+}
+
+export interface Job {
+  id: string
+  company: string
+  title: string
+  location: string
+  department: string
+  remote: boolean
+  url: string
+  posted: string
+  source: string
+}
+
+export interface JobBoard {
+  company: string
+  ats: string
+  careers_url: string
+  open_roles: number | null
+  checked: string
+}
+
+export interface JobsData {
+  generated_at: string
+  boards: JobBoard[]
+  jobs: Job[]
+}
+
+/** Month precision dates ("2026-05") display as "May 2026". */
+export function formatMonthOrDay(d: string) {
+  if (/^\d{4}-\d{2}$/.test(d)) {
+    return new Date(`${d}-15T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
+  }
+  return new Date(`${d.slice(0, 10)}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+}
+
 export interface ReadingListItem {
   title: string
   authors?: string

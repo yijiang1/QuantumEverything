@@ -5,9 +5,11 @@ import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
   loadData, loadPapers, loadPolicy, loadStocks, useData,
-  type CompanyRecord, type Facility, type NewsItem, type PolicyData, type StockTicker,
+  type CompanyRecord, type Deal, type Facility, type HardwareRecord, type JobsData, type Machine, type Milestone, type NewsItem, type PolicyData, type StockTicker,
 } from '../lib/data'
 import { TypeLabel } from '../components/FacilityType'
+import { DealRow } from './Funding'
+import { MachineRows, Roadmap } from './Hardware'
 import {
   Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
 } from '../components/StockChart'
@@ -108,6 +110,82 @@ function PolicyCard({ company, policy }: { company: CompanyRecord; policy: Polic
   )
 }
 
+function CompanyExtras({ slug, deals, hardware, jobs, names }: {
+  slug: string
+  deals: Deal[]
+  hardware: HardwareRecord[]
+  jobs: JobsData
+  names: Map<string, string>
+}) {
+  const own = deals.filter(d => d.company === slug || d.counterparty_slug === slug)
+  const machines = hardware.filter((h): h is Machine => h.kind === 'machine' && h.company === slug)
+    .sort((a, b) => b.date.localeCompare(a.date))
+  const milestones = hardware.filter((h): h is Milestone => h.kind === 'milestone' && h.company === slug)
+  const board = jobs.boards.find(b => b.company === slug)
+  const openRoles = jobs.jobs.filter(j => j.company === slug).length
+  const header = (title: string, to: string, label: string) => (
+    <div className="flex items-center justify-between gap-2">
+      <h2 className="text-sm font-medium text-gray-500">{title}</h2>
+      <Link to={to} className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">
+        {label} <ArrowRight className="w-3.5 h-3.5" />
+      </Link>
+    </div>
+  )
+  return (
+    <>
+      {own.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-2">
+          {header('Funding and deals', '/funding', 'All deals')}
+          <div className="divide-y divide-gray-100 -mx-3">
+            {own.map(d => <DealRow key={d.id} d={d} names={names} showCompany={d.company !== slug} />)}
+          </div>
+        </section>
+      )}
+      {(machines.length > 0 || milestones.length > 0) && (
+        <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-3">
+          {header('Hardware', '/hardware', 'Hardware tracker')}
+          {machines.length > 0 && (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="text-xs text-gray-500 border-b border-gray-200">
+                  <tr>
+                    <th className="py-2 pr-3 font-medium text-left">Machine</th>
+                    <th className="py-2 pr-3 font-medium text-left">Date</th>
+                    <th className="py-2 pr-3 font-medium text-left">Platform</th>
+                    <th className="py-2 pr-3 font-medium text-right">Qubits</th>
+                    <th className="py-2 pr-3 font-medium text-right">2-qubit fidelity</th>
+                    <th className="py-2 font-medium text-right"><span className="sr-only">Source</span></th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  <MachineRows machines={machines} names={names} showBuilder={false} />
+                </tbody>
+              </table>
+            </div>
+          )}
+          {milestones.length > 0 && (
+            <div className="space-y-2">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Roadmap</h3>
+              <Roadmap milestones={milestones} names={names} showBuilder={false} />
+            </div>
+          )}
+        </section>
+      )}
+      {(openRoles > 0 || board?.careers_url) && (
+        <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-medium text-gray-500">Jobs</h2>
+            <p className="text-sm text-gray-900">{openRoles > 0 ? `${openRoles} open role${openRoles === 1 ? '' : 's'}` : 'Open roles are listed on the careers page.'}</p>
+          </div>
+          {openRoles > 0
+            ? <Link to={`/events?company=${slug}`} className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">See roles <ArrowRight className="w-3.5 h-3.5" /></Link>
+            : <a href={board!.careers_url} target="_blank" rel="noopener noreferrer" className="text-sm text-teal-700 hover:text-teal-800">Careers page</a>}
+        </section>
+      )}
+    </>
+  )
+}
+
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>()
   const [tab, setTab] = useState<'papers' | 'news'>('papers')
@@ -119,6 +197,9 @@ export default function CompanyDetail() {
       loadStocks(),
       loadPolicy(),
       loadData<Facility[]>('facilities.json').catch(() => [] as Facility[]),
+      loadData<Deal[]>('deals.json').catch(() => [] as Deal[]),
+      loadData<HardwareRecord[]>('hardware.json').catch(() => [] as HardwareRecord[]),
+      loadData<JobsData>('jobs.json').catch(() => ({ generated_at: '', boards: [], jobs: [] }) as JobsData),
     ]),
   )
 
@@ -257,6 +338,8 @@ export default function CompanyDetail() {
           ))}
         </section>
       )}
+
+      {all && <CompanyExtras slug={company.slug} deals={all[6]} hardware={all[7]} jobs={all[8]} names={new Map(all[0].map(c => [c.slug, c.name]))} />}
 
       {/* Mentions */}
       <div className="space-y-3">
