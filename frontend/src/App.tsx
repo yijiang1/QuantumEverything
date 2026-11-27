@@ -1,4 +1,6 @@
-import { HashRouter, Routes, Route, NavLink, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink, Link, useLocation } from 'react-router-dom'
+import type { ReactNode } from 'react'
+import ErrorBoundary from './components/ErrorBoundary'
 import { Atom, FileText, Newspaper, Building2, LayoutGrid, BookOpen, Sparkles, LineChart, Landmark, MapPin, Banknote, Cpu, CalendarDays, TrendingUp, GraduationCap } from 'lucide-react'
 import Overview from './pages/Overview'
 import Papers from './pages/Papers'
@@ -33,6 +35,11 @@ const NAV = [
   { to: '/reading-list', label: 'Reading list', icon: BookOpen },
 ]
 
+function PageBoundary({ children }: { children: ReactNode }) {
+  const { pathname } = useLocation()
+  return <ErrorBoundary resetKey={pathname}>{children}</ErrorBoundary>
+}
+
 export default function App() {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `flex items-center gap-1.5 text-sm whitespace-nowrap transition-colors ${
@@ -61,6 +68,7 @@ export default function App() {
         </nav>
 
         <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+          <PageBoundary>
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/papers" element={<Papers />} />
@@ -80,6 +88,7 @@ export default function App() {
             <Route path="/reading-list" element={<ReadingList />} />
             <Route path="*" element={<p className="text-center text-gray-500 py-12">Page not found.</p>} />
           </Routes>
+          </PageBoundary>
         </main>
 
         <footer className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 text-xs text-gray-400">
