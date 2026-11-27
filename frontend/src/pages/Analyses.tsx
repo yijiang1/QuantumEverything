@@ -42,7 +42,7 @@ export function AnalysesList() {
           <p>No analyses yet.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 *:min-w-0">
           {data!.map(a => (
             <Link
               key={a.slug}

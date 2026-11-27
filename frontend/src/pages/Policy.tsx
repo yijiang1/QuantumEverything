@@ -152,7 +152,7 @@ function ProgramGrid({ programs, companies, facilities }: { programs: PolicyProg
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 *:min-w-0">
         {shown.map(p => <ProgramCard key={p.slug} p={p} companies={companies} facilities={facilities} />)}
       </div>
     </div>

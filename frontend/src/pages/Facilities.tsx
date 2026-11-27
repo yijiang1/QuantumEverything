@@ -108,7 +108,7 @@ export default function Facilities() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 *:min-w-0">
         {counts.map(([t, n]) => (
           <button
             key={t}
@@ -165,7 +165,7 @@ export default function Facilities() {
         byCountry.map(([c, list]) => (
           <section key={c} className="space-y-2">
             <h2 className="text-sm font-semibold text-gray-900">{c} <span className="text-gray-400 font-normal">{list.length}</span></h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 *:min-w-0">
               {list.map(f => <FacilityCard key={f.slug} f={f} names={names} programs={programs} />)}
             </div>
           </section>

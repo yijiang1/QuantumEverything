@@ -67,7 +67,7 @@ export default function Trends() {
       </div>
 
       {v.tiles.length > 0 && (
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 *:min-w-0">
           {v.tiles.map(t => (
             <div key={t.label} className="bg-white border border-gray-200 rounded-xl p-3">
               <div className="text-2xl font-bold text-gray-900 tabular-nums">{t.value}</div>
@@ -80,7 +80,7 @@ export default function Trends() {
 
       <section className="space-y-3">
         <h2 className="flex items-center gap-2 text-base font-semibold text-gray-900"><TrendingUp className="w-4 h-4 text-teal-600" /> The hardware</h2>
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 *:min-w-0">
           <Card title="Physical qubits in one processor" subtitle="Landmark and record devices, log scale. More qubits isn't better on its own; their quality (below) decides what a machine can do.">
             <TimeScatter points={v.qubits} series={PLATFORMS} format={compact} />
           </Card>
@@ -104,7 +104,7 @@ export default function Trends() {
 
       <section className="space-y-3">
         <h2 className="flex items-center gap-2 text-base font-semibold text-gray-900"><TrendingUp className="w-4 h-4 text-teal-600" /> The field</h2>
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 *:min-w-0">
           <Card title="Quantum physics papers per year" subtitle={v.arxivNote}>
             <YearBars data={v.arxiv} format={compact} unit="new papers" />
           </Card>
@@ -122,7 +122,7 @@ export default function Trends() {
           title="National quantum programs"
           subtitle="Each program by launch year, with its budget as announced. Budgets are in different currencies and periods, so they aren't added up or converted."
         >
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6 *:min-w-0">
             <YearBars data={v.programs.byYear} format={count} unit="launched" cumulativeLabel="Programs in place" height={180} />
             <Timeline items={v.programs.items} />
           </div>

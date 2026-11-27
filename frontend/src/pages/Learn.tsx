@@ -32,7 +32,7 @@ function ResourceRow({ r }: { r: LearnResource }) {
         {r.free_note && <p className="text-xs text-gray-500">{r.free_note}</p>}
         {!r.confirmed && <p className="text-xs text-amber-700">Link not yet checked.</p>}
       </div>
-      <div className="flex sm:flex-col sm:items-end gap-1.5 mt-1.5 sm:mt-0 shrink-0">
+      <div className="flex flex-wrap items-center sm:flex-col sm:items-end gap-x-2 gap-y-1 mt-1.5 sm:mt-0 sm:shrink-0 sm:max-w-[12rem]">
         <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{FORMATS[r.format] ?? r.format}</span>
         {r.topics.slice(0, 2).map(t => <span key={t} className="text-xs text-gray-400">{t}</span>)}
       </div>
@@ -68,7 +68,7 @@ export default function Learn() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-3">
+      <div className="grid sm:grid-cols-3 gap-3 *:min-w-0">
         {(Object.keys(LEVELS) as LearnLevel[]).map(l => (
           <button
             key={l}

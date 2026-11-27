@@ -151,7 +151,8 @@ export function LineChart({
     const x = (i: number) => (i / (series.length - 1)) * w
     const y = (v: number) => h - ((v - lo) / (hi - lo)) * h
     const path = series.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p[1]).toFixed(1)}`).join('')
-    const xLabels = [0, Math.floor((series.length - 1) / 2), series.length - 1]
+    // three dates need ~250px; on a narrow phone show only the first and last
+    const xLabels = w >= 260 ? [0, Math.floor((series.length - 1) / 2), series.length - 1] : [0, series.length - 1]
     return { x, y, ticks, path, xLabels }
   }, [series, w, h])
 
@@ -208,7 +209,7 @@ export function LineChart({
               y={h + 17}
               fontSize={11}
               fill={AXIS_TEXT}
-              textAnchor={k === 0 ? 'start' : k === 2 ? 'end' : 'middle'}
+              textAnchor={k === 0 ? 'start' : k === xLabels.length - 1 ? 'end' : 'middle'}
             >
               {formatDay(series[i][0])}
             </text>

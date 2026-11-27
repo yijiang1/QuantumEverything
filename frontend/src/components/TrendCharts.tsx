@@ -24,12 +24,20 @@ export function Card({ title, subtitle, children, id }: { title: string; subtitl
 function Tooltip({ x, y, width, children }: { x: number; y: number; width: number; children: ReactNode }) {
   return (
     <div
-      className="absolute pointer-events-none bg-white border border-gray-200 rounded-lg shadow-sm px-2.5 py-1.5 text-xs z-10 max-w-[15rem]"
-      style={{ left: Math.max(0, Math.min(x + 12, width - 200)), top: Math.max(0, y - 44) }}
+      className="absolute pointer-events-none bg-white border border-gray-200 rounded-lg shadow-sm px-2.5 py-1.5 text-xs z-10 break-words"
+      // keep the whole tooltip inside the chart, even on a narrow phone
+      style={{ maxWidth: Math.min(240, width), left: Math.max(0, Math.min(x + 12, width - Math.min(240, width))), top: Math.max(0, y - 44) }}
     >
       {children}
     </div>
   )
+}
+
+/** Anchor a 4-digit year label so it stays inside the plot at either end. */
+function edgeAnchor(x: number, w: number): 'start' | 'middle' | 'end' {
+  if (x < 14) return 'start'
+  if (x > w - 14) return 'end'
+  return 'middle'
 }
 
 function SourceLink({ url, name }: { url?: string; name?: string }) {
@@ -81,7 +89,7 @@ export function YearBars({ data, format, unit, cumulativeLabel, height = 200 }: 
   const ticks = Array.from({ length: Math.round(top / step) + 1 }, (_, i) => i * step)
   const slot = w / rows.length
   const gap = Math.min(2, slot * 0.2)
-  const labelEvery = Math.ceil(rows.length / Math.max(1, Math.floor(w / 38)))
+  const labelEvery = Math.ceil(rows.length / Math.max(1, Math.floor(w / 44)))
   const y = (v: number) => h - (v / top) * h
   const hv = hover != null ? rows[hover] : null
 
@@ -133,7 +141,7 @@ export function YearBars({ data, format, unit, cumulativeLabel, height = 200 }: 
                     />
                   )}
                   {i % labelEvery === 0 && (
-                    <text x={i * slot + slot / 2} y={h + 16} fontSize={11} fill={TICK} textAnchor="middle">{r.year}</text>
+                    <text x={i * slot + slot / 2} y={h + 16} fontSize={11} fill={TICK} textAnchor={edgeAnchor(i * slot + slot / 2, w)}>{r.year}</text>
                   )}
                 </g>
               )
@@ -228,7 +236,8 @@ export function TimeScatter({ points, series, log = true, format, record = 'max'
   const x = (t: number) => ((t - x0) / (x1 - x0)) * w
   const y = (v: number) => (log ? h - ((Math.log10(v) - lo) / (hi - lo)) * h : h - (v / hi) * h)
   const span = x1 - x0
-  const yearStep = span > 24 ? 5 : span > 12 ? 2 : 1
+  // leave at least ~40px per year label so they never run into each other on a phone
+  const yearStep = [1, 2, 5, 10, 20, 50].find(s => (w / Math.max(1, span)) * s >= 40) ?? 50
   const years = Array.from({ length: span + 1 }, (_, i) => x0 + i).filter(v => v % yearStep === 0)
 
   const lines = record ? used.map(s => {
@@ -258,7 +267,7 @@ export function TimeScatter({ points, series, log = true, format, record = 'max'
             ))}
             <line x1={0} x2={w} y1={h} y2={h} stroke={AXIS} />
             {years.map(v => (
-              <text key={v} x={x(v)} y={h + 17} fontSize={11} fill={TICK} textAnchor="middle">{v}</text>
+              <text key={v} x={x(v)} y={h + 17} fontSize={11} fill={TICK} textAnchor={edgeAnchor(x(v), w)}>{v}</text>
             ))}
             {lines.map(l => <path key={l.key} d={l.d} fill="none" stroke={color.get(l.key)} strokeWidth={2} opacity={0.45} />)}
             {pts.map(p => (
