@@ -1,6 +1,6 @@
 # Quantum Everything
 
-A website for following quantum computing in one place: new research papers, the companies building quantum technology, industry news, and research reports on where quantum computing could help.
+A website for following quantum computing in one place: new research papers, the companies building quantum technology, their share prices, industry news, and research reports on where quantum computing could help.
 
 It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow refreshes the data every day.
 
@@ -11,6 +11,7 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Overview | Counts, top papers, latest news, companies in the news | All of the below |
 | Papers | Recent quantum papers, searchable, with relevance scores and topic tags | arXiv and OpenAlex, scored by Claude Haiku |
 | Companies | 68 quantum companies with profiles, linked to the papers and news that mention them | `backend/app/companies/seed_companies.json` (curated) |
+| Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
 | Analyses | Research reports on quantum opportunities in a field | The Claude research agent, run on request |
 | Reading list | Hand-picked papers | `frontend/public/data/reading_list.json` (edit by hand) |
@@ -18,7 +19,7 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 ## How it works
 
 ```
-backend/pipeline/update_data.py   fetch papers + news, score, link companies
+backend/pipeline/update_data.py   fetch papers + news + prices, score, link companies
             │  writes JSON
             ▼
 frontend/public/data/*.json       the site's only data source
@@ -29,7 +30,7 @@ frontend/ (React + Vite)          built to static files, deployed to Pages
 
 Two workflows in `.github/workflows/`:
 
-- **Refresh data and deploy site** (`deploy.yml`) runs daily and on every push to `main`. On the daily run it fetches new papers and news, scores up to 60 new papers with Claude Haiku, commits the updated JSON, then builds and deploys the site.
+- **Refresh data and deploy site** (`deploy.yml`) runs daily and on every push to `main`. On the daily run it fetches new papers, news and share prices, scores up to 60 new papers with Claude Haiku, commits the updated JSON, then builds and deploys the site.
 - **Analyze a topic** (`analyze-topic.yml`) is started by hand from the Actions tab. Enter a topic and it runs the research agent, saves the report under `frontend/public/data/analyses/`, and redeploys.
 
 ### What changed from the local app
@@ -42,6 +43,10 @@ The site has no server, so features that needed one now work differently:
 - **Fetching:** happens on the daily schedule, or when you run the deploy workflow by hand with "Refresh data" ticked.
 
 The FastAPI server in `backend/app` still runs, but the site no longer uses it. The pipeline reuses its fetchers, classifier and company matching.
+
+### Stocks and the quantum index
+
+`backend/pipeline/stocks.py` fetches daily closes for every company in the directory that has a `ticker`. Each run merges new closes into `stocks.json`, so a day when the price sources fail loses nothing. The "Quantum pure-play index" is an equal-weight average of the hardware, software, networking and sensing stocks, chained daily and starting at 100 on the first day of data. Big tech and suppliers are shown but left out of the index. It's built by this site, not a published index, and none of it is investment advice.
 
 ## Setting up GitHub Pages
 
@@ -80,7 +85,7 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 
 ## Editing content
 
-- **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company.
+- **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.
 - **Paper searches:** edit `QUANTUM_QUERIES` in `backend/app/knowledge_base/arxiv_fetcher.py` and `QUANTUM_KEYWORDS` in `backend/app/knowledge_base/openalex_fetcher.py`.

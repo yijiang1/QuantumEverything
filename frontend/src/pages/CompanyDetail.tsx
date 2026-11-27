@@ -1,15 +1,73 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, ExternalLink, FileText, Newspaper, TrendingUp, Building2 } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink, FileText, Newspaper, TrendingUp, Building2 } from 'lucide-react'
 import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
-import { loadData, loadPapers, useData, type CompanyRecord, type NewsItem } from '../lib/data'
+import {
+  loadData, loadPapers, loadStocks, useData,
+  type CompanyRecord, type NewsItem, type StockTicker,
+} from '../lib/data'
+import {
+  Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
+} from '../components/StockChart'
 import type { Paper } from '../components/PaperCard'
 import {
   CATEGORY_LABELS,
   CATEGORY_STYLES,
   PLATFORM_LABELS,
 } from '../lib/companies'
+
+function PriceCard({ stock, ticker, example }: { stock: StockTicker | undefined; ticker: string; example?: boolean }) {
+  const [range, setRange] = useState<RangeKey>('1Y')
+  const shown = sliceRange(stock?.history ?? [], range)
+  const heading = (
+    <div className="flex items-center justify-between gap-2">
+      <h2 className="text-sm font-medium text-gray-500">Share price · <span className="font-mono">{ticker}</span></h2>
+      <Link to="/stocks" className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">
+        All quantum stocks <ArrowRight className="w-3.5 h-3.5" />
+      </Link>
+    </div>
+  )
+  if (!stock || stock.history.length === 0) {
+    return (
+      <section className="bg-white border border-gray-200 rounded-xl p-5 space-y-2">
+        {heading}
+        <p className="text-sm text-gray-500">Price history appears after the next daily data refresh.</p>
+      </section>
+    )
+  }
+  const periods: [string, number | null][] = [
+    ['1D', stock.change['1d']], ['1M', stock.change['1m']], ['YTD', stock.change.ytd], ['1Y', stock.change['1y']],
+  ]
+  return (
+    <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-3">
+      {heading}
+      {example && <ExampleNotice />}
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <div className="flex items-baseline gap-3">
+            <span className="text-3xl font-bold text-gray-900 tabular-nums">{formatPrice(stock.last, stock.currency)}</span>
+            <Change value={pctChange(shown)} className="text-sm" />
+            <span className="text-xs text-gray-400">{range === 'All' ? 'since start' : range}</span>
+          </div>
+          <p className="text-xs text-gray-400 mt-0.5">
+            Close on {stock.last_date ? formatDay(stock.last_date) : '—'}{stock.exchange ? ` · ${stock.exchange}` : ''}
+          </p>
+        </div>
+        <RangePicker value={range} onChange={setRange} />
+      </div>
+      <LineChart series={shown} format={v => formatPrice(v, stock.currency)} label={`${ticker} closing price`} />
+      <dl className="grid grid-cols-4 gap-2 text-sm">
+        {periods.map(([k, v]) => (
+          <div key={k}>
+            <dt className="text-xs text-gray-400">{k}</dt>
+            <dd><Change value={v} /></dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )
+}
 
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>()
@@ -19,11 +77,14 @@ export default function CompanyDetail() {
       loadData<CompanyRecord[]>('companies.json'),
       loadPapers(),
       loadData<NewsItem[]>('news.json'),
+      loadStocks(),
     ]),
   )
 
   const found = all?.[0].find(c => c.slug === slug)
   const error = loadError || (all && !found ? 'Company not found' : '')
+  const example = all?.[3].example
+  const stock = found?.ticker ? all?.[3].tickers[found.ticker.toUpperCase()] : undefined
   let company: (CompanyRecord & {
     papers: Paper[]
     news: NewsItem[]
@@ -133,6 +194,8 @@ export default function CompanyDetail() {
           </div>
         )}
       </div>
+
+      {company.ticker && <PriceCard stock={stock} ticker={company.ticker} example={example} />}
 
       {/* Mentions */}
       <div className="space-y-3">
