@@ -11,7 +11,7 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Overview | Counts, top papers, latest news, companies in the news | All of the below |
 | Papers | Recent quantum papers, searchable, with relevance scores and topic tags | arXiv and OpenAlex, scored by Claude Haiku |
 | Companies | 68 quantum companies with profiles, linked to the papers and news that mention them | `backend/app/companies/seed_companies.json` (curated) |
-| Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
+| Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data (free, no key) |
 | Policy | National quantum programs and budgets, US bills and their status, US laws and executive orders, Federal Register rules and notices | `backend/app/policy/*.json` (curated), bill status from govinfo.gov, Federal Register API (both free, no key) |
 | Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs, on a world map | `backend/app/facilities/facilities.json` (curated); map tiles from OpenStreetMap |
 | Funding | Funding rounds, share offerings, IPOs, SPAC mergers and acquisitions, with a yearly total, linked to company profiles | `backend/app/funding/deals.json` (curated, each with a source) |

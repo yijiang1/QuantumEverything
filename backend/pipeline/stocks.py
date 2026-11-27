@@ -2,10 +2,13 @@
 Daily share prices for the listed companies in the directory, plus a simple
 quantum stock index built from them.
 
-Prices come from two free sources that need no API key:
+Prices come from Yahoo Finance's public chart endpoint (daily closes). It
+answers requests without a session with 429 "Too Many Requests", so a run first
+gets a cookie and a "crumb" token the way a browser visit would, then reuses
+them for every ticker, waits between tickers and backs off on a 429.
 
-    1. Yahoo Finance's public chart endpoint (daily closes)
-    2. Stooq's CSV download, used for a ticker when Yahoo fails
+Stooq's CSV download used to be the fallback, but since March 2026 it returns
+a page asking for an API key instead of a CSV, so it was removed.
 
 Each run merges new closes into the history already in stocks.json, so a day
 when both sources fail loses nothing. History is kept from the first run on.
@@ -22,8 +25,6 @@ be a day or more behind.
 
 from __future__ import annotations
 
-import csv
-import io
 import time
 from datetime import date, datetime, timedelta, timezone
 
@@ -33,20 +34,23 @@ import httpx
 PURE_PLAY_CATEGORIES = {"hardware", "software", "networking_security", "sensing"}
 
 YAHOO_HOSTS = ["https://query1.finance.yahoo.com", "https://query2.finance.yahoo.com"]
-STOOQ_URL = "https://stooq.com/q/d/l/"
+YAHOO_COOKIE_URL = "https://fc.yahoo.com"
+YAHOO_CRUMB_URL = "https://query1.finance.yahoo.com/v1/test/getcrumb"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
-    "Accept": "application/json,text/csv,*/*",
+    "Accept": "application/json,text/plain,*/*",
+    "Accept-Language": "en-US,en;q=0.9",
 }
+PAUSE = 1.5            # seconds between tickers
+BACKOFF = [5, 20]      # seconds to wait before retrying after a 429
 
 FIRST_RANGE = "2y"     # how far back to fetch when a ticker has no history yet
 UPDATE_RANGE = "3mo"   # later runs only need recent closes
 MAX_YEARS = 10         # safety cap on stored history
 
-# Yahoo and Stooq symbols differ from the plain ticker on non-US exchanges.
+# Yahoo symbols differ from the plain ticker on non-US exchanges.
 YAHOO_SUFFIX = {"LSE": ".L", "TSX": ".TO", "XETRA": ".DE", "EPA": ".PA", "ASX": ".AX"}
-STOOQ_SUFFIX = {"NYSE": ".us", "NASDAQ": ".us", "NYSE American": ".us"}
 
 
 # ── Listings ──────────────────────────────────────────────────────────────────
@@ -99,46 +103,58 @@ def parse_yahoo(payload: dict) -> tuple[list[list], str]:
     return sorted([d, v] for d, v in rows.items()), currency
 
 
-def parse_stooq(text: str) -> list[list]:
-    """Return [[YYYY-MM-DD, close], ...] from a Stooq daily CSV."""
-    reader = csv.DictReader(io.StringIO(text))
-    if not reader.fieldnames or "Close" not in reader.fieldnames:
-        raise ValueError("not a Stooq price CSV")
-    rows = []
-    for row in reader:
-        try:
-            rows.append([row["Date"], float(row["Close"])])
-        except (KeyError, TypeError, ValueError):
-            continue
-    if not rows:
-        raise ValueError("CSV had no closes")
-    return sorted(rows)
+def valid_crumb(text: str) -> bool:
+    """A crumb is a short token. Error pages ("Too Many Requests", HTML) are not."""
+    t = (text or "").strip()
+    return 0 < len(t) <= 32 and not any(c in t for c in "<> \n") and "Too Many" not in t
 
 
-def fetch_yahoo(client: httpx.Client, ticker: str, exchange: str, rng: str) -> tuple[list[list], str]:
-    symbol = ticker + YAHOO_SUFFIX.get(exchange, "")
-    last_err: Exception | None = None
-    for host in YAHOO_HOSTS:
-        try:
-            r = client.get(f"{host}/v8/finance/chart/{symbol}",
-                           params={"range": rng, "interval": "1d"})
-            r.raise_for_status()
-            return parse_yahoo(r.json())
-        except Exception as e:  # noqa: BLE001 - try the next host
-            last_err = e
-    raise RuntimeError(f"Yahoo: {last_err}")
-
-
-def fetch_stooq(client: httpx.Client, ticker: str, exchange: str) -> tuple[list[list], str]:
-    suffix = STOOQ_SUFFIX.get(exchange)
-    if not suffix:
-        raise RuntimeError(f"Stooq: no symbol mapping for {exchange or 'unknown exchange'}")
+def yahoo_session(client: httpx.Client) -> str:
+    """Get Yahoo's session cookie and crumb into the client. Returns the crumb, or "" if none."""
     try:
-        r = client.get(STOOQ_URL, params={"s": f"{ticker.lower()}{suffix}", "i": "d"})
-        r.raise_for_status()
-        return parse_stooq(r.text), "USD"
-    except Exception as e:  # noqa: BLE001
-        raise RuntimeError(f"Stooq: {e}") from e
+        client.get(YAHOO_COOKIE_URL)  # answers 404 but sets the session cookie
+    except httpx.HTTPError:
+        pass
+    for wait in [0, *BACKOFF]:
+        time.sleep(wait)
+        try:
+            r = client.get(YAHOO_CRUMB_URL)
+        except httpx.HTTPError:
+            continue
+        if r.status_code == 200 and valid_crumb(r.text):
+            return r.text.strip()
+        if r.status_code != 429:
+            break
+    return ""
+
+
+def fetch_yahoo(client: httpx.Client, ticker: str, exchange: str, rng: str,
+                crumb: str = "") -> tuple[list[list], str]:
+    symbol = ticker + YAHOO_SUFFIX.get(exchange, "")
+    params = {"range": rng, "interval": "1d", **({"crumb": crumb} if crumb else {})}
+    last_err = "no response"
+    for wait in [0, *BACKOFF]:
+        time.sleep(wait)
+        limited = False
+        for host in YAHOO_HOSTS:
+            try:
+                r = client.get(f"{host}/v8/finance/chart/{symbol}", params=params)
+            except httpx.HTTPError as e:
+                last_err = type(e).__name__
+                continue
+            if r.status_code == 429:
+                limited, last_err = True, "HTTP 429 Too Many Requests"
+                continue
+            if r.status_code != 200:
+                last_err = f"HTTP {r.status_code}"
+                continue
+            try:
+                return parse_yahoo(r.json())
+            except ValueError as e:
+                last_err = str(e)
+        if not limited:  # only a rate limit is worth waiting out
+            break
+    raise RuntimeError(f"Yahoo: {last_err}")
 
 
 # ── History and metrics ──────────────────────────────────────────────────────
@@ -221,6 +237,10 @@ def refresh(companies: list[dict], previous: dict | None, offline: bool,
     own_client = client is None and not offline
     if own_client:
         client = httpx.Client(headers=HEADERS, timeout=20, follow_redirects=True)
+    crumb = ""
+    if not offline:
+        crumb = yahoo_session(client)
+        status["yahoo_session"] = "ok" if crumb else "no crumb (trying without)"
     try:
         for t, info in listings(companies).items():
             old = old_tickers.get(t) or {}
@@ -232,16 +252,10 @@ def refresh(companies: list[dict], previous: dict | None, offline: bool,
                 errors = []
                 new: list[list] = []
                 try:
-                    new, currency = fetch_yahoo(client, t, info["exchange"], rng)
+                    new, currency = fetch_yahoo(client, t, info["exchange"], rng, crumb)
                     source = "Yahoo Finance"
                 except Exception as e:  # noqa: BLE001
                     errors.append(str(e))
-                    try:
-                        new, cur = fetch_stooq(client, t, info["exchange"])
-                        currency = currency or cur
-                        source = "Stooq"
-                    except Exception as e2:  # noqa: BLE001
-                        errors.append(str(e2))
                 if new:
                     history = merge_history(history, new)
                     status["fetched"] += 1
@@ -250,7 +264,7 @@ def refresh(companies: list[dict], previous: dict | None, offline: bool,
                     status["failed"].append({"ticker": t, "errors": errors[:2]})
                     if history:
                         status["kept_old"] += 1
-                time.sleep(0.3)  # be polite to free endpoints
+                time.sleep(PAUSE)  # be polite to free endpoints
 
             tickers[t] = {
                 **info,

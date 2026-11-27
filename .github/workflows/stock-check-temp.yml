@@ -1,0 +1,35 @@
+name: Temporary stock price check
+
+# Temporary: runs only the share-price fetch on this branch to confirm Yahoo
+# answers from a GitHub runner. Commits and deploys nothing. Removed before merge.
+
+on:
+  push:
+    branches: [claude/project-thread-swbfeb]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install httpx
+      - name: Fetch share prices
+        working-directory: backend
+        run: |
+          python - <<'PY'
+          import json
+          from pipeline import stocks
+          comps = json.load(open("../frontend/public/data/companies.json"))
+          comps = comps.get("companies", comps) if isinstance(comps, dict) else comps
+          old = json.load(open("../frontend/public/data/stocks.json"))
+          payload, status = stocks.refresh(comps, old, False)
+          print(json.dumps(status, indent=1))
+          for t, v in payload["tickers"].items():
+              print(t, v["source"], v["last_date"], v["last"])
+          PY

@@ -172,7 +172,7 @@ export default function Stocks() {
       )}
 
       <p className="text-xs text-gray-400">
-        Daily closing prices from Yahoo Finance, with Stooq as a fallback, refreshed once a day. Prices may be a
+        Daily closing prices from Yahoo Finance, refreshed once a day. Prices may be a
         day or more behind. Not investment advice.
       </p>
     </div>
