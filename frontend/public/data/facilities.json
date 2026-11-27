@@ -172,7 +172,7 @@
   "companies": [
    "fujitsu"
   ],
-  "program": "",
+  "program": "jp-quantum",
   "url": "https://rqc.riken.jp/",
   "source_url": "https://www.sg.riken.jp/riken-established-riken-centre-for-quantum-computing-on-april-1-2021.html",
   "confirmed": true
@@ -458,5 +458,380 @@
   "url": "https://iqm.tech/company/about-iqm/",
   "source_url": "https://www.hpcwire.com/off-the-wire/iqm-quantum-computers-opens-a-new-fabrication-facility-in-finland/",
   "confirmed": true
+ },
+ {
+  "slug": "hefei-national-lab",
+  "name": "Hefei National Laboratory",
+  "type": "government",
+  "open_access": false,
+  "operator": "Chinese Academy of Sciences and USTC",
+  "city": "Hefei",
+  "country": "China",
+  "lat": 31.84,
+  "lon": 117.27,
+  "focus": "China's national quantum information laboratory, the center of its state quantum program, with research teams from the University of Science and Technology of China.",
+  "platforms": [
+   "superconducting",
+   "photonic"
+  ],
+  "companies": [],
+  "program": "cn-quantum",
+  "url": "",
+  "source_url": "https://itif.org/publications/2024/09/09/how-innovative-is-china-in-quantum/",
+  "confirmed": true,
+  "note": "Reported funding ranges from about CNY 7 billion for construction to an unverified $10 billion."
+ },
+ {
+  "slug": "origin-quantum-hefei",
+  "name": "Origin Quantum headquarters",
+  "type": "company",
+  "open_access": false,
+  "operator": "Origin Quantum",
+  "city": "Hefei",
+  "country": "China",
+  "lat": 31.82,
+  "lon": 117.22,
+  "focus": "Builds the Origin Wukong superconducting quantum computers, in Hefei's cluster of more than 30 quantum companies.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [
+   "origin-quantum"
+  ],
+  "program": "cn-quantum",
+  "url": "",
+  "source_url": "https://en.people.cn/n3/2025/0508/c90000-20312145.html",
+  "confirmed": true
+ },
+ {
+  "slug": "baqis-beijing",
+  "name": "Beijing Academy of Quantum Information Sciences",
+  "type": "government",
+  "open_access": true,
+  "operator": "Beijing municipal government",
+  "city": "Beijing",
+  "country": "China",
+  "lat": 39.99,
+  "lon": 116.32,
+  "focus": "Runs the Quafu quantum cloud with superconducting chips of 136, 18 and 10 qubits, built with the CAS Institute of Physics and Tsinghua University.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "cn-quantum",
+  "url": "",
+  "source_url": "https://english.cas.cn/newsroom/cas_media/202305/t20230529_331086.shtml",
+  "confirmed": true
+ },
+ {
+  "slug": "aist-g-quat",
+  "name": "G-QuAT at AIST",
+  "type": "government",
+  "open_access": false,
+  "operator": "National Institute of Advanced Industrial Science and Technology",
+  "city": "Tsukuba",
+  "country": "Japan",
+  "lat": 36.06,
+  "lon": 140.13,
+  "focus": "Global Research and Development Center for Business by Quantum-AI technology: hybrid quantum-AI computing for companies, plus the Qufab qubit foundry.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "jp-quantum",
+  "url": "https://unit.aist.go.jp/g-quat/index_en.html",
+  "source_url": "https://unit.aist.go.jp/g-quat/index_en.html",
+  "confirmed": true
+ },
+ {
+  "slug": "kriss-daejeon",
+  "name": "KRISS superconducting quantum computer",
+  "type": "government",
+  "open_access": false,
+  "operator": "Korea Research Institute of Standards and Science",
+  "city": "Daejeon",
+  "country": "South Korea",
+  "lat": 36.39,
+  "lon": 127.37,
+  "focus": "Building Korea's own superconducting quantum computer: 20 qubits shown in January 2024, with 50 qubits targeted for 2026.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "kr-quantum",
+  "url": "",
+  "source_url": "https://www.asiae.co.kr/en/article/2024011108401562915",
+  "confirmed": true,
+  "note": "The source places the system in Daejeon only by saying the demo linked Daejeon and Seoul."
+ },
+ {
+  "slug": "academia-sinica",
+  "name": "Academia Sinica quantum computer",
+  "type": "government",
+  "open_access": false,
+  "operator": "Academia Sinica",
+  "city": "Taipei",
+  "country": "Taiwan",
+  "lat": 25.04,
+  "lon": 121.61,
+  "focus": "Taiwan's national academy unveiled a home-built 20-qubit superconducting quantum computer in January 2026.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "tw-quantum",
+  "url": "https://www.sinica.edu.tw/en",
+  "source_url": "https://www.sinica.edu.tw/en/news_content/55/3655",
+  "confirmed": true
+ },
+ {
+  "slug": "nnf-qcp-copenhagen",
+  "name": "Novo Nordisk Foundation Quantum Computing Programme",
+  "type": "university",
+  "open_access": false,
+  "operator": "Niels Bohr Institute, University of Copenhagen",
+  "city": "Copenhagen",
+  "country": "Denmark",
+  "lat": 55.7,
+  "lon": 12.57,
+  "focus": "A DKK 1.5 billion, 12-year program funded by the Novo Nordisk Foundation to build a full-scale quantum computer by 2034.",
+  "platforms": [],
+  "companies": [],
+  "program": "",
+  "url": "https://novonordiskfonden.dk/en/projects/novo-nordisk-foundation-quantum-computing-programme/",
+  "source_url": "https://novonordiskfonden.dk/en/projects/novo-nordisk-foundation-quantum-computing-programme/",
+  "confirmed": true
+ },
+ {
+  "slug": "vtt-espoo",
+  "name": "VTT quantum computers",
+  "type": "government",
+  "open_access": false,
+  "operator": "VTT Technical Research Centre of Finland",
+  "city": "Espoo",
+  "country": "Finland",
+  "lat": 60.19,
+  "lon": 24.81,
+  "focus": "Finland's national quantum computers, built with IQM; the 50-qubit system at VTT's Micronova site went live in March 2025.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [
+   "iqm"
+  ],
+  "program": "fi-quantum",
+  "url": "https://www.vttresearch.com/",
+  "source_url": "https://iqm.tech/press-releases/vtt-and-iqm-launch-first-50-qubit-quantum-computer-developed-in-europe/",
+  "confirmed": true
+ },
+ {
+  "slug": "ethz-psi-hub",
+  "name": "ETH Zurich–PSI Quantum Computing Hub",
+  "type": "university",
+  "open_access": false,
+  "operator": "ETH Zurich and Paul Scherrer Institute",
+  "city": "Villigen",
+  "country": "Switzerland",
+  "lat": 47.54,
+  "lon": 8.23,
+  "focus": "Joint center developing superconducting and trapped-ion quantum computers.",
+  "platforms": [
+   "superconducting",
+   "trapped_ion"
+  ],
+  "companies": [],
+  "program": "ch-sqi",
+  "url": "https://www.psi.ch/en/qchub",
+  "source_url": "https://www.psi.ch/en/qchub",
+  "confirmed": true
+ },
+ {
+  "slug": "iqcc-tel-aviv",
+  "name": "Israeli Quantum Computing Center",
+  "type": "company",
+  "open_access": true,
+  "operator": "Quantum Machines",
+  "city": "Tel Aviv",
+  "country": "Israel",
+  "lat": 32.11,
+  "lon": 34.8,
+  "focus": "At Tel Aviv University, funded by the Israel Innovation Authority: a 25-qubit superconducting processor, an ORCA photonic computer and NVIDIA DGX Quantum, open to researchers worldwide.",
+  "platforms": [
+   "superconducting",
+   "photonic"
+  ],
+  "companies": [
+   "quantum-machines",
+   "orca",
+   "nvidia"
+  ],
+  "program": "il-inqi",
+  "url": "https://www.quantum-machines.co/",
+  "source_url": "https://www.quantum-machines.co/press-release/quantum-machines-opens-the-israeli-quantum-computing-center/",
+  "confirmed": true
+ },
+ {
+  "slug": "bsc-euroqcs-spain",
+  "name": "Barcelona Supercomputing Center",
+  "type": "government",
+  "open_access": false,
+  "operator": "BSC-CNS",
+  "city": "Barcelona",
+  "country": "Spain",
+  "lat": 41.39,
+  "lon": 2.12,
+  "focus": "Hosts the EuroHPC quantum computer EuroQCS-Spain, a superconducting quantum annealer, alongside the MareNostrum supercomputer.",
+  "platforms": [
+   "superconducting",
+   "annealing"
+  ],
+  "companies": [],
+  "program": "es-qts",
+  "url": "https://www.bsc.es/",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true,
+  "note": "EuroHPC lists this system as still to be installed."
+ },
+ {
+  "slug": "cineca-sol",
+  "name": "CINECA",
+  "type": "government",
+  "open_access": false,
+  "operator": "CINECA consortium",
+  "city": "Bologna",
+  "country": "Italy",
+  "lat": 44.48,
+  "lon": 11.28,
+  "focus": "Will host SOL, a 140-qubit neutral-atom EuroHPC quantum computer.",
+  "platforms": [
+   "neutral_atom"
+  ],
+  "companies": [],
+  "program": "it-nsqt",
+  "url": "https://www.cineca.it/en",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true,
+  "note": "EuroHPC lists this system as still to be installed."
+ },
+ {
+  "slug": "lrz-euro-q-exa",
+  "name": "Leibniz Supercomputing Centre",
+  "type": "government",
+  "open_access": false,
+  "operator": "Bavarian Academy of Sciences",
+  "city": "Garching near Munich",
+  "country": "Germany",
+  "lat": 48.26,
+  "lon": 11.67,
+  "focus": "Hosts Euro-Q-Exa, a 54-qubit superconducting EuroHPC quantum computer with a 150-qubit upgrade expected by the end of 2026.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "de-action-concept",
+  "url": "https://www.lrz.de/",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true
+ },
+ {
+  "slug": "cea-tgcc",
+  "name": "CEA supercomputing center (TGCC)",
+  "type": "government",
+  "open_access": false,
+  "operator": "CEA, with GENCI",
+  "city": "Bruyères-le-Châtel",
+  "country": "France",
+  "lat": 48.59,
+  "lon": 2.19,
+  "focus": "Hosts two EuroHPC quantum computers: Ruby, 100 neutral-atom qubits, and Lucy, a 12-qubit photonic machine.",
+  "platforms": [
+   "neutral_atom",
+   "photonic"
+  ],
+  "companies": [],
+  "program": "fr-nqs",
+  "url": "",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true
+ },
+ {
+  "slug": "pcss-piast-q",
+  "name": "Poznań Supercomputing and Networking Center",
+  "type": "government",
+  "open_access": false,
+  "operator": "PCSS",
+  "city": "Poznań",
+  "country": "Poland",
+  "lat": 52.41,
+  "lon": 16.93,
+  "focus": "Hosts Piast-Q, a 20-qubit trapped-ion EuroHPC quantum computer.",
+  "platforms": [
+   "trapped_ion"
+  ],
+  "companies": [],
+  "program": "eu-quantum",
+  "url": "https://www.pcss.pl/en/",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true
+ },
+ {
+  "slug": "it4i-vlq",
+  "name": "IT4Innovations",
+  "type": "government",
+  "open_access": false,
+  "operator": "VSB – Technical University of Ostrava",
+  "city": "Ostrava",
+  "country": "Czechia",
+  "lat": 49.83,
+  "lon": 18.16,
+  "focus": "Hosts VLQ, a 24-qubit superconducting EuroHPC quantum computer.",
+  "platforms": [
+   "superconducting"
+  ],
+  "companies": [],
+  "program": "eu-quantum",
+  "url": "https://www.it4i.cz/en",
+  "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
+  "confirmed": true
+ },
+ {
+  "slug": "rqc-moscow",
+  "name": "Russian Quantum Center",
+  "type": "university",
+  "open_access": false,
+  "operator": "Russian Quantum Center",
+  "city": "Moscow",
+  "country": "Russia",
+  "lat": 55.7,
+  "lon": 37.36,
+  "focus": "Research center with 12 laboratories near Moscow and a main partner in Rosatom's roadmap, behind Russia's 50-qubit prototype quantum computers.",
+  "platforms": [
+   "trapped_ion"
+  ],
+  "companies": [],
+  "program": "ru-roadmap",
+  "url": "",
+  "source_url": "https://thequantuminsider.com/2025/01/02/russian-quantum-center-founder-details-navigating-challenges-in-quantum-computing-quest-offers-glimpse-at-future-roadmap/",
+  "confirmed": true,
+  "note": "Sources differ on the founding year (2010 or 2012); the pin marks Skolkovo, where it began."
+ },
+ {
+  "slug": "iisc-nqm-hub",
+  "name": "National Quantum Mission computing hub",
+  "type": "university",
+  "open_access": false,
+  "operator": "Indian Institute of Science",
+  "city": "Bengaluru",
+  "country": "India",
+  "lat": 13.02,
+  "lon": 77.57,
+  "focus": "Reported as the National Quantum Mission's thematic hub for quantum computing.",
+  "platforms": [],
+  "companies": [],
+  "program": "in-nqm",
+  "url": "",
+  "source_url": "https://thequantuminsider.com/2024/10/02/indias-national-quantum-mission-launches-four-thematic-hubs-to-encourage-development-in-quantum-technology-and-innovation/",
+  "confirmed": false,
+  "note": "Not yet confirmed from an official source."
  }
 ]

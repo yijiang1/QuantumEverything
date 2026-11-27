@@ -88,7 +88,7 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 ## Editing content
 
 - **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
-- **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action.
+- **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action. For a country with no official total (China, Japan), give the reported figure or range and set `funding_basis` to `estimate`; use `proposed` for a recommended figure not yet allocated. A `note` shows under the card.
 - **Facilities:** edit `backend/app/facilities/facilities.json`. `companies` holds company slugs and `program` a slug from `programs.json`. `lat` and `lon` place the pin on the map (town or campus level is fine). Set `confirmed` to false for an entry you haven't checked against a source.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.

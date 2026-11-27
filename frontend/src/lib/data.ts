@@ -89,6 +89,8 @@ export interface PolicyProgram {
   launched: string
   period: string
   funding: string
+  /** announced (default): a published budget; estimate: no official total, so a reported figure or range; proposed: recommended, not yet allocated */
+  funding_basis?: 'announced' | 'estimate' | 'proposed'
   funding_confirmed: boolean
   summary: string
   source_url: string

@@ -16,6 +16,11 @@ export const STAGES: { key: BillStage; label: string }[] = [
   { key: 'law', label: 'Became law' },
 ]
 
+const BASIS_LABEL: Record<string, string> = {
+  estimate: 'Estimate',
+  proposed: 'Proposed',
+}
+
 const KIND_LABEL: Record<string, string> = {
   law: 'Law',
   executive_order: 'Executive order',
@@ -77,13 +82,21 @@ function ProgramCard({ p, companies, facilities }: { p: PolicyProgram; companies
         <h3 className="font-medium text-gray-900 leading-snug">{p.name}</h3>
       </div>
       <div>
-        <div className="text-lg font-semibold text-gray-900">{p.funding || 'No total published'}</div>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-lg font-semibold text-gray-900">{p.funding || 'No total published'}</span>
+          {p.funding && p.funding_basis && p.funding_basis !== 'announced' && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+              {BASIS_LABEL[p.funding_basis]}
+            </span>
+          )}
+        </div>
         <div className="text-xs text-gray-500">
           {p.period}
           {!p.funding_confirmed && p.funding && <span className="text-amber-700"> · figure not confirmed from the source</span>}
         </div>
       </div>
       <p className="text-sm text-gray-600">{p.summary}</p>
+      {p.note && <p className="text-xs text-amber-700">{p.note}</p>}
       {local.length > 0 && (
         <div className="space-y-1">
           <div className="text-xs text-gray-400">Companies based here</div>
@@ -110,6 +123,38 @@ function ProgramCard({ p, companies, facilities }: { p: PolicyProgram; companies
       <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="mt-auto pt-1 text-xs text-teal-700 hover:text-teal-800 inline-flex items-center gap-1">
         Source: {p.source_name} <ExternalLink className="w-3 h-3" />
       </a>
+    </div>
+  )
+}
+
+const REGIONS: Record<string, string> = {
+  'United States': 'Americas', Canada: 'Americas',
+  'United Kingdom': 'Europe', 'European Union': 'Europe', Germany: 'Europe', France: 'Europe', Netherlands: 'Europe',
+  Denmark: 'Europe', Finland: 'Europe', Switzerland: 'Europe', Spain: 'Europe', Italy: 'Europe', Russia: 'Europe',
+}
+const regionOf = (p: PolicyProgram) => REGIONS[p.jurisdiction] ?? (p.jurisdiction === 'Israel' ? 'Middle East' : 'Asia-Pacific')
+
+function ProgramGrid({ programs, companies, facilities }: { programs: PolicyProgram[]; companies: CompanyRecord[]; facilities: Facility[] }) {
+  const regions = ['Americas', 'Europe', 'Asia-Pacific', 'Middle East'].filter(r => programs.some(p => regionOf(p) === r))
+  const [region, setRegion] = useState('')
+  const shown = programs.filter(p => !region || regionOf(p) === region)
+  return (
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-1.5" role="group" aria-label="Region">
+        {['', ...regions].map(r => (
+          <button
+            key={r || 'all'}
+            onClick={() => setRegion(r)}
+            aria-pressed={region === r}
+            className={`text-xs px-2.5 py-1 rounded-full border ${region === r ? 'bg-teal-600 border-teal-600 text-white' : 'bg-white border-gray-200 text-gray-600 hover:border-teal-300'}`}
+          >
+            {r || 'All'} <span className="opacity-70">{r ? programs.filter(p => regionOf(p) === r).length : programs.length}</span>
+          </button>
+        ))}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {shown.map(p => <ProgramCard key={p.slug} p={p} companies={companies} facilities={facilities} />)}
+      </div>
     </div>
   )
 }
@@ -217,11 +262,9 @@ export default function Policy() {
         <SectionTitle
           icon={Globe2}
           title="National programs"
-          note="Announced public funding in each program's own currency. Periods and what counts as funding differ, so compare with care."
+          note="Public funding in each program's own currency. Periods and what counts as funding differ, so compare with care. Estimate marks countries with no official total; Proposed marks a recommended figure not yet allocated."
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {policy.programs.map(p => <ProgramCard key={p.slug} p={p} companies={companies} facilities={facilities} />)}
-        </div>
+        <ProgramGrid programs={policy.programs} companies={companies} facilities={facilities} />
       </section>
 
       <section className="space-y-3">
