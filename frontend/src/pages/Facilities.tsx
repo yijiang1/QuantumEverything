@@ -150,7 +150,7 @@ export default function Facilities() {
         <div className="flex flex-wrap gap-x-4 gap-y-1" aria-label="Map legend">
           {(Object.keys(FACILITY_TYPES) as Facility['type'][]).map(t => <TypeLabel key={t} type={t} />)}
         </div>
-        <Suspense fallback={<div className="h-72 sm:h-96 rounded-xl border border-gray-200 bg-gray-100" />}>
+        <Suspense fallback={<div className="h-72 sm:h-96 xl:h-[32rem] rounded-xl border border-gray-200 bg-gray-100" />}>
           <FacilitiesMap facilities={shown} onSelect={select} />
         </Suspense>
         <p className="text-xs text-gray-400">Pins mark the town or campus, not the exact building. Click a pin to jump to its entry.</p>
@@ -165,7 +165,7 @@ export default function Facilities() {
         byCountry.map(([c, list]) => (
           <section key={c} className="space-y-2">
             <h2 className="text-sm font-semibold text-gray-900">{c} <span className="text-gray-400 font-normal">{list.length}</span></h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
               {list.map(f => <FacilityCard key={f.slug} f={f} names={names} programs={programs} />)}
             </div>
           </section>

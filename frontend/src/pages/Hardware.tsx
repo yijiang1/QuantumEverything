@@ -108,6 +108,36 @@ function QubitChart({ machines }: { machines: Machine[] }) {
 
 // ── Machines table ────────────────────────────────────────────────────────────
 
+/** Phone layout: one card per machine instead of a wide table. */
+function MachineCards({ machines, names }: { machines: Machine[]; names: Map<string, string> }) {
+  return (
+    <div className="divide-y divide-gray-100">
+      {machines.map(m => (
+        <div key={m.id} className="py-3 first:pt-0 space-y-1">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <div className="text-sm font-medium text-gray-900">{m.name}</div>
+              <div className="text-xs text-gray-500"><BuilderLink r={m} names={names} /> · {m.date ? formatMonthOrDay(m.date) : ''}</div>
+            </div>
+            <div className="text-right shrink-0">
+              <div className="text-sm font-semibold text-gray-900 tabular-nums">{m.qubits != null ? `${m.qubits.toLocaleString('en-US')} qubits` : '—'}</div>
+              {m.two_qubit_fidelity != null && <div className="text-xs text-gray-500 tabular-nums">{m.two_qubit_fidelity}% 2-qubit</div>}
+            </div>
+          </div>
+          <div className="text-xs text-gray-500">
+            {PLATFORM_LABELS[m.platform] ?? m.platform} · {STATUS_LABEL[m.status] ?? m.status}
+            {m.logical_qubits ? ` · ${m.logical_qubits} logical` : ''}
+          </div>
+          {m.highlight && <p className="text-xs text-gray-600">{m.highlight}</p>}
+          {m.fidelity_text && <p className="text-xs text-gray-500">Fidelity as stated: {m.fidelity_text}</p>}
+          {(!m.confirmed || m.note) && <p className="text-xs text-amber-700">{m.note ?? 'Not yet confirmed from the source page.'}</p>}
+          <div className="text-xs"><SourceLink url={m.source_url} name={m.source_name} /></div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 type SortKey = 'builder' | 'date' | 'qubits' | 'fidelity'
 
 export function MachineRows({ machines, names, showBuilder = true }: { machines: Machine[]; names: Map<string, string>; showBuilder?: boolean }) {
@@ -237,7 +267,8 @@ export default function Hardware() {
       <QubitChart machines={shown} />
 
       <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 overflow-x-auto">
-        <table className="w-full text-sm">
+        <div className="md:hidden"><MachineCards machines={shown} names={names} /></div>
+        <table className="w-full text-sm hidden md:table">
           <thead className="text-xs text-gray-500 border-b border-gray-200">
             <tr>
               <SortHeader k="builder" label="Builder" sort={sort} setSort={setSort} />

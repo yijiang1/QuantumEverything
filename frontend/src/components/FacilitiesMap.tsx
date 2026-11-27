@@ -67,7 +67,7 @@ export default function FacilitiesMap({ facilities, onSelect }: {
   return (
     <div
       ref={el}
-      className="h-72 sm:h-96 w-full rounded-xl border border-gray-200 overflow-hidden z-0 bg-gray-100"
+      className="h-72 sm:h-96 xl:h-[32rem] w-full rounded-xl border border-gray-200 overflow-hidden z-0 bg-gray-100"
       role="region"
       aria-label={`Map of ${facilities.length} facilities. The same facilities are listed below the map.`}
     />

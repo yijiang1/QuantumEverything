@@ -94,9 +94,9 @@ function Jobs({ data, names, company, setCompany }: {
       {data.jobs.length > 0 ? (
         <>
           <div className="flex flex-wrap items-center gap-2">
-            <div className="relative">
+            <div className="relative w-full sm:w-auto">
               <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
-              <input value={q} onChange={e => { setQ(e.target.value); setLimit(30) }} placeholder="Role, team or place" aria-label="Search jobs" className={`${selectClass} pl-8 w-52`} />
+              <input value={q} onChange={e => { setQ(e.target.value); setLimit(30) }} placeholder="Role, team or place" aria-label="Search jobs" className={`${selectClass} pl-8 w-full sm:w-52`} />
             </div>
             <select value={company} onChange={e => { setCompany(e.target.value); setLimit(30) }} className={selectClass} aria-label="Company">
               <option value="">All companies</option>
