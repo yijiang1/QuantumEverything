@@ -51,6 +51,7 @@ from app.companies.linking import news_for, papers_for  # noqa: E402
 from app.knowledge_base import paper_db  # noqa: E402
 from app.knowledge_base.arxiv_fetcher import QUANTUM_QUERIES, fetch_arxiv_papers  # noqa: E402
 from app.knowledge_base.openalex_fetcher import QUANTUM_KEYWORDS, fetch_openalex_papers  # noqa: E402
+from app.knowledge_base.relevance import looks_quantum  # noqa: E402
 import app.news.tracker as tracker  # noqa: E402
 from pipeline import curated, jobs, policy, stocks  # noqa: E402
 
@@ -125,6 +126,36 @@ def classify(status: dict) -> None:
     status["classified"] = classify_papers(limit=CLASSIFY_PER_RUN)
 
 
+def hide_off_topic(status: dict) -> None:
+    """Skip unscored papers that never name a quantum-technology term, or are dated ahead.
+
+    Earlier runs used looser searches, so papers.json can hold such papers; new
+    fetches are already filtered. Future dates are journal issues assigned months
+    ahead, which sorted above every real new paper. Scored papers are left to the
+    classifier.
+    """
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    hidden = {"off_topic": 0, "future_date": 0}
+    with paper_db._get_conn() as conn:
+        rows = conn.execute(
+            "SELECT id, title, abstract, date FROM papers "
+            "WHERE status != 'skipped' AND COALESCE(relevance_score, 0) <= 0"
+        ).fetchall()
+        for r in rows:
+            if not looks_quantum(r["title"], r["abstract"]):
+                reason = "off_topic"
+            elif (r["date"] or "")[:10] > today:
+                reason = "future_date"
+            else:
+                continue
+            conn.execute(
+                "UPDATE papers SET status = 'skipped', skip_reason = ? WHERE id = ?",
+                (reason, r["id"]),
+            )
+            hidden[reason] += 1
+    status["papers_hidden"] = hidden
+
+
 def export_papers() -> list[dict]:
     with paper_db._get_conn() as conn:
         rows = [dict(r) for r in conn.execute("SELECT * FROM papers").fetchall()]
@@ -174,6 +205,7 @@ async def refresh_news(existing: list[dict], offline: bool, status: dict) -> lis
         await tracker.refresh_news()
         now = time.time()
         fresh = [{**i, "fetched_at": now} for i in tracker.get_news(limit=10_000)]
+        status["news_sources"] = tracker.last_status
     status["news_fetched"] = len(fresh)
 
     merged: dict[str, dict] = {}
@@ -231,6 +263,8 @@ async def main(offline: bool) -> None:
 
     if not offline:
         await fetch_papers(status)
+    hide_off_topic(status)
+    if not offline:
         classify(status)
 
     papers = export_papers()
