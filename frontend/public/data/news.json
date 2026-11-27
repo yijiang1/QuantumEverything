@@ -1,1 +1,102 @@
-[]
+[
+ {
+  "title": "Diraq Finalizes $38 Million CHIPS R&D Award with U.S. Department of Commerce for Silicon Spin Quantum Chips",
+  "summary": "Diraq secured a $38 million CHIPS R&#038;D award from the U.S. Department of Commerce to advance silicon spin quantum chips, establishing U.S. facilities and aiming for over two million physical qubits by 2031. This funding will accelerate U.S.-based fabrication, testing, and research for their CMOS-compatible quantum processors.\nThe post Diraq Finalizes $38 Million CHIPS R&#038;D Award with U.S. Department of Commerce for Silicon Spin Quantum Chips appeared first on Quantum Computing Report.",
+  "link": "https://quantumcomputingreport.com/diraq-finalizes-38-million-chips-rd-award-with-u-s-department-of-commerce-for-silicon-spin-quantum-chips/",
+  "published": "Fri, 27 Nov 2026 11:09:19 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "e13e0eb7b0a5"
+ },
+ {
+  "title": "planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Lattice Facility",
+  "summary": "planqc, a German quantum computing company, has opened a new UK subsidiary in Cambridge with a multi-million euro investment. This facility will develop next-generation optical-lattice architectures for scaling neutral-atom processors.\nThe post planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Lattice Facility appeared first on Quantum Computing Report.",
+  "link": "https://quantumcomputingreport.com/planqc-expands-into-the-uk-with-double-digit-million-euro-cambridge-optical-lattice-facility/",
+  "published": "Fri, 27 Nov 2026 10:59:04 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "94d6bbc01005"
+ },
+ {
+  "title": "SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at Quantum Day Munich",
+  "summary": "SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack. They demonstrated a multi-constraint bin-packing logistics workflow optimized by planqc's quantum simulator, and SAP introduced Quantum Agents to manage business constraints and hybrid solvers.\nThe post SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at Quantum Day Munich appeared first on Quantum Computing Repor",
+  "link": "https://quantumcomputingreport.com/sap-and-planqc-demonstrate-enterprise-software-integration-and-quantum-agents-at-quantum-day-munich/",
+  "published": "Fri, 27 Nov 2026 10:49:59 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "01c7b16f8dfc"
+ },
+ {
+  "title": "Riverlane and Nature Research Intelligence Release 2026 Quantum Error Correction Report Highlighting Shift to Full-Stack Engineering",
+  "summary": "The Quantum Error Correction Report 2026 indicates a shift in the quantum computing industry from physics demonstrations to full-stack engineering of fault-tolerant machines. Key findings show significant growth in QEC research, patent activity, and public funding, with a notable trend towards high-rate quantum low-density parity-check (qLDPC) codes. The report highlights challenges in real-time decoding and cross-layer system integration as the industry moves towards large-scale fault tolerance",
+  "link": "https://quantumcomputingreport.com/riverlane-and-nature-research-intelligence-release-2026-quantum-error-correction-report-highlighting-shift-to-full-stack-engineering/",
+  "published": "Thu, 26 Nov 2026 05:14:05 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "c5d50d2eedbf"
+ },
+ {
+  "title": "Equal1, NVIDIA, and Dell Technologies Demonstrate Real-Time Hybrid Quantum-Classical Rack Integration at SC26",
+  "summary": "At SC26, Equal1, NVIDIA, and Dell Technologies showcased a real-time hybrid quantum-classical computing integration. They demonstrated Equal1's RacQ quantum computer integrated with Dell servers in a standard rack. This setup utilizes NVIDIA's software for gate tuning and low-latency communication, with Dell's QIO orchestrating hybrid execution.\nThe post Equal1, NVIDIA, and Dell Technologies Demonstrate Real-Time Hybrid Quantum-Classical Rack Integration at SC26 appeared first on Quantum Computi",
+  "link": "https://quantumcomputingreport.com/equal1-nvidia-and-dell-technologies-demonstrate-real-time-hybrid-quantum-classical-rack-integration-at-sc26/",
+  "published": "Thu, 26 Nov 2026 04:48:05 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "f45213589a36"
+ },
+ {
+  "title": "Classiq Updates Qmod Compiler to Synthesize 2048-Bit Shor’s Algorithm in Under 10 Seconds",
+  "summary": "Classiq has upgraded its Qmod quantum programming language and compiler, allowing the Shor's algorithm for a 2048-bit RSA-scale integer to compile in under ten seconds. The improvement addresses a bottleneck in quantum software by preserving classical control structures during synthesis and enabling symbolic indexing of quantum qubit arrays.\nThe post Classiq Updates Qmod Compiler to Synthesize 2048-Bit Shor’s Algorithm in Under 10 Seconds appeared first on Quantum Computing Report.",
+  "link": "https://quantumcomputingreport.com/classiq-updates-qmod-compiler-to-synthesize-2048-bit-shors-algorithm-in-under-10-seconds/",
+  "published": "Thu, 26 Nov 2026 04:13:57 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "a7748ecd57bb"
+ },
+ {
+  "title": "University of Sussex and Universal Quantum Demonstrate Laser-Free Axial-Mode Entangling Gate on Doppler-Cooled Trapped Ions",
+  "summary": "Researchers from the University of Sussex and Universal Quantum have demonstrated a high-fidelity, all-electronic two-qubit entangling gate using Doppler-cooled ytterbium ions. This laser-free gate operates on the axial stretch mode, achieving Bell-state fidelities above fault-tolerant thresholds without ground-state cooling. The innovation offers improved compatibility for quantum computing architectures by simplifying cooling processes and enhancing gate robustness.\nThe post University of Suss",
+  "link": "https://quantumcomputingreport.com/university-of-sussex-and-universal-quantum-demonstrate-laser-free-axial-mode-entangling-gate-on-doppler-cooled-trapped-ions/",
+  "published": "Thu, 26 Nov 2026 03:58:16 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "5c8584a45b7d"
+ },
+ {
+  "title": "Quantum eMotion Completes C$32 Million ($22.5 Million USD) Acquisition of Cybersecurity Provider Plurilock Security",
+  "summary": "Quantum eMotion Corp. has completed its C$31.98 million acquisition of Plurilock Security Inc., a Canadian cybersecurity company. This strategic move combines Quantum eMotion's quantum cryptography with Plurilock's cybersecurity operations, enhancing their offerings in critical services, identity management, and cloud security across North America and NATO. Plurilock's shares are set to delist from the TSX Venture Exchange around November 26.\nThe post Quantum eMotion Completes C$32 Million ($22.",
+  "link": "https://quantumcomputingreport.com/quantum-emotion-completes-c32-million-22-5-million-usd-acquisition-of-cybersecurity-provider-plurilock-security/",
+  "published": "Thu, 26 Nov 2026 03:53:09 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "0d90d32518ba"
+ },
+ {
+  "title": "European Commission Proposes EU Quantum Act and Sovereign Tech Equity Fund to Scale Industrial Capacity by 2030",
+  "summary": "The European Commission has proposed the EU Quantum Act, a legislative framework for quantum technologies, and a €50 billion Sovereign Tech Equity Fund to boost industrial capacity by 2030. This initiative aims to align national and EU programs, address the private growth-capital gap, and establish global industrial leadership in quantum technology. The proposal includes significant funding, research and innovation targets, infrastructure development, and supply chain security measures.\nThe post",
+  "link": "https://quantumcomputingreport.com/european-commission-proposes-eu-quantum-act-and-sovereign-tech-equity-fund-to-scale-industrial-capacity-by-2030/",
+  "published": "Thu, 26 Nov 2026 02:57:24 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "99885c7a30bd"
+ },
+ {
+  "title": "IQM Quantum Computers Sells 54-Qubit Radiance R3 System to South Korean Quantum-AI Infrastructure Firm QAI",
+  "summary": "IQM Quantum Computers sold a 54-qubit Radiance R3 system to QAI Co., Ltd. in South Korea for EUR 8-10 million. The quantum computer will be installed in QAI's AI data center in Seoul by the end of 2027, making it IQM's first deployment in a private commercial data center in Asia. QAI will offer Quantum-as-a-Service to various organizations, supporting South Korea's national quantum strategy.\nThe post IQM Quantum Computers Sells 54-Qubit Radiance R3 System to South Korean Quantum-AI Infrastructur",
+  "link": "https://quantumcomputingreport.com/iqm-quantum-computers-sells-54-qubit-radiance-r3-system-to-south-korean-quantum-ai-infrastructure-firm-qai/",
+  "published": "Thu, 26 Nov 2026 02:18:06 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795808976.6570985,
+  "id": "7e8211f068f5"
+ }
+]

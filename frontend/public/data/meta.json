@@ -1,39 +1,170 @@
 {
- "generated_at": "2026-11-27T05:00:34+00:00",
+ "generated_at": "2026-11-27T19:50:01+00:00",
  "counts": {
-  "papers": 0,
+  "papers": 219,
   "papers_scored": 0,
-  "news": 0,
+  "news": 10,
   "companies": 68,
   "public_companies": 18,
   "stocks_priced": 0,
   "policy_programs": 21,
   "policy_us_actions": 11,
-  "federal_register": 0,
+  "federal_register": 81,
   "facilities": 40,
   "deals": 79,
   "machines": 43,
   "events": 32,
   "learn": 70,
   "trend_points": 144,
-  "jobs": 0
+  "jobs": 631
  },
  "last_run": {
-  "news_fetched": 0,
+  "arxiv_new": 49,
+  "openalex_new": 170,
+  "classified": 0,
+  "classify_note": "ANTHROPIC_API_KEY not set; papers left unscored",
+  "news_fetched": 10,
   "stocks": {
    "fetched": 0,
    "kept_old": 0,
-   "failed": [],
+   "failed": [
+    {
+     "ticker": "AMZN",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/AMZN?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "ARQQ",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/ARQQ?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "QBTS",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/QBTS?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "GOOGL",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/GOOGL?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "HON",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/HON?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "HQ",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/HQ?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "IBM",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/IBM?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "INFQ",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/INFQ?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "INTC",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/INTC?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "IONQ",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/IONQ?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "IQMX",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/IQMX?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "MSFT",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/MSFT?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "NVDA",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/NVDA?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "OXIG",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/OXIG.L?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: no symbol mapping for LSE"
+     ]
+    },
+    {
+     "ticker": "QNT",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/QNT?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "QUBT",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/QUBT?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "RGTI",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/RGTI?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    },
+    {
+     "ticker": "XNDU",
+     "errors": [
+      "Yahoo: Client error '429 Too Many Requests' for url 'https://query2.finance.yahoo.com/v8/finance/chart/XNDU?range=2y&interval=1d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+      "Stooq: not a Stooq price CSV"
+     ]
+    }
+   ],
    "sources": {}
   },
   "policy": {
-   "bills_refreshed": 0,
+   "bills_refreshed": 6,
    "bills_failed": [],
-   "federal_register_fetched": null,
+   "federal_register_fetched": 81,
    "federal_register_error": null
   },
   "jobs": {
-   "boards_fetched": 0,
+   "boards_fetched": 13,
    "boards_failed": []
   }
  }

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T05:00:34+00:00",
+ "generated_at": "2026-11-27T19:49:53+00:00",
  "programs": [
   {
    "slug": "us-nqi",
@@ -394,7 +394,7 @@
    "bill_type": "s",
    "number": 3597,
    "title": "National Quantum Initiative Reauthorization Act of 2026",
-   "sponsor": "Sen. Todd Young [R-IN]",
+   "sponsor": "Sen. Young, Todd [R-IN]",
    "introduced": "2026-01-08",
    "latest_action": {
     "date": "2026-11-16",
@@ -403,6 +403,7 @@
    "stage": "reported",
    "summary": "Reauthorizes the National Quantum Initiative Act.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3597",
+   "checked": "2026-11-27",
    "companies": []
   },
   {
@@ -412,7 +413,7 @@
    "bill_type": "hr",
    "number": 8462,
    "title": "National Quantum Initiative Reauthorization Act",
-   "sponsor": "Rep. Randy K. Weber Sr. [R-TX-14]",
+   "sponsor": "Rep. Weber, Randy K. Sr. [R-TX-14]",
    "introduced": "2026-04-23",
    "latest_action": {
     "date": "2026-04-29",
@@ -421,6 +422,7 @@
    "stage": "reported",
    "summary": "House version of the reauthorization of the National Quantum Initiative Act.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8462",
+   "checked": "2026-11-27",
    "companies": []
   },
   {
@@ -430,15 +432,16 @@
    "bill_type": "s",
    "number": 579,
    "title": "Department of Energy Quantum Leadership Act of 2025",
-   "sponsor": "Sen. Richard J. Durbin [D-IL]",
+   "sponsor": "Sen. Durbin, Richard J. [D-IL]",
    "introduced": "2025-02-13",
    "latest_action": {
     "date": "2025-02-13",
-    "text": "Read twice and referred to the Committee on Energy and Natural Resources."
+    "text": "Read twice and referred to the Committee on Energy and Natural Resources. (text: CR S974-977)"
    },
    "stage": "committee",
    "summary": "Expands DOE's quantum research program and reauthorizes the National Quantum Information Science Research Centers through FY2030.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/579",
+   "checked": "2026-11-27",
    "companies": []
   },
   {
@@ -448,7 +451,7 @@
    "bill_type": "hr",
    "number": 3220,
    "title": "Quantum Sandbox for Near-Term Applications Act of 2025",
-   "sponsor": "Rep. Jay Obernolte [R-CA-23]",
+   "sponsor": "Rep. Obernolte, Jay [R-CA-23]",
    "introduced": "2025-05-06",
    "latest_action": {
     "date": "2025-05-06",
@@ -457,6 +460,7 @@
    "stage": "committee",
    "summary": "Sets up a public-private partnership to develop near-term quantum applications.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3220",
+   "checked": "2026-11-27",
    "companies": []
   },
   {
@@ -466,7 +470,7 @@
    "bill_type": "s",
    "number": 1344,
    "title": "Quantum Sandbox for Near-Term Applications Act of 2025",
-   "sponsor": "Sen. Marsha Blackburn [R-TN]",
+   "sponsor": "Sen. Blackburn, Marsha [R-TN]",
    "introduced": "2025-04-08",
    "latest_action": {
     "date": "2025-04-08",
@@ -475,6 +479,7 @@
    "stage": "committee",
    "summary": "Senate companion to H.R. 3220.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1344",
+   "checked": "2026-11-27",
    "companies": []
   },
   {
@@ -484,7 +489,7 @@
    "bill_type": "hr",
    "number": 9585,
    "title": "Advancing American Quantum Leadership Act of 2026",
-   "sponsor": "Rep. Michael Lawler [R-NY-17]",
+   "sponsor": "Rep. Lawler, Michael [R-NY-17]",
    "introduced": "2026-07-02",
    "latest_action": {
     "date": "2026-07-02",
@@ -493,8 +498,1184 @@
    "stage": "committee",
    "summary": "Adds quantum technology to the Export-Import Bank's program on China and transformational exports.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9585",
+   "checked": "2026-11-27",
    "companies": []
   }
  ],
- "federal_register": []
+ "federal_register": [
+  {
+   "id": "2026-23529",
+   "title": "Addressing Remote Access to Advanced Semiconductors",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "In this interim final rule (IFR), the Department of Commerce is establishing new rules to prevent certain foreign actors from leveraging advanced computing power based on U.S. technology to threaten U.S. national security and foreign policy interests. First, this rule establishes new restrictions which will apply for exports, reexports, or transfers (in-country) to overseas data centers that remotely supply significant volumes of compute to companies headquartered in Country Group D:5 or Macau. These restrictions will undermine the ability of companies headquartered in countries of concern from using U.S. advanced Super Intelligence (SI) semiconductors to train advanced SI models. Data centers, foreign foundries, and chip exporters are required to perform robust due diligence on their customers, including any direct or indirect ownership or control by persons in Country Group D:5 or Macau, as part of complying with this new control. The license requirement will not apply to commercial recommender systems, such as those used by online retailers or social media companies, as these functions do not pose the same national security threat. Second, in addition to the current license requirements for advanced semiconductors, a license will be required to export, reexport, or transfer (in-country) advanced semiconductors to Indonesia, Malaysia, Singapore, Thailand, or Brazil (and any additional country designated by the Secretary of Commerce, in consultation with the Secretary of State or the Assistant to the President for National Security Affairs)--countries which present a higher-than-normal risk of diversion. The license requirement for these five countries will not apply to semiconductors destined to companies headquartered in, or whose ultimate parent company is headquartered in, the United States, provided certain reporting requirements are met. Commerce will be actively monitoring for countries that tolerate evasion of this IFR and will consider a range of consequences for such countries, such as import restrictions, new license requirements on advanced semiconductor exports, downgrading the country's status in the U.S. export control regime, and Entity List designations and temporary export prohibitions for foreign persons involved in such activities. Third, this IFR amends the presumptions which front-end chips fabricators and chip packagers face when exporting advanced-node logic chips. These amendments reduce the number of pathways to overcome the presumptions for chip designers located in destinations which face a license requirement for SI chips. This change gives the U.S. government critical oversight over companies headquartered in certain countries that seek to leverage advanced semiconductor production capabilities in third countries. Finally, the IFR formally rescinds the regulations implementing the Biden-era AI Diffusion Rule. The AI Diffusion Rule has never been enforced. The regulatory changes in this rule formalize the rescission of the AI Diffusion Rule, which the Department of Commerce Bureau of Industry and Security (BIS) announced in May 2025.",
+   "date": "2026-11-19",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "91 FR 74970",
+   "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23529/addressing-remote-access-to-advanced-semiconductors",
+   "companies": []
+  },
+  {
+   "id": "2026-21884",
+   "title": "Critical Material List; Addition of Helium",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The United States (U.S.) Department of Energy (DOE) is issuing this notice to advise the public that DOE added helium to the DOE Critical Material List. This notice also provides the link to the assessment that forms the justification for including helium on the Critical Material List. Helium is non-substitutable for multiple critical energy functions, including: semiconductor manufacturing, leak testing natural gas infrastructure, and quantum computing, along with being essential to key medical/scientific applications. Demand for helium is also growing as it enables advanced semiconductor manufacturing, which is essential for SI and data center supply chains.",
+   "date": "2026-10-27",
+   "agencies": [
+    "Energy Department"
+   ],
+   "citation": "91 FR 67558",
+   "url": "https://www.federalregister.gov/documents/2026/10/27/2026-21884/critical-material-list-addition-of-helium",
+   "companies": []
+  },
+  {
+   "id": "2026-21786",
+   "title": "Outbound Investment Security Program Regulations",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "This proposed rule sets forth regulations that would implement Subtitle C of the Comprehensive Outbound Investment National Security Act, which is codified at Title VIII of the Defense Production Act. The proposed rule would require United States persons to provide notification to the U.S. Department of the Treasury regarding certain transactions involving foreign persons that are engaged in notifiable technologies; and prohibit United States persons from engaging in certain other transactions involving foreign persons that are engaged in prohibited technologies. Where consistent with Title VIII, the proposed rule incorporates certain definitions and concepts from the current regulations governing the Outbound Investment Security Program. The proposed rule also would add applicability dates to the regulations, such that those regulations would continue to apply to activities that occurred within the relevant timeframe.",
+   "date": "2026-10-26",
+   "agencies": [
+    "Treasury Department",
+    "Investment Security Office"
+   ],
+   "citation": "91 FR 67396",
+   "url": "https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations",
+   "companies": []
+  },
+  {
+   "id": "2026-21706",
+   "title": "Implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act for the Issuance of Stablecoins by Entities Subject to the Jurisdiction of the Office of the Comptroller of the Currency",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Office of the Comptroller of the Currency (OCC) is issuing regulations implementing the Guiding and Establishing National Innovation for U.S. Stablecoins Act regarding the issuance of payment stablecoins and certain related activities by entities subject to the OCC's jurisdiction.",
+   "date": "2026-10-23",
+   "agencies": [
+    "Treasury Department",
+    "Comptroller of the Currency"
+   ],
+   "citation": "91 FR 67000",
+   "url": "https://www.federalregister.gov/documents/2026/10/23/2026-21706/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the",
+   "companies": []
+  },
+  {
+   "id": "2026-20466",
+   "title": "Adviser and Regulated Fund Custody Rules; Crypto Custody Rules",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "The Securities and Exchange Commission (the \"Commission\" or the \"SEC\") is proposing new custody rules under the Investment Company Act of 1940 (the \"Investment Company Act\") and amendments to related reporting and recordkeeping requirements to address how regulated investment companies may custody crypto securities and similar investments, and amendments to the custody rule and related reporting and recordkeeping rules under the Investment Advisers Act of 1940 (the \"Advisers Act\") to address how registered investment advisers may custody client crypto funds and securities. We are also proposing to amend the current custody rules to modernize their requirements, to better address current industry practices and feedback, and to implement certain conforming amendments. We are also proposing amendments to the recordkeeping rules under the Investment Company Act and Advisers Act related to these proposed modernization amendments to the custody rules. Additionally, we are proposing to redesignate the custody rule under the Advisers Act and to make corresponding amendments to Form ADV and Form ADV-E for registered investment advisers to reflect the Advisers Act custody rule redesignation. We are also proposing amendments to Form ADV for registered investment advisers and Form N-CEN for regulated investment companies and to improve the quality of public disclosures made on these forms. We are also proposing to add new questions to Form ADV and Form N-CEN related to tokenized private funds and regulated investment company shares, respectively.",
+   "date": "2026-10-06",
+   "agencies": [
+    "Securities and Exchange Commission"
+   ],
+   "citation": "91 FR 63870",
+   "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20466/adviser-and-regulated-fund-custody-rules-crypto-custody-rules",
+   "companies": []
+  },
+  {
+   "id": "2026-20023",
+   "title": "Request for Information (RFI) Regarding the Digitization and Modernization of the National Technical Reports Library (NTRL) and the Leveraging of Scientific, Technical and Engineering Information (STEI) Stored in the NTRL",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Technical Information Service (NTIS) is seeking general information, feedback, suggestions, and experiential and technical insights from stakeholders to inform NTIS's goal of fully digitizing, modernizing, and enhancing the utility of the National Technical Reports Library (NTRL). NTIS has historically collected, indexed, abstracted, and stored U.S. Government-sponsored technical reports and made them available to the public through the NTRL. To further unlock the NTRL's intrinsic value, NTIS aims to digitize records that are part of the NTRL but currently exist only in physical formats. Leveraging the information archived within the NTRL may include making the data more accessible to AI and advanced computing applications. NTIS seeks to understand the opportunities, challenges, and priorities that may attend NTRL's efforts to modernize and make any resultant high-quality technical federal data sets publicly available.",
+   "date": "2026-09-30",
+   "agencies": [
+    "Commerce Department",
+    "National Technical Information Service"
+   ],
+   "citation": "91 FR 61835",
+   "url": "https://www.federalregister.gov/documents/2026/09/30/2026-20023/request-for-information-rfi-regarding-the-digitization-and-modernization-of-the-national-technical",
+   "companies": []
+  },
+  {
+   "id": "2026-15919",
+   "title": "Delegation of Authority to the Assistant Secretary for Emerging Threats",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2026-08-06",
+   "agencies": [
+    "State Department"
+   ],
+   "citation": "91 FR 50914",
+   "url": "https://www.federalregister.gov/documents/2026/08/06/2026-15919/delegation-of-authority-to-the-assistant-secretary-for-emerging-threats",
+   "companies": []
+  },
+  {
+   "id": "2026-15600",
+   "title": "Wireless Emergency Alerts; The Emergency Alert System; Modernization of the Nation's Alerting Systems",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "In this document, the Federal Communications Commission (\"FCC\" or \"Commission\") adopted a Further Notice of Proposed Rulemaking that seeks comment on proposed rules intended to make the Emergency Alert System (EAS) and Wireless Emergency Alerts (WEA) more resilient, flexible, and useful.",
+   "date": "2026-07-31",
+   "agencies": [
+    "Federal Communications Commission"
+   ],
+   "citation": "91 FR 48320",
+   "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15600/wireless-emergency-alerts-the-emergency-alert-system-modernization-of-the-nations-alerting-systems",
+   "companies": []
+  },
+  {
+   "id": "2026-14439",
+   "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Department of Homeland Security (DHS) is amending its regulations to change the admission period in the F, J, and I classifications from duration of status to an admission for a fixed time period, and additional changes to admission and extension requirements. This final rule will provide additional protections and oversight of these nonimmigrant categories and will allow DHS to better evaluate whether these nonimmigrants are maintaining status while temporarily in the United States. This final rule provides amendments to the proposed rule covering this topic that was published in the Federal Register on August 28, 2025.",
+   "date": "2026-07-17",
+   "agencies": [
+    "Homeland Security Department"
+   ],
+   "citation": "91 FR 44976",
+   "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+   "companies": []
+  },
+  {
+   "id": "2026-12910",
+   "title": "Ushering in the Next Frontier of Quantum Innovation",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2026-06-25",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "91 FR 38487",
+   "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12910/ushering-in-the-next-frontier-of-quantum-innovation",
+   "companies": []
+  },
+  {
+   "id": "2026-12909",
+   "title": "Securing the Nation Against Advanced Cryptographic Attacks",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2026-06-25",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "91 FR 38483",
+   "url": "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks",
+   "companies": []
+  },
+  {
+   "id": "2026-11521",
+   "title": "Office of Science Advisory Committee",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "This notice announces an open meeting of the Department of Energy (DOE) Office of Science Advisory Committee (SCAC). The Federal Advisory Committee Act requires that public notice of these meetings be announced in the Federal Register.",
+   "date": "2026-06-09",
+   "agencies": [
+    "Energy Department"
+   ],
+   "citation": "91 FR 34818",
+   "url": "https://www.federalregister.gov/documents/2026/06/09/2026-11521/office-of-science-advisory-committee",
+   "companies": []
+  },
+  {
+   "id": "2026-10698",
+   "title": "Proposal Review Panel for Physics; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Physics.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32109",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10698/proposal-review-panel-for-physics-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10697",
+   "title": "Proposal Review Panel for Computer and Network Systems; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Computer and Network Systems.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32120",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10697/proposal-review-panel-for-computer-and-network-systems-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10696",
+   "title": "Proposal Review Panel for Mathematical Sciences; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Mathematical Sciences.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32116",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10696/proposal-review-panel-for-mathematical-sciences-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10695",
+   "title": "Proposal Review Panel for Materials Research; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Materials Research.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32112",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10695/proposal-review-panel-for-materials-research-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10694",
+   "title": "Proposal Review Panel for Information and Intelligent Systems; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Information and Intelligent Systems.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32126",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10694/proposal-review-panel-for-information-and-intelligent-systems-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10691",
+   "title": "Proposal Review Panel for Computing & Communication Foundations; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Computing & Communication Foundations.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32113",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10691/proposal-review-panel-for-computing-and-communication-foundations-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10690",
+   "title": "Proposal Review Panel for Chemistry; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Chemistry.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32128",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10690/proposal-review-panel-for-chemistry-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-10684",
+   "title": "Proposal Review Panel for Graduate Education; Committee Renewal",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Science Foundation (NSF) is renewing the committee for Proposal Review Panel for Graduate Education.",
+   "date": "2026-05-29",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "91 FR 32115",
+   "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10684/proposal-review-panel-for-graduate-education-committee-renewal",
+   "companies": []
+  },
+  {
+   "id": "2026-08784",
+   "title": "Renewal of Department of War Federal Advisory Committee-U.S. Strategic Command Strategic Advisory Group",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The Department of War (DoW) is publishing this notice to announce that it is renewing the U.S. Strategic Command Strategic Advisory Group (USSTRATCOM SAG) as a discretionary Federal advisory committee.",
+   "date": "2026-05-06",
+   "agencies": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "citation": "91 FR 24534",
+   "url": "https://www.federalregister.gov/documents/2026/05/06/2026-08784/renewal-of-department-of-war-federal-advisory-committee-us-strategic-command-strategic-advisory",
+   "companies": []
+  },
+  {
+   "id": "2026-06271",
+   "title": "Whistleblower Incentives and Protections",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "FinCEN is proposing a rule to establish a whistleblower program that offers incentives and protections to encourage individuals who have information about potential violations of the Bank Secrecy Act (BSA), International Emergency Economic Powers Act (IEEPA), Trading With the Enemy Act of 1917 (TWEA), and Foreign Narcotics Kingpin Designation Act (Kingpin Act) to voluntarily report such information (the \"Whistleblower Program\"). The proposed rule would implement section 6314 of the Anti-Money Laundering Act of 2020 (AML Act) and the Anti-Money Laundering Whistleblower Improvement Act (AML Whistleblower Improvement Act), which were enacted into law as part of the National Defense Authorization Act for Fiscal Year 2021 (FY21 NDAA) and the Consolidated Appropriations Act of 2023, respectively. The Whistleblower Program will contribute to the U.S. government's efforts to safeguard the financial system from illicit use, promote national security, and combat money laundering, terrorist financing, proliferation financing, and related crimes. This notice of proposed rulemaking invites comments from the public regarding all aspects of the proposed rule, as well as comments in response to specific questions.",
+   "date": "2026-04-01",
+   "agencies": [
+    "Treasury Department",
+    "Financial Crimes Enforcement Network"
+   ],
+   "citation": "91 FR 16328",
+   "url": "https://www.federalregister.gov/documents/2026/04/01/2026-06271/whistleblower-incentives-and-protections",
+   "companies": []
+  },
+  {
+   "id": "2026-04488",
+   "title": "Office of Science Advisory Committee",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "This notice announces an open meeting of the Department of Energy (DOE) Office of Science Advisory Committee (SCAC). The Federal Advisory Committee Act requires that public notice of these meetings be announced in the Federal Register.",
+   "date": "2026-03-06",
+   "agencies": [
+    "Energy Department"
+   ],
+   "citation": "91 FR 11068",
+   "url": "https://www.federalregister.gov/documents/2026/03/06/2026-04488/office-of-science-advisory-committee",
+   "companies": []
+  },
+  {
+   "id": "2026-03244",
+   "title": "Granting of Requests for Early Termination of the Waiting Period Under the Premerger Notification Rules",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2026-02-19",
+   "agencies": [
+    "Federal Trade Commission"
+   ],
+   "citation": "91 FR 7985",
+   "url": "https://www.federalregister.gov/documents/2026/02/19/2026-03244/granting-of-requests-for-early-termination-of-the-waiting-period-under-the-premerger-notification",
+   "companies": []
+  },
+  {
+   "id": "2025-23853",
+   "title": "Weighted Selection Process for Registrants and Petitioners Seeking To File Cap-Subject H-1B Petitions",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The U.S. Department of Homeland Security (DHS) is amending its regulations governing the process by which U.S. Citizenship and Immigration Services (USCIS) selects H-1B registrations for unique beneficiaries for filing of H-1B cap-subject petitions (or H-1B petitions for any year in which the registration requirement is suspended). Through this rule, DHS is implementing a weighted selection process that will generally favor the allocation of H-1B visas to higher-skilled and higher-paid aliens, while maintaining the opportunity for employers to secure H-1B workers at all wage levels, to better serve the congressional intent for the H-1B program. This rule will be effective in time for the FY 2027 registration season.",
+   "date": "2025-12-29",
+   "agencies": [
+    "Homeland Security Department"
+   ],
+   "citation": "90 FR 60864",
+   "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23853/weighted-selection-process-for-registrants-and-petitioners-seeking-to-file-cap-subject-h-1b",
+   "companies": []
+  },
+  {
+   "id": "2025-23022",
+   "title": "Notice of 2022 Department of State Sanctions Actions Pursuant to the Executive Order Regarding Blocking Property With Respect to Specified Harmful Foreign Activities of the Government of the Russian Federation",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The Department of State is publishing the names of one or more persons that were placed on the Department of Treasury's List of Specially Designated Nationals and Blocked Persons (SDN List) administered by the Office of Foreign Asset Control (OFAC) in 2022 based on the Department of State's determination, in consultation with other departments, as appropriate, that one or more applicable legal criteria of the Executive Order regarding blocking property with respect to specified harmful foreign activities of the Government of the Russian Federation were satisfied. All property and interests in property subject to U.S. jurisdiction of these persons are blocked, and U.S. persons are generally prohibited from engaging in transactions with them.",
+   "date": "2025-12-17",
+   "agencies": [
+    "State Department"
+   ],
+   "citation": "90 FR 58725",
+   "url": "https://www.federalregister.gov/documents/2025/12/17/2025-23022/notice-of-2022-department-of-state-sanctions-actions-pursuant-to-the-executive-order-regarding",
+   "companies": []
+  },
+  {
+   "id": "2025-21741",
+   "title": "UChicago Argonne LLC et al.: Application(s) for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2025-12-02",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "90 FR 55301",
+   "url": "https://www.federalregister.gov/documents/2025/12/02/2025-21741/uchicago-argonne-llc-et-al-applications-for-duty-free-entry-of-scientific-instruments",
+   "companies": []
+  },
+  {
+   "id": "2025-21740",
+   "title": "University of Washington et al.: Notice of Decision on Applicationfor Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2025-12-02",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "90 FR 55302",
+   "url": "https://www.federalregister.gov/documents/2025/12/02/2025-21740/university-of-washington-et-al-notice-of-decision-on-applicationfor-duty-free-entry-of-scientific",
+   "companies": []
+  },
+  {
+   "id": "2025-21665",
+   "title": "Launching the Genesis Mission",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2025-11-28",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "90 FR 55035",
+   "url": "https://www.federalregister.gov/documents/2025/11/28/2025-21665/launching-the-genesis-mission",
+   "companies": []
+  },
+  {
+   "id": "2025-21150",
+   "title": "Notice of Request for Information; Accelerating the American Scientific Enterprise",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The Office of Science and Technology Policy (OSTP) requests input from all interested parties on Federal policy updates that aim to accelerate the American scientific enterprise, enable groundbreaking discoveries, and ensure that scientific progress and technological innovation benefit all Americans. Through this Request for Information (RFI), OSTP seeks input from academia; private sector organizations; industry groups; state, local, and tribal governments; and other stakeholders regarding priorities for strengthening the science and technology (S&T) ecosystem to support both the expansion of scientific knowledge and the mechanisms to transition these discoveries into the marketplace. This RFI will inform the formulation of Executive branch efforts to advance and maintain U.S. S&T leadership.",
+   "date": "2025-11-26",
+   "agencies": [
+    "Science and Technology Policy Office"
+   ],
+   "citation": "90 FR 54412",
+   "url": "https://www.federalregister.gov/documents/2025/11/26/2025-21150/notice-of-request-for-information-accelerating-the-american-scientific-enterprise",
+   "companies": []
+  },
+  {
+   "id": "2025-19658",
+   "title": "Review of Submarine Cable Landing License Rules and Procedures To Assess Evolving National Security, Law Enforcement, Foreign Policy, and Trade Policy Risks",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "In this document, the Federal Communications Commission (Commission or FCC) adopted a Report and Order that updates the Commission's submarine cable licensing process and adopts rule changes to protect critical U.S. communications infrastructure against foreign adversary threats, specifically those posed by an entity that is owned by, controlled by, or subject to the jurisdiction or direction of a foreign adversary. The Report and Order adopts a requirement for certain licensees to file an annual report about the licensee, submarine cable system ownership, and submarine cable operations. The Report and Order adopts a one-time information collection for licensees to identify, among other things, how many entities currently own or operate submarine line terminal equipment (SLTEs) on existing licensed cable systems. The Report and Order also requires applicants and licensees to certify that they have created, updated, and implemented a cybersecurity and physical security risk management plan and requires applicants to certify that the submarine cable system will not use equipment or services identified on the Commission's Covered List. With respect to the circuit capacity data collection, the Report and Order adopts streamlined rules and eliminates the requirement for licensees to file a cable operator report about the capacity on a cable and clarify the types of capacity that need to be reported on an annual basis.",
+   "date": "2025-10-27",
+   "agencies": [
+    "Federal Communications Commission"
+   ],
+   "citation": "90 FR 48648",
+   "url": "https://www.federalregister.gov/documents/2025/10/27/2025-19658/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security",
+   "companies": []
+  },
+  {
+   "id": "2025-19657",
+   "title": "Review of Submarine Cable Landing License Rules and Procedures To Assess Evolving National Security, Law Enforcement, Foreign Policy, and Trade Policy Risks",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "In this document, the Federal Communications Commission (Commission or FCC) adopted a Further Notice of Proposed Rulemaking (FNPRM) that proposes to prevent national security risks from current and potential foreign adversaries, while encouraging the use of trusted technology and measures to further accelerate the buildout of submarine cables. The FNPRM proposes a regulatory framework that would grant a blanket license to entities that own or operate Submarine Line Terminal Equipment (SLTEs), subject to certain exclusions and routine conditions, such as a tailored foreign adversary annual report. The FNPRM proposes new certifications and routine conditions related to foreign adversaries to further protect submarine cables from national security risks. The FNPRM also proposes an approach to expedite deployment of submarine cables that connect to the United States by presumptively excluding submarine cable applications from referral to the relevant Executive Branch agencies if they meet certain standards. The FNPRM seeks comment on requiring existing licensees to remove from their submarine cable system covered equipment or services, within a specified timeframe prior to the expiration of the license. The FNPRM also seeks comment on how the Commission can use its authority to incentivize and encourage the adoption and the use of trusted technologies produced and provided by the United States and its foreign allies.",
+   "date": "2025-10-27",
+   "agencies": [
+    "Federal Communications Commission"
+   ],
+   "citation": "90 FR 48557",
+   "url": "https://www.federalregister.gov/documents/2025/10/27/2025-19657/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security",
+   "companies": []
+  },
+  {
+   "id": "2025-19407",
+   "title": "Duke University et al.; Application(s) for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2025-10-03",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "90 FR 48024",
+   "url": "https://www.federalregister.gov/documents/2025/10/03/2025-19407/duke-university-et-al-applications-for-duty-free-entry-of-scientific-instruments",
+   "companies": []
+  },
+  {
+   "id": "2025-17893",
+   "title": "Additions and Revisions to the Entity List",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "In this rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 32 entities to the Entity List. These entries are listed on the Entity List under the destination of China, People's Republic of (China) (23), India, (1), Iran (1), Singapore (1), Taiwan (1), Turkey (3), and the United Arab Emirates (UAE) (2). These entities have been determined by the U.S. Government to be acting contrary to the national security or foreign policy interests of the United States. This final rule revises an entry by removing two addresses from one entity under the destination of Russia. Finally, this rule amends 27 existing entries on the Entity List to correct typographical errors under the following destinations: Belarus (3), China (11), Iran (1), Pakistan (1), Russia (9), and Turkey (2).",
+   "date": "2025-09-16",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "90 FR 44496",
+   "url": "https://www.federalregister.gov/documents/2025/09/16/2025-17893/additions-and-revisions-to-the-entity-list",
+   "companies": []
+  },
+  {
+   "id": "2025-11374",
+   "title": "Request for Information on Key Technology Focus Areas for the National Science Foundation's Directorate for Technology, Innovation and Partnerships",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The U.S. National Science Foundation seeks input from academia, non-profits, philanthropy, state and local government, venture capital, the private sector and any other interested parties to inform the agency's assessment and potential update of the Key Technology Focus Areas as described in Public Law 117-167 (Research and Development, Competition, and Innovation Act.)",
+   "date": "2025-06-20",
+   "agencies": [
+    "National Science Foundation"
+   ],
+   "citation": "90 FR 26330",
+   "url": "https://www.federalregister.gov/documents/2025/06/20/2025-11374/request-for-information-on-key-technology-focus-areas-for-the-national-science-foundations",
+   "companies": []
+  },
+  {
+   "id": "2025-10804",
+   "title": "Sustaining Select Efforts To Strengthen the Nation's Cybersecurity and Amending Executive Order 13694 and Executive Order 14144",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2025-06-11",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "90 FR 24723",
+   "url": "https://www.federalregister.gov/documents/2025/06/11/2025-10804/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694",
+   "companies": []
+  },
+  {
+   "id": "2025-10399",
+   "title": "Information Security and Privacy Advisory Board",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "National Institute of Standards and Technology (NIST)'s Information Security and Privacy Advisory Board (ISPAB) will hold an open meeting on Wednesday, July 16, 2025, from 10:00 a.m. until 4:30 p.m., Eastern Time and Thursday, July 17, 2025, from 10:00 a.m. until 4:30 p.m., Eastern Time.",
+   "date": "2025-06-09",
+   "agencies": [
+    "Commerce Department",
+    "National Institute of Standards and Technology"
+   ],
+   "citation": "90 FR 24270",
+   "url": "https://www.federalregister.gov/documents/2025/06/09/2025-10399/information-security-and-privacy-advisory-board",
+   "companies": []
+  },
+  {
+   "id": "2025-09798",
+   "title": "Ordering the Reform of the Nuclear Regulatory Commission",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2025-05-29",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "90 FR 22587",
+   "url": "https://www.federalregister.gov/documents/2025/05/29/2025-09798/ordering-the-reform-of-the-nuclear-regulatory-commission",
+   "companies": []
+  },
+  {
+   "id": "2025-08867",
+   "title": "Harvard University et al.; Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2025-05-19",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "90 FR 21284",
+   "url": "https://www.federalregister.gov/documents/2025/05/19/2025-08867/harvard-university-et-al-notice-of-decision-on-application-for-duty-free-entry-of-scientific",
+   "companies": []
+  },
+  {
+   "id": "2025-06169",
+   "title": "Harvard University, et al.; Application(s) for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2025-04-11",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "90 FR 15438",
+   "url": "https://www.federalregister.gov/documents/2025/04/11/2025-06169/harvard-university-et-al-applications-for-duty-free-entry-of-scientific-instruments",
+   "companies": []
+  },
+  {
+   "id": "2025-05426",
+   "title": "Additions and Modifications to the Entity List",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "In this final rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 70 entities to the Entity List, under the destinations of China, People's Republic of (China) (42); Iran (2); Pakistan (19); South Africa (3); and the United Arab Emirates (UAE) (4). These entities have been determined by the U.S. Government to be acting contrary to the national security or foreign policy interests of the United States. This final rule also modifies four existing entries on the Entity List, consisting of revisions to one entry under France, one entry under Iran, one entry under Senegal, and one entry under the United Kingdom.",
+   "date": "2025-03-28",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "90 FR 14032",
+   "url": "https://www.federalregister.gov/documents/2025/03/28/2025-05426/additions-and-modifications-to-the-entity-list",
+   "companies": []
+  },
+  {
+   "id": "2025-02121",
+   "title": "President's Council of Advisors on Science and Technology",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2025-01-31",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "90 FR 8643",
+   "url": "https://www.federalregister.gov/documents/2025/01/31/2025-02121/presidents-council-of-advisors-on-science-and-technology",
+   "companies": []
+  },
+  {
+   "id": "2025-01470",
+   "title": "Strengthening and Promoting Innovation in the Nation's Cybersecurity",
+   "type": "Presidential Document",
+   "subtype": "Executive Order",
+   "abstract": "",
+   "date": "2025-01-17",
+   "agencies": [
+    "Executive Office of the President"
+   ],
+   "citation": "90 FR 6755",
+   "url": "https://www.federalregister.gov/documents/2025/01/17/2025-01470/strengthening-and-promoting-innovation-in-the-nations-cybersecurity",
+   "companies": []
+  },
+  {
+   "id": "2025-00636",
+   "title": "Framework for Artificial Intelligence Diffusion",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "With this interim final rule, the Commerce Department's Bureau of Industry and Security (BIS) revises the Export Administration Regulations' (EAR) controls on advanced computing integrated circuits (ICs) and adds a new control on artificial intelligence (AI) model weights for certain advanced closed-weight dual-use AI models. In conjunction with the expansion of these controls, which BIS has determined are necessary to protect U.S. national security and foreign policy interests, BIS is adding new license exceptions and updating the Data Center Validated End User authorization to facilitate the export, reexport, and transfer (in-country) of advanced computing (ICs) to end users in destinations that do not raise national security or foreign policy concerns. Together, these changes will cultivate secure ecosystems for the responsible diffusion and use of AI and advanced computing ICs.",
+   "date": "2025-01-15",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "90 FR 4544",
+   "url": "https://www.federalregister.gov/documents/2025/01/15/2025-00636/framework-for-artificial-intelligence-diffusion",
+   "companies": []
+  },
+  {
+   "id": "2024-31621",
+   "title": "Common Application, Waivers, and Alternative Requirements for Community Development Block Grant Disaster Recovery Grantees: The Universal Notice",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "This notice contains a preamble and the Community Development Block Grant Disaster Recovery Universal Notice: Waivers and Alternative Requirements (the \"Universal Notice\"). The Universal Notice describes the processes, procedures, timelines, waivers, and alternative requirements that U.S. Department of Housing and Urban Development (HUD) intends to implement with each allocation of Community Development Block Grant Disaster Recovery (CDBG-DR) funding after a qualifying presidential disaster declaration. Specifically, following the appropriation of CDBG-DR funds for qualifying disasters, HUD will publish an Allocation Announcement Notice in the Federal Register that incorporates, via cross-reference, the waivers and alternative requirements provided in the Universal Notice, as appropriate, along with any other new requirements imposed by the specific appropriation. This notice also describes the grant award process, pre-award certification submissions, criteria for Action Plan approval, and eligible disaster recovery activities to streamline post-disaster processes for future grantees. By publishing the Universal Notice, HUD intends to provide grantees and the public with increased transparency, consistency, and more timely access to CDBG-DR funds, helping to minimize program delays and accelerate recovery.",
+   "date": "2025-01-08",
+   "agencies": [
+    "Housing and Urban Development Department"
+   ],
+   "citation": "90 FR 1754",
+   "url": "https://www.federalregister.gov/documents/2025/01/08/2024-31621/common-application-waivers-and-alternative-requirements-for-community-development-block-grant",
+   "companies": []
+  },
+  {
+   "id": "2024-31486",
+   "title": "Preventing Access to U.S. Sensitive Personal Data and Government-Related Data by Countries of Concern or Covered Persons",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Department of Justice is issuing a final rule to implement Executive Order 14117 of February 28, 2024 (Preventing Access to Americans' Bulk Sensitive Personal Data and United States Government- Related Data by Countries of Concern), by prohibiting and restricting certain data transactions with certain countries or persons.",
+   "date": "2025-01-08",
+   "agencies": [
+    "Justice Department"
+   ],
+   "citation": "90 FR 1636",
+   "url": "https://www.federalregister.gov/documents/2025/01/08/2024-31486/preventing-access-to-us-sensitive-personal-data-and-government-related-data-by-countries-of-concern",
+   "companies": []
+  },
+  {
+   "id": "2024-30983",
+   "title": "HIPAA Security Rule To Strengthen the Cybersecurity of Electronic Protected Health Information",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "The Department of Health and Human Services (HHS or \"Department\") is issuing this notice of proposed rulemaking (NPRM) to solicit comment on its proposal to modify the Security Standards for the Protection of Electronic Protected Health Information (\"Security Rule\") under the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and the Health Information Technology for Economic and Clinical Health Act of 2009 (HITECH Act). The proposed modifications would revise existing standards to better protect the confidentiality, integrity, and availability of electronic protected health information (ePHI). The proposals in this NPRM would increase the cybersecurity for ePHI by revising the Security Rule to address: changes in the environment in which health care is provided; significant increases in breaches and cyberattacks; common deficiencies the Office for Civil Rights has observed in investigations into Security Rule compliance by covered entities and their business associates (collectively, \"regulated entities\"); other cybersecurity guidelines, best practices, methodologies, procedures, and processes; and court decisions that affect enforcement of the Security Rule.",
+   "date": "2025-01-06",
+   "agencies": [
+    "Health and Human Services Department",
+    "Office of the Secretary"
+   ],
+   "citation": "90 FR 898",
+   "url": "https://www.federalregister.gov/documents/2025/01/06/2024-30983/hipaa-security-rule-to-strengthen-the-cybersecurity-of-electronic-protected-health-information",
+   "companies": []
+  },
+  {
+   "id": "2024-28335",
+   "title": "Securing the Information and Communications Technology and Services Supply Chain",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "On January 19, 2021, the Department of Commerce (Department) issued an interim final rule establishing procedures for its review of transactions involving information and communications technology and services (ICTS) designed, developed, manufactured, or supplied by persons owned by, controlled by, or subject to the jurisdiction or direction of a foreign adversary that may pose undue or unacceptable risk to the United States or U.S. persons. In the interim final rule, the Department solicited public comments and committed to promulgating a final rule. This final rule responds to public comments on the interim final rule and finalizes the practices guiding review of ICTS Transactions, amending and, in some cases, removing terms or concepts which experience has shown to be unnecessary, inefficient, or ineffective.",
+   "date": "2024-12-06",
+   "agencies": [
+    "Commerce Department"
+   ],
+   "citation": "89 FR 96872",
+   "url": "https://www.federalregister.gov/documents/2024/12/06/2024-28335/securing-the-information-and-communications-technology-and-services-supply-chain",
+   "companies": []
+  },
+  {
+   "id": "2024-25422",
+   "title": "Provisions Pertaining to U.S. Investments in Certain National Security Technologies and Products in Countries of Concern",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "This final rule sets forth the regulations that implement Executive Order 14105 of August 9, 2023, \"Addressing United States Investments in Certain National Security Technologies and Products in Countries of Concern,\" which declares a national emergency to address the threat to the United States posed by countries of concern that seek to develop and exploit sensitive technologies or products critical for military, intelligence, surveillance, or cyber-enabled capabilities. The final rule requires United States persons to provide notification to the U.S. Department of the Treasury regarding certain transactions involving persons of a country of concern that are engaged in activities involving certain national security technologies and products that may contribute to the threat to the national security of the United States; and prohibits United States persons from engaging in certain other transactions involving persons of a country of concern that are engaged in activities involving certain other national security technologies and products that pose a particularly acute national security threat to the United States.",
+   "date": "2024-11-15",
+   "agencies": [
+    "Treasury Department",
+    "Investment Security Office"
+   ],
+   "citation": "89 FR 90398",
+   "url": "https://www.federalregister.gov/documents/2024/11/15/2024-25422/provisions-pertaining-to-us-investments-in-certain-national-security-technologies-and-products-in",
+   "companies": []
+  },
+  {
+   "id": "2024-23817",
+   "title": "Department of Energy Acquisition Regulation (DEAR)",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Department of Energy (DOE or the Department) is publishing a final rule comprehensively revising its Acquisition Regulation in order to update and streamline the policies, procedures, provisions and clauses that are applicable to the Department's contracts. This rulemaking updates or eliminates coverage that is obsolete or that unnecessarily duplicates the Federal Acquisition Regulation (FAR) and retains only that coverage which either implements or supplements the FAR for the award and administration of the DOE's contracts. The rule adds several new clauses and amends several existing clauses in order to promote more uniform application of the DOE's contract award and administration policies.",
+   "date": "2024-11-13",
+   "agencies": [
+    "Energy Department"
+   ],
+   "citation": "89 FR 89720",
+   "url": "https://www.federalregister.gov/documents/2024/11/13/2024-23817/department-of-energy-acquisition-regulation-dear",
+   "companies": []
+  },
+  {
+   "id": "2024-24582",
+   "title": "Provisions Pertaining to Preventing Access to U.S. Sensitive Personal Data and Government-Related Data by Countries of Concern or Covered Persons",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "The Department of Justice proposes a rule to implement Executive Order 14117 of February 28, 2024 (Preventing Access to Americans' Bulk Sensitive Personal Data and United States Government- Related Data by Countries of Concern), by prohibiting and restricting certain data transactions with certain countries or persons.",
+   "date": "2024-10-29",
+   "agencies": [
+    "Justice Department"
+   ],
+   "citation": "89 FR 86116",
+   "url": "https://www.federalregister.gov/documents/2024/10/29/2024-24582/provisions-pertaining-to-preventing-access-to-us-sensitive-personal-data-and-government-related-data",
+   "companies": []
+  },
+  {
+   "id": "2024-24863",
+   "title": "National Security Telecommunications Advisory Committee",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "CISA is publishing this notice to announce the President's National Security Telecommunications Advisory Committee (NSTAC) Meeting on November 14, 2024, in Washington DC. This meeting will be partially closed to the public. The public can access the open portion of the meeting via teleconference.",
+   "date": "2024-10-25",
+   "agencies": [
+    "Homeland Security Department"
+   ],
+   "citation": "89 FR 85227",
+   "url": "https://www.federalregister.gov/documents/2024/10/25/2024-24863/national-security-telecommunications-advisory-committee",
+   "companies": []
+  },
+  {
+   "id": "2024-23881",
+   "title": "Minimum Standards for Driver's Licenses and Identification Cards Acceptable by Federal Agencies for Official Purposes; Waiver for Mobile Driver's Licenses",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Department of Homeland Security (DHS) is amending the REAL ID regulations to waive, on a temporary and State-by-State basis, the regulatory requirement that mobile or digital driver's licenses or identification cards (collectively \"mobile driver's licenses\" or \"mDLs\") must be compliant with REAL ID requirements to be accepted by Federal agencies for official purposes, as defined by the REAL ID Act, when full enforcement of the REAL ID Act and regulations begins on May 7, 2025.",
+   "date": "2024-10-25",
+   "agencies": [
+    "Homeland Security Department"
+   ],
+   "citation": "89 FR 85340",
+   "url": "https://www.federalregister.gov/documents/2024/10/25/2024-23881/minimum-standards-for-drivers-licenses-and-identification-cards-acceptable-by-federal-agencies-for",
+   "companies": []
+  },
+  {
+   "id": "2024-23868",
+   "title": "Information Systems Technical Advisory Committee; Notice of Partially Closed Meeting",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2024-10-16",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "89 FR 83457",
+   "url": "https://www.federalregister.gov/documents/2024/10/16/2024-23868/information-systems-technical-advisory-committee-notice-of-partially-closed-meeting",
+   "companies": []
+  },
+  {
+   "id": "2024-22905",
+   "title": "Cybersecurity Maturity Model Certification (CMMC) Program",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "With this final rule, DoD establishes the Cybersecurity Maturity Model Certification (CMMC) Program in order to verify contractors have implemented required security measures necessary to safeguard Federal Contract Information (FCI) and Controlled Unclassified Information (CUI). The mechanisms discussed in this rule will allow the Department to confirm a defense contractor or subcontractor has implemented the security requirements for a specified CMMC level and is maintaining that status (meaning level and assessment type) across the contract period of performance. This rule will be updated as needed, using the appropriate rulemaking process, to address evolving cybersecurity standards, requirements, threats, and other relevant changes.",
+   "date": "2024-10-15",
+   "agencies": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "citation": "89 FR 83092",
+   "url": "https://www.federalregister.gov/documents/2024/10/15/2024-22905/cybersecurity-maturity-model-certification-cmmc-program",
+   "companies": []
+  },
+  {
+   "id": "2024-23384",
+   "title": "Visiting Committee on Advanced Technology",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "National Institute of Standards and Technology (NIST) Visiting Committee on Advanced Technology (VCAT or Committee) will meet on Tuesday, October 29, 2024, from 9:00 a.m. to 5:00 p.m. Eastern Time and Wednesday, October 30, 2024, from 9:00 a.m. to 11:00 a.m. Eastern Time.",
+   "date": "2024-10-09",
+   "agencies": [
+    "Commerce Department",
+    "National Institute of Standards and Technology"
+   ],
+   "citation": "89 FR 81889",
+   "url": "https://www.federalregister.gov/documents/2024/10/09/2024-23384/visiting-committee-on-advanced-technology",
+   "companies": []
+  },
+  {
+   "id": "2024-22229",
+   "title": "Notice of Funding Availability-Covered Technology Categories-Equipment Financing",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The OSC is announcing the availability of up to $984,000,000 aggregate funding for direct loans for equipment financing for technologies in the designated covered technology categories.",
+   "date": "2024-09-27",
+   "agencies": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "citation": "89 FR 79271",
+   "url": "https://www.federalregister.gov/documents/2024/09/27/2024-22229/notice-of-funding-availability-covered-technology-categories-equipment-financing",
+   "companies": []
+  },
+  {
+   "id": "2024-21107",
+   "title": "State University of New York at Stony Brook University, et al.; Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2024-09-17",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "89 FR 76086",
+   "url": "https://www.federalregister.gov/documents/2024/09/17/2024-21107/state-university-of-new-york-at-stony-brook-university-et-al-notice-of-decision-on-application-for",
+   "companies": []
+  },
+  {
+   "id": "2024-20175",
+   "title": "Submission for Review: 3206-0246, CyberCorps®: Scholarship for Service (SFS) Registration System",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "Office of Personnel Management (OPM) Human Resources Solutions offers the general public and other Federal agencies the opportunity to comment on the extension with change of a currently approved information collection request (ICR): 3206-0246, CyberCorps[supreg]: Scholarship for Service (SFS) Registration system.",
+   "date": "2024-09-09",
+   "agencies": [
+    "Personnel Management Office"
+   ],
+   "citation": "89 FR 73130",
+   "url": "https://www.federalregister.gov/documents/2024/09/09/2024-20175/submission-for-review-3206-0246-cybercorps-scholarship-for-service-sfs-registration-system",
+   "companies": []
+  },
+  {
+   "id": "2024-19633",
+   "title": "Commerce Control List Additions and Revisions; Implementation of Controls on Advanced Technologies Consistent With Controls Implemented by International Partners",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "The Bureau of Industry and Security (BIS) is implementing export controls on several semiconductor, quantum, and additive manufacturing items for national security and foreign policy reasons. This rule adds new Export Control Classification Numbers (ECCNs) to the Commerce Control List, revises existing ECCNs, adds a new license exception to authorize exports and reexports to and by countries that have implemented equivalent technical controls for these newly added items, and adds two new worldwide license requirements to the national security and regional stability controls in the Export Administration Regulations (EAR). These controls are the product of extensive discussions with international partners.",
+   "date": "2024-09-06",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "89 FR 72926",
+   "url": "https://www.federalregister.gov/documents/2024/09/06/2024-19633/commerce-control-list-additions-and-revisions-implementation-of-controls-on-advanced-technologies",
+   "companies": []
+  },
+  {
+   "id": "2024-19260",
+   "title": "Financial Crimes Enforcement Network: Anti-Money Laundering/Countering the Financing of Terrorism Program and Suspicious Activity Report Filing Requirements for Registered Investment Advisers and Exempt Reporting Advisers",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "FinCEN, a bureau of the U.S. Department of the Treasury (Treasury), is issuing a final rule to include certain investment advisers in the definition of \"financial institution\" under the Bank Secrecy Act (BSA), prescribe minimum standards for anti-money laundering/countering the financing of terrorism (AML/CFT) programs to be established by certain investment advisers, require certain investment advisers to report suspicious activity to FinCEN pursuant to the BSA, and make several other related changes to FinCEN regulations. These regulations will apply to certain investment advisers who may be at risk for misuse by money launderers, terrorist financers, or other actors who seek access to the U.S. financial system for illicit purposes and who threaten U.S. national security.",
+   "date": "2024-09-04",
+   "agencies": [
+    "Treasury Department",
+    "Financial Crimes Enforcement Network"
+   ],
+   "citation": "89 FR 72156",
+   "url": "https://www.federalregister.gov/documents/2024/09/04/2024-19260/financial-crimes-enforcement-network-anti-money-launderingcountering-the-financing-of-terrorism",
+   "companies": []
+  },
+  {
+   "id": "2024-17956",
+   "title": "Announcing Issuance of Federal Information Processing Standards (FIPS) FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard, FIPS 204, Module-Lattice-Based Digital Signature Standard, and FIPS 205, Stateless Hash-Based Digital Signature Standard",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "This notice announces the Secretary of Commerce's approval of three Federal Information Processing Standards (FIPS): FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard; FIPS 204, Module-Lattice-Based Digital Signature Standard; and FIPS 205, Stateless Hash-Based Digital Signature Standard. These standards specify key establishment and digital signature schemes that are designed to resist future attacks by quantum computers, which threaten the security of current standards. The three algorithms specified in these standards are each derived from different submissions in the NIST post-quantum cryptography standardization project (see https:// csrc.nist.gov/pqc-standardization).",
+   "date": "2024-08-14",
+   "agencies": [
+    "Commerce Department",
+    "National Institute of Standards and Technology"
+   ],
+   "citation": "89 FR 66052",
+   "url": "https://www.federalregister.gov/documents/2024/08/14/2024-17956/announcing-issuance-of-federal-information-processing-standards-fips-fips-203-module-lattice-based",
+   "companies": []
+  },
+  {
+   "id": "2024-17756",
+   "title": "State University of New York at Stony Brook University, et al.; Application(s)for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2024-08-09",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "89 FR 65323",
+   "url": "https://www.federalregister.gov/documents/2024/08/09/2024-17756/state-university-of-new-york-at-stony-brook-university-et-al-applicationsfor-duty-free-entry-of",
+   "companies": []
+  },
+  {
+   "id": "2024-16180",
+   "title": "Information Request on Financing Support for Covered Technology Categories-Specific to Lenders",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The OSC is seeking information from lenders and other private credit investors regarding capital needs for industries related to the Covered Technology Categories to inform the design and implementation of the DoD Loan Program Office.",
+   "date": "2024-07-24",
+   "agencies": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "citation": "89 FR 59903",
+   "url": "https://www.federalregister.gov/documents/2024/07/24/2024-16180/information-request-on-financing-support-for-covered-technology-categories-specific-to-lenders",
+   "companies": []
+  },
+  {
+   "id": "2024-16179",
+   "title": "Information Request on Financing Support for Covered Technology Categories-Specific to Companies and Trade Associations",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The OSC is seeking information from companies and trade associations regarding strategic capital needs for industries related to the Covered Technology Categories to inform the design and implementation of the DoD Loan Program.",
+   "date": "2024-07-24",
+   "agencies": [
+    "Defense Department",
+    "Office of the Secretary"
+   ],
+   "citation": "89 FR 59904",
+   "url": "https://www.federalregister.gov/documents/2024/07/24/2024-16179/information-request-on-financing-support-for-covered-technology-categories-specific-to-companies-and",
+   "companies": []
+  },
+  {
+   "id": "2024-16168",
+   "title": "National Quantum Initiative Advisory Committee (NQIAC)",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "This notice announces an open virtual meeting of the National Quantum Initiative Advisory Committee (NQIAC). The Federal Advisory Committee Act (FACA) requires that public notice of these meetings be announced in the Federal Register.",
+   "date": "2024-07-23",
+   "agencies": [
+    "Energy Department"
+   ],
+   "citation": "89 FR 59729",
+   "url": "https://www.federalregister.gov/documents/2024/07/23/2024-16168/national-quantum-initiative-advisory-committee-nqiac",
+   "companies": []
+  },
+  {
+   "id": "2024-15377",
+   "title": "2024 Guidance Update on Patent Subject Matter Eligibility, Including on Artificial Intelligence",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "In accordance with Executive Order 14110 on the \"Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence\" (October 30, 2023) (Executive Order), the United States Patent and Trademark Office (USPTO) is issuing a guidance update on patent subject matter eligibility to address innovation in critical and emerging technologies (ET), especially artificial intelligence (AI). This guidance update will assist USPTO personnel and stakeholders in evaluating the subject matter eligibility of claims in patent applications and patents involving inventions related to AI technology (AI inventions). This update also announces a new set of examples that are intended to assist USPTO personnel in applying the USPTO's subject matter eligibility guidance to AI inventions during patent examination, appeal, and post-grant proceedings. In addition to addressing issues especially relevant to AI inventions, this guidance update addresses feedback from our stakeholders and includes discussions of recent Federal Circuit decisions on patent subject matter eligibility. This guidance update, together with the guidance provided in the Manual of Patent Examining Procedure (MPEP), is to be used by USPTO personnel when applying subject matter eligibility law.",
+   "date": "2024-07-17",
+   "agencies": [
+    "Commerce Department",
+    "Patent and Trademark Office"
+   ],
+   "citation": "89 FR 58128",
+   "url": "https://www.federalregister.gov/documents/2024/07/17/2024-15377/2024-guidance-update-on-patent-subject-matter-eligibility-including-on-artificial-intelligence",
+   "companies": []
+  },
+  {
+   "id": "2024-13923",
+   "title": "Provisions Pertaining to U.S. Investments in Certain National Security Technologies and Products in Countries of Concern",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "This proposed rule sets forth regulations that would implement Executive Order 14105 of August 9, 2023, \"Addressing United States Investments in Certain National Security Technologies and Products in Countries of Concern,\" which declares a national emergency to address the threat to the United States posed by countries of concern, which seek to develop and exploit sensitive technologies or products critical for military, intelligence, surveillance, or cyber-enabled capabilities. The proposed rule would require United States persons to provide notification to the U.S. Department of the Treasury regarding certain transactions involving persons of a country of concern who are engaged in activities involving certain national security technologies and products that may contribute to the threat to the national security of the United States; and prohibit United States persons from engaging in certain other transactions involving persons of a country of concern who are engaged in activities involving certain other national security technologies and products that pose a particularly acute national security threat to the United States. This notice of proposed rulemaking (NPRM) seeks public comment on various topics related to the implementation of Executive Order 14105. In accordance with 5 U.S.C. 553(b)(4), a summary of this rule may be found at https:// www.regulations.gov.",
+   "date": "2024-07-05",
+   "agencies": [
+    "Treasury Department",
+    "Investment Security Office"
+   ],
+   "citation": "89 FR 55846",
+   "url": "https://www.federalregister.gov/documents/2024/07/05/2024-13923/provisions-pertaining-to-us-investments-in-certain-national-security-technologies-and-products-in",
+   "companies": []
+  },
+  {
+   "id": "2024-14164",
+   "title": "Experimental Use Exception Request for Comments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The United States Patent and Trademark Office (USPTO), Department of Commerce, is interested in collecting the public's views on the current state of the common law experimental use exception and whether legislative action should be considered to enact a statutory experimental use exception.",
+   "date": "2024-06-28",
+   "agencies": [
+    "Commerce Department",
+    "Patent and Trademark Office"
+   ],
+   "citation": "89 FR 53963",
+   "url": "https://www.federalregister.gov/documents/2024/06/28/2024-14164/experimental-use-exception-request-for-comments",
+   "companies": []
+  },
+  {
+   "id": "2024-12861",
+   "title": "Information Security and Privacy Advisory Board",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Institute of Standards and Technology (NIST) Information Security and Privacy Advisory Board (ISPAB) will hold an open meeting on Wednesday, July 17, 2024, from 10:00 a.m. until 4:30 p.m., Eastern Time and Thursday, July 18, 2024, from 10:00 a.m. until 4:30 p.m., Eastern Time.",
+   "date": "2024-06-12",
+   "agencies": [
+    "Commerce Department",
+    "National Institute of Standards and Technology"
+   ],
+   "citation": "89 FR 49860",
+   "url": "https://www.federalregister.gov/documents/2024/06/12/2024-12861/information-security-and-privacy-advisory-board",
+   "companies": []
+  },
+  {
+   "id": "2024-11277",
+   "title": "Advancement of 6G Telecommunications Technology",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The National Telecommunications and Information Administration (NTIA) is requesting comments on the current state of development of sixth generation (6G) wireless communications technology and to guide Executive Branch policies on necessary steps to facilitate the advancement of this technology. As potential requirements for 6G are being developed by industry, governmental, academic, and civil society stakeholders, NTIA hopes to hear from the public on the following questions to inform our own future engagement in support of 6G development and deployment.",
+   "date": "2024-05-23",
+   "agencies": [
+    "Commerce Department",
+    "National Telecommunications and Information Administration"
+   ],
+   "citation": "89 FR 45648",
+   "url": "https://www.federalregister.gov/documents/2024/05/23/2024-11277/advancement-of-6g-telecommunications-technology",
+   "companies": []
+  },
+  {
+   "id": "2024-10485",
+   "title": "Additions of Entities to the Entity List",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "In this final rule, the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) by adding 37 entities under 37 entries to the Entity List. These entries are listed on the Entity List under the destinations of the People's Republic of China (China) and have been determined by the U.S. Government to be acting contrary to the national security or foreign policy interests of the United States.",
+   "date": "2024-05-14",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "89 FR 41886",
+   "url": "https://www.federalregister.gov/documents/2024/05/14/2024-10485/additions-of-entities-to-the-entity-list",
+   "companies": []
+  },
+  {
+   "id": "2024-08446",
+   "title": "Export Control Revisions for Australia, United Kingdom, United States (AUKUS) Enhanced Trilateral Security Partnership",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "With this interim final rule (IFR), the Bureau of Industry and Security (BIS) amends the Export Administration Regulations (EAR) to remove license requirements, expand the availability of license exceptions, and reduce the scope of end-use and end-user-based license requirements for exports, reexports, and transfers (in-country) to or within Australia and the United Kingdom (UK) to enhance technological innovation among the three countries and support the goals of the AUKUS Trilateral Security Partnership.",
+   "date": "2024-04-19",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "89 FR 28594",
+   "url": "https://www.federalregister.gov/documents/2024/04/19/2024-08446/export-control-revisions-for-australia-united-kingdom-united-states-aukus-enhanced-trilateral",
+   "companies": []
+  },
+  {
+   "id": "2024-08268",
+   "title": "University of Chicago; Application(s) for Duty-Free Entry of Scientific Instruments",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "",
+   "date": "2024-04-18",
+   "agencies": [
+    "Commerce Department",
+    "International Trade Administration"
+   ],
+   "citation": "89 FR 27715",
+   "url": "https://www.federalregister.gov/documents/2024/04/18/2024-08268/university-of-chicago-applications-for-duty-free-entry-of-scientific-instruments",
+   "companies": []
+  },
+  {
+   "id": "2024-07004",
+   "title": "Implementation of Additional Export Controls: Certain Advanced Computing Items; Supercomputer and Semiconductor End Use; Updates and Corrections; and Export Controls on Semiconductor Manufacturing Items; Corrections and Clarifications",
+   "type": "Rule",
+   "subtype": "",
+   "abstract": "On October 25, 2023, the Bureau of Industry and Security (BIS) published in the Federal Register the interim final rules (IFR), \"Export Controls on Semiconductor Manufacturing Items\" (SME IFR) and \"Implementation of Additional Export Controls: Certain Advanced Computing Items; Supercomputer and Semiconductor End Use; Updates and Corrections\" (AC/S IFR). This rule corrects inadvertent errors in those rules and makes additional clarifications for the two rules.",
+   "date": "2024-04-04",
+   "agencies": [
+    "Commerce Department",
+    "Industry and Security Bureau"
+   ],
+   "citation": "89 FR 23876",
+   "url": "https://www.federalregister.gov/documents/2024/04/04/2024-07004/implementation-of-additional-export-controls-certain-advanced-computing-items-supercomputer-and",
+   "companies": []
+  },
+  {
+   "id": "2024-05228",
+   "title": "Manufacturing USA Institute Competition: AI for Resilient Manufacturing",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "The Office of Advanced Manufacturing within the National Institute of Standards and Technology, an agency of the U.S. Department of Commerce, intends to announce an open competition for a new Manufacturing USA institute. The expected competition will seek to establish a Manufacturing USA institute focused on the use of Artificial Intelligence to improve resilience of U.S. manufacturing. This NOI is provided to allow potential applicants sufficient time to develop meaningful collaborations among industry, academia, Federal laboratories and state/local government.",
+   "date": "2024-03-13",
+   "agencies": [
+    "Commerce Department",
+    "National Institute of Standards and Technology"
+   ],
+   "citation": "89 FR 18373",
+   "url": "https://www.federalregister.gov/documents/2024/03/13/2024-05228/manufacturing-usa-institute-competition-ai-for-resilient-manufacturing",
+   "companies": []
+  },
+  {
+   "id": "2024-04883",
+   "title": "Information Request on Financing Support for Critical Minerals Projects",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "To assist the Export-Import Bank of the United States (EXIM) in supporting critical minerals transactions, which are crucial to the supply chains of several of the Congressionally mandated Transformational Export Areas in EXIM's Charter, EXIM seeks information on the financing gaps faced by project sponsors, users of critical minerals, and suppliers to critical minerals projects.",
+   "date": "2024-03-07",
+   "agencies": [
+    "Export-Import Bank"
+   ],
+   "citation": "89 FR 16564",
+   "url": "https://www.federalregister.gov/documents/2024/03/07/2024-04883/information-request-on-financing-support-for-critical-minerals-projects",
+   "companies": []
+  },
+  {
+   "id": "2024-03329",
+   "title": "Notice of the Federal Chief Information Officers Council Innovation Committee's Disruption and Discovery: AI, Data, and Quantum Symposium",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "Join leaders across the federal government for an immersive one-day symposium exploring the technologies transforming our future. Through keynote addresses and fireside chats, gain insider perspectives from those using AI to combat and reduce fraud to those safeguarding our digital lives in the emerging quantum era and designing the future of data security across government. Learn about the technical breakthroughs employees at the National Labs are making to improve the lives of the American public. This symposium will spotlight the intersections of technology, innovation, and open government--shaping the digital tomorrow and harnessing the power of technology to drive mission impact. Join us at the frontier of what's next.",
+   "date": "2024-02-20",
+   "agencies": [
+    "General Services Administration"
+   ],
+   "citation": "89 FR 12843",
+   "url": "https://www.federalregister.gov/documents/2024/02/20/2024-03329/notice-of-the-federal-chief-information-officers-council-innovation-committees-disruption-and",
+   "companies": []
+  },
+  {
+   "id": "2024-02854",
+   "title": "Financial Crimes Enforcement Network: Anti-Money Laundering/Countering the Financing of Terrorism Program and Suspicious Activity Report Filing Requirements for Registered Investment Advisers and Exempt Reporting Advisers",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "FinCEN, a bureau of the U.S. Department of the Treasury (Treasury), is issuing this notice of proposed rulemaking (NPRM) to include certain investment advisers in the definition of \"financial institution\" under the Bank Secrecy Act (BSA), prescribe minimum standards for anti-money laundering/countering the financing of terrorism (AML/CFT) programs to be established by covered investment advisers, require covered investment advisers to report suspicious activity to FinCEN pursuant to the BSA, and make several other related changes to FinCEN regulations. FinCEN is proposing this action to address gaps in the existing AML/CFT regulatory framework in this sector. The proposed regulations will apply to investment advisers that may be at risk for misuse by money launderers, terrorist financers, or other actors who seek access to the U.S. financial system for illicit purposes via investment advisers and threaten U.S. national security.",
+   "date": "2024-02-15",
+   "agencies": [
+    "Treasury Department",
+    "Financial Crimes Enforcement Network"
+   ],
+   "citation": "89 FR 12108",
+   "url": "https://www.federalregister.gov/documents/2024/02/15/2024-02854/financial-crimes-enforcement-network-anti-money-launderingcountering-the-financing-of-terrorism",
+   "companies": []
+  },
+  {
+   "id": "2024-00749",
+   "title": "Notice of Open Public Hearing",
+   "type": "Notice",
+   "subtype": "",
+   "abstract": "Notice is hereby given of the following hearing of the U.S.- China Economic and Security Review Commission. The Commission is mandated by Congress to investigate, assess, and report to Congress annually on \"the national security implications of the economic relationship between the United States and the People's Republic of China.\" Pursuant to this mandate, the Commission will hold a public hearing in Washington, DC on February 1, 2024 on \"Current and Emerging Technologies in U.S.-China Economic and National Security Competition.\"",
+   "date": "2024-01-17",
+   "agencies": [
+    "U.S.-China Economic and Security Review Commission"
+   ],
+   "citation": "89 FR 3021",
+   "url": "https://www.federalregister.gov/documents/2024/01/17/2024-00749/notice-of-open-public-hearing",
+   "companies": []
+  },
+  {
+   "id": "2023-27938",
+   "title": "Labor Certification for Permanent Employment of Foreign Workers in the United States; Modernizing Schedule A To Include Consideration of Additional Occupations in Science, Technology, Engineering, and Mathematics (STEM) and Non-STEM Occupations",
+   "type": "Proposed Rule",
+   "subtype": "",
+   "abstract": "The Department of Labor's (Department or DOL) Employment and Training Administration (ETA) is considering revisions to Schedule A of the permanent labor certification process to include occupations in Science, Technology, Engineering and Mathematics (STEM) and other non- STEM occupations and invites employers and other interested parties to comment on this Request for Information (RFI). ETA's Office of Foreign Labor Certification developed this RFI and is publishing it for comment so that the public may provide input, including data, statistical metrics or models, studies, and other relevant information, on how the Department may establish a reliable, objective, and transparent methodology for revising Schedule A to include STEM and other non-STEM occupations that are experiencing labor shortages, consistent with requirements of the Immigration and Nationality Act (INA). The Department wants to ensure that it is striking an appropriate balance between the need to provide U.S. workers notice of available permanent job opportunities and the opportunity to apply for those job opportunities, and, where insufficient U.S. workers are available to satisfy an employer's need for permanent labor, the need to provide employers access to foreign labor through effective administration of the permanent labor certification program. Information received from the public will help inform decisions regarding whether or how to improve Schedule A and ensure that its purpose in responding to national labor shortages is more effectively met.",
+   "date": "2023-12-21",
+   "agencies": [
+    "Labor Department",
+    "Employment and Training Administration"
+   ],
+   "citation": "88 FR 88290",
+   "url": "https://www.federalregister.gov/documents/2023/12/21/2023-27938/labor-certification-for-permanent-employment-of-foreign-workers-in-the-united-states-modernizing",
+   "companies": []
+  }
+ ]
 }
