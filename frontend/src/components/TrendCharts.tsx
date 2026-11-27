@@ -1,6 +1,6 @@
 import { useMemo, useState, type ReactNode } from 'react'
 import { ExternalLink } from 'lucide-react'
-import { useWidth } from './StockChart'
+import { useWidth } from '../lib/format'
 
 /** Fixed categorical order (validated palette); a series keeps its color whatever is filtered. */
 export const SERIES_COLORS = ['#257de0', '#f47230', '#00b894', '#f2a600', '#ee7fac', '#008a17', '#6a4ce2', '#ec4647']

@@ -28,58 +28,11 @@ export interface Meta {
     news: number
     companies: number
     public_companies: number
-    stocks_priced?: number
   }
 }
 
 export type Point = [string, number]  // [YYYY-MM-DD, value]
 
-export interface Changes {
-  '1d': number | null
-  '1m': number | null
-  ytd: number | null
-  '1y': number | null
-}
-
-export interface StockTicker {
-  ticker: string
-  exchange: string
-  companies: string[]   // company slugs that trade under this ticker
-  name: string
-  pure_play: boolean
-  currency: string
-  source: string
-  last: number | null
-  last_date: string | null
-  change: Changes
-  history: Point[]
-}
-
-export interface StocksData {
-  generated_at: string
-  example?: boolean     // set only in preview builds that use made-up prices
-  index: {
-    name: string
-    method: string
-    constituents: string[]
-    series: Point[]
-    last: number | null
-    last_date: string | null
-    change: Changes
-  }
-  tickers: Record<string, StockTicker>
-}
-
-const EMPTY_STOCKS: StocksData = {
-  generated_at: '',
-  index: { name: '', method: '', constituents: [], series: [], last: null, last_date: null, change: { '1d': null, '1m': null, ytd: null, '1y': null } },
-  tickers: {},
-}
-
-/** Stock data, or an empty set if the file isn't there yet. */
-export function loadStocks(): Promise<StocksData> {
-  return loadData<StocksData>('stocks.json').catch(() => EMPTY_STOCKS)
-}
 
 export interface PolicyProgram {
   slug: string

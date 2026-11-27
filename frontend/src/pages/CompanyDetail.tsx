@@ -4,70 +4,39 @@ import { ArrowLeft, ArrowRight, ExternalLink, FileText, Newspaper, TrendingUp, B
 import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
-  loadData, loadPapers, loadPolicy, loadStocks, useData,
-  type CompanyRecord, type Deal, type Facility, type HardwareRecord, type JobsData, type Machine, type Milestone, type NewsItem, type PolicyData, type StockTicker,
+  loadData, loadPapers, loadPolicy, useData,
+  type CompanyRecord, type Deal, type Facility, type HardwareRecord, type JobsData, type Machine, type Milestone, type NewsItem, type PolicyData,
 } from '../lib/data'
 import { TypeLabel } from '../components/FacilityType'
 import { DealRow } from './Funding'
 import { MachineRows, Roadmap } from './Hardware'
-import {
-  Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
-} from '../components/StockChart'
+import { formatDay } from '../lib/format'
 import type { Paper } from '../components/PaperCard'
 import {
   CATEGORY_LABELS,
   CATEGORY_STYLES,
   PLATFORM_LABELS,
+  quoteUrl,
 } from '../lib/companies'
 
-function PriceCard({ stock, ticker, example }: { stock: StockTicker | undefined; ticker: string; example?: boolean }) {
-  const [range, setRange] = useState<RangeKey>('1Y')
-  const shown = sliceRange(stock?.history ?? [], range)
-  const heading = (
-    <div className="flex items-center justify-between gap-2">
-      <h2 className="text-sm font-medium text-gray-500">Share price · <span className="font-mono">{ticker}</span></h2>
-      <Link to="/stocks" className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">
-        All quantum stocks <ArrowRight className="w-3.5 h-3.5" />
-      </Link>
-    </div>
-  )
-  if (!stock || stock.history.length === 0) {
-    return (
-      <section className="bg-white border border-gray-200 rounded-xl p-5 space-y-2">
-        {heading}
-        <p className="text-sm text-gray-500">Price history appears after the next daily data refresh.</p>
-      </section>
-    )
-  }
-  const periods: [string, number | null][] = [
-    ['1D', stock.change['1d']], ['1M', stock.change['1m']], ['YTD', stock.change.ytd], ['1Y', stock.change['1y']],
-  ]
+function QuoteCard({ ticker, exchange }: { ticker: string; exchange: string }) {
   return (
-    <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-3">
-      {heading}
-      {example && <ExampleNotice />}
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <div className="flex items-baseline gap-3">
-            <span className="text-3xl font-bold text-gray-900 tabular-nums">{formatPrice(stock.last, stock.currency)}</span>
-            <Change value={pctChange(shown)} className="text-sm" />
-            <span className="text-xs text-gray-400">{range === 'All' ? 'since start' : range}</span>
-          </div>
-          <p className="text-xs text-gray-400 mt-0.5">
-            Close on {stock.last_date ? formatDay(stock.last_date) : '—'}{stock.exchange ? ` · ${stock.exchange}` : ''}
-          </p>
-        </div>
-        <RangePicker value={range} onChange={setRange} />
+    <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
+      <div className="min-w-0">
+        <h2 className="text-sm font-medium text-gray-500">Share price</h2>
+        <p className="text-sm text-gray-900">
+          Listed as <span className="font-mono">{ticker}</span>{exchange ? ` on ${exchange}` : ''}
+        </p>
       </div>
-      <LineChart series={shown} format={v => formatPrice(v, stock.currency)} label={`${ticker} closing price`} />
-      <dl className="grid grid-cols-4 gap-2 text-sm *:min-w-0">
-        {periods.map(([k, v]) => (
-          <div key={k}>
-            <dt className="text-xs text-gray-400">{k}</dt>
-            <dd><Change value={v} /></dd>
-          </div>
-        ))}
-      </dl>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+        <a href={quoteUrl(ticker, exchange)} target="_blank" rel="noopener noreferrer"
+           className="text-teal-700 hover:text-teal-800 flex items-center gap-1">
+          Live quote <ExternalLink className="w-3.5 h-3.5" />
+        </a>
+        <Link to="/stocks" className="text-teal-700 hover:text-teal-800 flex items-center gap-1">
+          All listed companies <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
     </section>
   )
 }
@@ -194,7 +163,6 @@ export default function CompanyDetail() {
       loadData<CompanyRecord[]>('companies.json'),
       loadPapers(),
       loadData<NewsItem[]>('news.json'),
-      loadStocks(),
       loadPolicy(),
       loadData<Facility[]>('facilities.json').catch(() => [] as Facility[]),
       loadData<Deal[]>('deals.json').catch(() => [] as Deal[]),
@@ -205,8 +173,6 @@ export default function CompanyDetail() {
 
   const found = all?.[0].find(c => c.slug === slug)
   const error = loadError || (all && !found ? 'Company not found' : '')
-  const example = all?.[3].example
-  const stock = found?.ticker ? all?.[3].tickers[found.ticker.toUpperCase()] : undefined
   let company: (CompanyRecord & {
     papers: Paper[]
     news: NewsItem[]
@@ -317,11 +283,11 @@ export default function CompanyDetail() {
         )}
       </div>
 
-      {company.ticker && <PriceCard stock={stock} ticker={company.ticker} example={example} />}
+      {company.ticker && <QuoteCard ticker={company.ticker} exchange={company.exchange} />}
 
-      {all && <PolicyCard company={company} policy={all[4]} />}
+      {all && <PolicyCard company={company} policy={all[3]} />}
 
-      {all && all[5].some(f => f.companies.includes(company!.slug)) && (
+      {all && all[4].some(f => f.companies.includes(company!.slug)) && (
         <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-2">
           <div className="flex items-center justify-between gap-2">
             <h2 className="text-sm font-medium text-gray-500">Facilities</h2>
@@ -329,7 +295,7 @@ export default function CompanyDetail() {
               All facilities <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
-          {all[5].filter(f => f.companies.includes(company!.slug)).map(f => (
+          {all[4].filter(f => f.companies.includes(company!.slug)).map(f => (
             <div key={f.slug} className="text-sm">
               <div className="text-gray-900 font-medium">{f.name} <span className="text-gray-400 font-normal">· {f.city}</span></div>
               <TypeLabel type={f.type} />
@@ -339,7 +305,7 @@ export default function CompanyDetail() {
         </section>
       )}
 
-      {all && <CompanyExtras slug={company.slug} deals={all[6]} hardware={all[7]} jobs={all[8]} names={new Map(all[0].map(c => [c.slug, c.name]))} />}
+      {all && <CompanyExtras slug={company.slug} deals={all[5]} hardware={all[6]} jobs={all[7]} names={new Map(all[0].map(c => [c.slug, c.name]))} />}
 
       {/* Mentions */}
       <div className="space-y-3">

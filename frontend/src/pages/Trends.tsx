@@ -2,10 +2,9 @@ import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { TrendingUp } from 'lucide-react'
 import {
-  loadData, loadPolicy, loadStocks, useData,
-  type CompanyRecord, type Deal, type Facility, type PolicyData, type StocksData, type TrendPoint,
+  loadData, loadPolicy, useData,
+  type CompanyRecord, type Deal, type Facility, type PolicyData, type TrendPoint,
 } from '../lib/data'
-import { LineChart } from '../components/StockChart'
 import { Card, SERIES_COLORS, TimeScatter, Timeline, YearBars, yearOf, type SeriesDef, type TimePoint, type YearValue } from '../components/TrendCharts'
 import { RAISES, formatMillions } from './Funding'
 
@@ -50,7 +49,6 @@ export default function Trends() {
     loadData<CompanyRecord[]>('companies.json'),
     loadData<Facility[]>('facilities.json').catch(() => [] as Facility[]),
     loadPolicy(),
-    loadStocks(),
   ]))
   const view = useMemo(() => data && build(...data), [data])
   if (error) return <p className="text-center text-gray-500 py-12">{error}</p>
@@ -127,11 +125,6 @@ export default function Trends() {
             <Timeline items={v.programs.items} />
           </div>
         </Card>
-        <Card title={v.stocks.title} subtitle={v.stocks.subtitle}>
-          {v.stocks.series.length > 1
-            ? <LineChart series={v.stocks.series} format={x => x.toFixed(0)} label="Quantum stock index" />
-            : <p className="text-xs text-gray-500">The index appears after the first daily data refresh. See the <Link to="/stocks" className="text-teal-700 hover:text-teal-800">Stocks</Link> page.</p>}
-        </Card>
       </section>
 
       <p className="text-xs text-gray-400">
@@ -141,7 +134,7 @@ export default function Trends() {
   )
 }
 
-function build(trends: TrendPoint[], deals: Deal[], companies: CompanyRecord[], facilities: Facility[], policy: PolicyData, stocks: StocksData) {
+function build(trends: TrendPoint[], deals: Deal[], companies: CompanyRecord[], facilities: Facility[], policy: PolicyData) {
   const of = (s: TrendPoint['series']) => trends.filter(r => r.series === s && r.value != null)
 
   const qubits = of('qubits').map(r => toPoint(r))
@@ -196,13 +189,6 @@ function build(trends: TrendPoint[], deals: Deal[], companies: CompanyRecord[], 
     })),
   }
 
-  const idx = stocks.index
-  const stockView = {
-    title: idx.name || 'Quantum stock index',
-    subtitle: `${idx.method || 'An equal-weight index of listed quantum companies.'}${stocks.example ? ' Preview only: these prices are made up.' : ''}`,
-    series: idx.series,
-  }
-
   const tiles: { label: string; value: string; sub: string }[] = []
   const bestQ = [...qubits].filter(p => p.confirmed !== false).sort((a, b) => b.value - a.value)[0]
   if (bestQ) tiles.push({ label: 'Largest qubit array', value: compact(bestQ.value), sub: `${bestQ.label}, ${bestQ.date.slice(0, 4)}` })
@@ -212,5 +198,5 @@ function build(trends: TrendPoint[], deals: Deal[], companies: CompanyRecord[], 
   if (lastArxiv) tiles.push({ label: 'quant-ph papers', value: compact(lastArxiv.value), sub: `in ${lastArxiv.year}` })
   if (programs.length) tiles.push({ label: 'National programs', value: String(programs.length), sub: `since ${programs[0].launched.slice(0, 4)}` })
 
-  return { qubits, fidelity, coherence, qv, qec, arxiv, arxivNote, founded, capital, facilities: facilityData, programs: programData, stocks: stockView, tiles }
+  return { qubits, fidelity, coherence, qv, qec, arxiv, arxivNote, founded, capital, facilities: facilityData, programs: programData, tiles }
 }

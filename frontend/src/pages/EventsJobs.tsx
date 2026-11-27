@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { CalendarDays, Briefcase, ExternalLink, MapPin, Search } from 'lucide-react'
 import { loadData, useData, type CompanyRecord, type EventItem, type JobsData } from '../lib/data'
-import { formatDay } from '../components/StockChart'
+import { formatDay } from '../lib/format'
 
 const FORMAT_LABEL: Record<EventItem['format'], string> = { in_person: 'In person', hybrid: 'Hybrid', online: 'Online' }
 const KIND_LABEL: Record<EventItem['kind'], string> = { academic: 'Academic', industry: 'Industry', government: 'Government' }
