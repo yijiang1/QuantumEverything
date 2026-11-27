@@ -4,8 +4,8 @@ import { ArrowLeft, ArrowRight, ExternalLink, FileText, Newspaper, TrendingUp, B
 import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
-  loadData, loadPapers, loadStocks, useData,
-  type CompanyRecord, type NewsItem, type StockTicker,
+  loadData, loadPapers, loadPolicy, loadStocks, useData,
+  type CompanyRecord, type NewsItem, type PolicyData, type StockTicker,
 } from '../lib/data'
 import {
   Change, ExampleNotice, LineChart, RangePicker, formatDay, formatPrice, pctChange, sliceRange, type RangeKey,
@@ -69,6 +69,44 @@ function PriceCard({ stock, ticker, example }: { stock: StockTicker | undefined;
   )
 }
 
+function PolicyCard({ company, policy }: { company: CompanyRecord; policy: PolicyData }) {
+  const programs = policy.programs.filter(p => p.countries.includes(company.country))
+  const mentions = [
+    ...policy.us_actions.filter(a => a.companies?.includes(company.slug))
+      .map(a => ({ id: a.id, title: a.title, url: a.url, date: a.latest_action?.date ?? a.date ?? '' })),
+    ...policy.federal_register.filter(d => d.companies.includes(company.slug))
+      .map(d => ({ id: d.id, title: d.title, url: d.url, date: d.date })),
+  ].sort((a, b) => b.date.localeCompare(a.date))
+  if (!programs.length && !mentions.length) return null
+  return (
+    <section className="bg-white border border-gray-200 rounded-xl p-4 sm:p-5 space-y-3">
+      <div className="flex items-center justify-between gap-2">
+        <h2 className="text-sm font-medium text-gray-500">Government policy</h2>
+        <Link to="/policy" className="text-sm text-teal-700 hover:text-teal-800 flex items-center gap-1">
+          All policy <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+      {programs.map(p => (
+        <div key={p.slug} className="text-sm">
+          <span className="text-gray-900 font-medium">{p.name}</span>
+          <span className="text-gray-500"> ({p.jurisdiction}, {p.launched})</span>
+          {p.funding && <span className="text-gray-700"> · {p.funding}</span>}
+        </div>
+      ))}
+      {mentions.length > 0 && (
+        <div className="space-y-1">
+          <div className="text-xs text-gray-400">Named in</div>
+          {mentions.slice(0, 5).map(m => (
+            <a key={m.id} href={m.url} target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-800 hover:text-teal-700">
+              {m.title} {m.date && <span className="text-xs text-gray-400">· {formatDay(m.date)}</span>}
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>()
   const [tab, setTab] = useState<'papers' | 'news'>('papers')
@@ -78,6 +116,7 @@ export default function CompanyDetail() {
       loadPapers(),
       loadData<NewsItem[]>('news.json'),
       loadStocks(),
+      loadPolicy(),
     ]),
   )
 
@@ -196,6 +235,8 @@ export default function CompanyDetail() {
       </div>
 
       {company.ticker && <PriceCard stock={stock} ticker={company.ticker} example={example} />}
+
+      {all && <PolicyCard company={company} policy={all[4]} />}
 
       {/* Mentions */}
       <div className="space-y-3">

@@ -3,10 +3,10 @@ import { ArrowRight, FileText, Building2, Newspaper, Atom, TrendingUp } from 'lu
 import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
-  loadData, loadPapers, loadStocks, useData, formatDate,
+  loadData, loadPapers, loadPolicy, loadStocks, useData, formatDate, billLabel,
   type CompanyRecord, type NewsItem, type Meta, type AnalysisSummary,
 } from '../lib/data'
-import { Change, ExampleNotice, Sparkline, formatPrice, sliceRange } from '../components/StockChart'
+import { Change, ExampleNotice, Sparkline, formatDay, formatPrice, sliceRange } from '../components/StockChart'
 
 function Stat({ to, icon: Icon, value, label }: { to: string; icon: typeof FileText; value: number | string; label: string }) {
   return (
@@ -40,10 +40,21 @@ export default function Overview() {
     loadData<CompanyRecord[]>('companies.json'),
     loadData<AnalysisSummary[]>('analyses/index.json').catch(() => [] as AnalysisSummary[]),
     loadStocks(),
+    loadPolicy(),
   ]))
 
   if (!data) return <p className="text-center text-gray-500 py-12">Loading…</p>
-  const [meta, papers, news, companies, analyses, stocks] = data
+  const [meta, papers, news, companies, analyses, stocks, policy] = data
+  const policyItems = [
+    ...policy.us_actions.map(a => ({
+      id: a.id,
+      title: a.title,
+      url: a.url,
+      date: a.latest_action?.date ?? a.date ?? '',
+      tag: a.kind === 'bill' ? billLabel(a) : a.reference ?? '',
+    })),
+    ...policy.federal_register.map(d => ({ id: d.id, title: d.title, url: d.url, date: d.date, tag: d.type })),
+  ].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 5)
   const index = stocks.index
   const movers = Object.values(stocks.tickers)
     .filter(t => t.pure_play && t.change['1d'] != null)
@@ -126,6 +137,20 @@ export default function Overview() {
                   {c.paper_ids.length} papers · {c.news_ids.length} news
                 </span>
               </Link>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {policyItems.length > 0 && (
+        <Section title="Latest in policy" to="/policy">
+          <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
+            {policyItems.map(item => (
+              <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{item.date ? formatDay(item.date) : ""}</span>
+                <span className="text-sm text-gray-900 min-w-0 flex-1">{item.title}</span>
+                <span className="text-xs text-gray-400 shrink-0 hidden sm:inline">{item.tag}</span>
+              </a>
             ))}
           </div>
         </Section>

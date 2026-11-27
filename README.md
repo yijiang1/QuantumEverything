@@ -1,6 +1,6 @@
 # Quantum Everything
 
-A website for following quantum computing in one place: new research papers, the companies building quantum technology, their share prices, industry news, and research reports on where quantum computing could help.
+A website for following quantum computing in one place: new research papers, the companies building quantum technology, their share prices, government policy, industry news, and research reports on where quantum computing could help.
 
 It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow refreshes the data every day.
 
@@ -12,6 +12,7 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Papers | Recent quantum papers, searchable, with relevance scores and topic tags | arXiv and OpenAlex, scored by Claude Haiku |
 | Companies | 68 quantum companies with profiles, linked to the papers and news that mention them | `backend/app/companies/seed_companies.json` (curated) |
 | Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
+| Policy | National quantum programs and budgets, US bills and their status, US laws and executive orders, Federal Register rules and notices | `backend/app/policy/*.json` (curated), bill status from govinfo.gov, Federal Register API (both free, no key) |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
 | Analyses | Research reports on quantum opportunities in a field | The Claude research agent, run on request |
 | Reading list | Hand-picked papers | `frontend/public/data/reading_list.json` (edit by hand) |
@@ -30,7 +31,7 @@ frontend/ (React + Vite)          built to static files, deployed to Pages
 
 Two workflows in `.github/workflows/`:
 
-- **Refresh data and deploy site** (`deploy.yml`) runs daily and on every push to `main`. On the daily run it fetches new papers, news and share prices, scores up to 60 new papers with Claude Haiku, commits the updated JSON, then builds and deploys the site.
+- **Refresh data and deploy site** (`deploy.yml`) runs daily and on every push to `main`. On the daily run it fetches new papers, news, share prices, bill status and Federal Register documents, scores up to 60 new papers with Claude Haiku, commits the updated JSON, then builds and deploys the site.
 - **Analyze a topic** (`analyze-topic.yml`) is started by hand from the Actions tab. Enter a topic and it runs the research agent, saves the report under `frontend/public/data/analyses/`, and redeploys.
 
 ### What changed from the local app
@@ -86,6 +87,7 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 ## Editing content
 
 - **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
+- **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.
 - **Paper searches:** edit `QUANTUM_QUERIES` in `backend/app/knowledge_base/arxiv_fetcher.py` and `QUANTUM_KEYWORDS` in `backend/app/knowledge_base/openalex_fetcher.py`.

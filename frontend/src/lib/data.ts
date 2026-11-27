@@ -81,6 +81,73 @@ export function loadStocks(): Promise<StocksData> {
   return loadData<StocksData>('stocks.json').catch(() => EMPTY_STOCKS)
 }
 
+export interface PolicyProgram {
+  slug: string
+  name: string
+  jurisdiction: string
+  countries: string[]       // matched against Company.country
+  launched: string
+  period: string
+  funding: string
+  funding_confirmed: boolean
+  summary: string
+  source_url: string
+  source_name: string
+  note?: string
+}
+
+export type BillStage = 'introduced' | 'committee' | 'reported' | 'passed_one' | 'passed_both' | 'law'
+
+export interface UsAction {
+  id: string
+  kind: 'law' | 'executive_order' | 'standard' | 'bill'
+  title: string
+  summary: string
+  url?: string
+  date?: string
+  reference?: string
+  // bills only
+  congress?: number
+  bill_type?: string
+  number?: number
+  sponsor?: string
+  introduced?: string
+  latest_action?: { date: string; text: string }
+  stage?: BillStage
+  companies?: string[]
+}
+
+export interface FederalRegisterDoc {
+  id: string
+  title: string
+  type: string
+  subtype: string
+  abstract: string
+  date: string
+  agencies: string[]
+  citation: string
+  url: string
+  companies: string[]
+}
+
+export interface PolicyData {
+  generated_at: string
+  programs: PolicyProgram[]
+  us_actions: UsAction[]
+  federal_register: FederalRegisterDoc[]
+}
+
+export function loadPolicy(): Promise<PolicyData> {
+  return loadData<PolicyData>('policy.json').catch(
+    () => ({ generated_at: '', programs: [], us_actions: [], federal_register: [] }),
+  )
+}
+
+export function billLabel(a: UsAction) {
+  const prefix = ({ hr: 'H.R.', s: 'S.', hres: 'H.Res.', sres: 'S.Res.', hjres: 'H.J.Res.', sjres: 'S.J.Res.' } as Record<string, string>)[a.bill_type ?? ''] ?? ''
+  return `${prefix} ${a.number}`
+}
+
 export interface AnalysisSummary {
   slug: string
   topic: string

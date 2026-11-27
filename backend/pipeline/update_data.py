@@ -14,6 +14,7 @@ company matching, then writes JSON back for the site:
     news.json       latest news items, merged with earlier runs
     companies.json  company directory with paper and news links
     stocks.json     daily share prices and a quantum stock index (see stocks.py)
+    policy.json     national programs, US actions and Federal Register items (see policy.py)
     meta.json       when the data was built and what each source returned
 
 A GitHub Actions workflow runs this on a schedule and commits the changes.
@@ -44,7 +45,7 @@ from app.knowledge_base import paper_db  # noqa: E402
 from app.knowledge_base.arxiv_fetcher import QUANTUM_QUERIES, fetch_arxiv_papers  # noqa: E402
 from app.knowledge_base.openalex_fetcher import QUANTUM_KEYWORDS, fetch_openalex_papers  # noqa: E402
 import app.news.tracker as tracker  # noqa: E402
-from pipeline import stocks  # noqa: E402
+from pipeline import policy, stocks  # noqa: E402
 
 MAX_PAPERS = 2000      # visible papers kept on the site, newest first
 MAX_NEWS = 200
@@ -207,6 +208,7 @@ async def main(offline: bool) -> None:
     news = await refresh_news(_read("news.json", []), offline, status)
     companies = export_companies(news)
     stock_data, status["stocks"] = stocks.refresh(companies, _read("stocks.json", {}), offline)
+    policy_data, status["policy"] = policy.refresh(companies, _read("policy.json", {}), offline)
 
     visible = [p for p in papers if p["status"] != "skipped"]
     meta = {
@@ -218,6 +220,9 @@ async def main(offline: bool) -> None:
             "companies": len(companies),
             "public_companies": sum(1 for c in companies if c["is_public"]),
             "stocks_priced": sum(1 for t in stock_data["tickers"].values() if t["history"]),
+            "policy_programs": len(policy_data["programs"]),
+            "policy_us_actions": len(policy_data["us_actions"]),
+            "federal_register": len(policy_data["federal_register"]),
         },
         "last_run": status,
     }
@@ -226,6 +231,7 @@ async def main(offline: bool) -> None:
     _write("news.json", news)
     _write("companies.json", companies)
     _write("stocks.json", stock_data)
+    _write("policy.json", policy_data)
     _write("meta.json", meta)
     print(json.dumps(meta, indent=1))
 

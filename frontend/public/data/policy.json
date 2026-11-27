@@ -1,0 +1,339 @@
+{
+ "generated_at": "2026-11-27T03:04:37+00:00",
+ "programs": [
+  {
+   "slug": "us-nqi",
+   "name": "National Quantum Initiative",
+   "jurisdiction": "United States",
+   "countries": [
+    "US"
+   ],
+   "launched": "2018",
+   "period": "FY2019–FY2023, reauthorization pending",
+   "funding": "$1.2 billion authorized over five years",
+   "funding_confirmed": false,
+   "summary": "Created by the National Quantum Initiative Act (Pub. L. 115-368), which coordinates federal quantum research across NIST, NSF and DOE and set up the DOE National Quantum Information Science Research Centers. Executive Order 14413 (June 2026) orders an updated national strategy.",
+   "source_url": "https://en.wikipedia.org/wiki/National_Quantum_Initiative_Act",
+   "source_name": "Wikipedia",
+   "note": "The $1.2 billion figure is widely reported but wasn't stated on the source page checked."
+  },
+  {
+   "slug": "uk-nqs",
+   "name": "National Quantum Strategy",
+   "jurisdiction": "United Kingdom",
+   "countries": [
+    "UK"
+   ],
+   "launched": "2023",
+   "period": "2024–2034",
+   "funding": "£2.5 billion over ten years",
+   "funding_confirmed": true,
+   "summary": "Ten-year plan with five quantum missions, including quantum computers and networks, quantum sensing and navigation, run through UKRI and the National Quantum Computing Centre.",
+   "source_url": "https://www.gov.uk/government/publications/national-quantum-strategy",
+   "source_name": "GOV.UK"
+  },
+  {
+   "slug": "eu-quantum",
+   "name": "Quantum Flagship and Quantum Europe Strategy",
+   "jurisdiction": "European Union",
+   "countries": [
+    "Austria",
+    "Finland",
+    "France",
+    "Germany",
+    "Ireland",
+    "Netherlands",
+    "Spain"
+   ],
+   "launched": "2018",
+   "period": "Flagship 2018–2028; strategy launched July 2025",
+   "funding": "€1 billion over ten years (Quantum Flagship)",
+   "funding_confirmed": false,
+   "summary": "The EU's research flagship for quantum technologies. The Quantum Europe Strategy (July 2025) aims to make the EU a quantum leader by 2030 and announced a Quantum Act.",
+   "source_url": "https://digital-strategy.ec.europa.eu/en/policies/quantum",
+   "source_name": "European Commission",
+   "note": "The €1 billion Flagship figure is widely reported but wasn't confirmed from the page checked."
+  },
+  {
+   "slug": "de-action-concept",
+   "name": "Action Concept for Quantum Technologies",
+   "jurisdiction": "Germany",
+   "countries": [
+    "Germany"
+   ],
+   "launched": "2023",
+   "period": "2023–2026",
+   "funding": "€3 billion",
+   "funding_confirmed": true,
+   "summary": "Federal plan adopted by the cabinet in April 2023, aiming for a universal quantum computer of at least 100 qubits by 2026.",
+   "source_url": "https://www.bundesregierung.de/breg-de/themen/forschung/quantentechnologien-2186404",
+   "source_name": "Bundesregierung"
+  },
+  {
+   "slug": "fr-nqs",
+   "name": "National Strategy for Quantum Technologies",
+   "jurisdiction": "France",
+   "countries": [
+    "France"
+   ],
+   "launched": "2021",
+   "period": "2021–2025",
+   "funding": "€1.8 billion over five years",
+   "funding_confirmed": true,
+   "summary": "Announced by President Macron in January 2021, covering quantum computing, sensing, communications and enabling technologies.",
+   "source_url": "https://www.enseignementsup-recherche.gouv.fr/cid156616/strategie-nationale-sur-les-technologies-quantiques.html",
+   "source_name": "French Ministry of Higher Education and Research"
+  },
+  {
+   "slug": "nl-qdnl",
+   "name": "Quantum Delta NL",
+   "jurisdiction": "Netherlands",
+   "countries": [
+    "Netherlands"
+   ],
+   "launched": "2021",
+   "period": "2021 onward",
+   "funding": "€615 million from the National Growth Fund",
+   "funding_confirmed": true,
+   "summary": "National program for quantum computing, networks and sensing, built around hubs in Delft, Amsterdam, Leiden, Eindhoven and Twente.",
+   "source_url": "https://qutech.nl/2021/04/09/quantum-delta-nl-awarded-615-million-euro-from-netherlands-national-growth-fund-to-accelerate-quantum-technology/",
+   "source_name": "QuTech"
+  },
+  {
+   "slug": "ca-nqs",
+   "name": "National Quantum Strategy",
+   "jurisdiction": "Canada",
+   "countries": [
+    "Canada"
+   ],
+   "launched": "2023",
+   "period": "From Budget 2021",
+   "funding": "C$360 million",
+   "funding_confirmed": true,
+   "summary": "Launched in January 2023 with missions in quantum computing, quantum communications and quantum sensors.",
+   "source_url": "https://www.canada.ca/en/innovation-science-economic-development/news/2023/01/government-of-canada-launches-national-quantum-strategy-to-create-jobs-and-advance-quantum-technologies.html",
+   "source_name": "Government of Canada"
+  },
+  {
+   "slug": "au-nqs",
+   "name": "National Quantum Strategy",
+   "jurisdiction": "Australia",
+   "countries": [
+    "Australia"
+   ],
+   "launched": "2023",
+   "period": "2023 onward",
+   "funding": "A$940 million with Queensland for PsiQuantum (2024)",
+   "funding_confirmed": true,
+   "summary": "Strategy published in 2023. In 2024 the federal and Queensland governments committed A$940 million to PsiQuantum to build a fault-tolerant quantum computer in Brisbane.",
+   "source_url": "https://www.industry.gov.au/publications/state-australian-quantum-report-2024/executive-summary",
+   "source_name": "Department of Industry, Science and Resources"
+  },
+  {
+   "slug": "in-nqm",
+   "name": "National Quantum Mission",
+   "jurisdiction": "India",
+   "countries": [
+    "India"
+   ],
+   "launched": "2023",
+   "period": "2023-24 to 2030-31",
+   "funding": "₹6,003.65 crore",
+   "funding_confirmed": true,
+   "summary": "Approved by the Union Cabinet in April 2023 to build intermediate-scale quantum computers, quantum communication, sensing and materials, through four thematic hubs.",
+   "source_url": "https://dst.gov.in/cabinet-approves-national-quantum-mission-scale-scientific-industrial-rd-quantum-technologies",
+   "source_name": "Department of Science and Technology"
+  },
+  {
+   "slug": "kr-quantum",
+   "name": "Quantum Science and Technology Strategy",
+   "jurisdiction": "South Korea",
+   "countries": [
+    "South Korea"
+   ],
+   "launched": "2023",
+   "period": "2023–2035",
+   "funding": "₩3 trillion by 2035",
+   "funding_confirmed": true,
+   "summary": "Plan from the Ministry of Science and ICT to make Korea a quantum economy hub by 2035, with public and private investment.",
+   "source_url": "https://thequantuminsider.com/2023/06/29/south-korea-to-invest-2-33-billion-in-quantum-by-2035/",
+   "source_name": "The Quantum Insider"
+  },
+  {
+   "slug": "sg-nqs",
+   "name": "National Quantum Strategy",
+   "jurisdiction": "Singapore",
+   "countries": [
+    "Singapore"
+   ],
+   "launched": "2024",
+   "period": "About five years from 2024",
+   "funding": "About S$300 million",
+   "funding_confirmed": true,
+   "summary": "Announced in May 2024 to fund quantum research, talent and a national quantum processor initiative.",
+   "source_url": "https://www.edb.gov.sg/en/business-insights/insights/singapore-to-invest-about-s300-million-in-quantum-tech-research-and-talent.html",
+   "source_name": "Singapore Economic Development Board"
+  }
+ ],
+ "us_actions": [
+  {
+   "id": "pl-115-368",
+   "kind": "law",
+   "title": "National Quantum Initiative Act",
+   "date": "2018-12-21",
+   "reference": "Pub. L. 115-368 (H.R. 6227)",
+   "summary": "Set up the National Quantum Initiative to coordinate federal quantum research and education, and the DOE National Quantum Information Science Research Centers.",
+   "url": "https://www.congress.gov/bill/115th-congress/house-bill/6227",
+   "companies": []
+  },
+  {
+   "id": "pl-117-167",
+   "kind": "law",
+   "title": "CHIPS and Science Act",
+   "date": "2022-08-09",
+   "reference": "Pub. L. 117-167 (H.R. 4346)",
+   "summary": "Broad science law that includes quantum provisions, such as quantum networking and workforce programs at NSF and DOE.",
+   "url": "https://www.congress.gov/bill/117th-congress/house-bill/4346",
+   "companies": []
+  },
+  {
+   "id": "pl-117-260",
+   "kind": "law",
+   "title": "Quantum Computing Cybersecurity Preparedness Act",
+   "date": "2022-12-21",
+   "reference": "Pub. L. 117-260 (H.R. 7535)",
+   "summary": "Requires federal agencies to plan the move of their systems to post-quantum cryptography.",
+   "url": "https://www.congress.gov/bill/117th-congress/house-bill/7535",
+   "companies": []
+  },
+  {
+   "id": "nist-fips-203-205",
+   "kind": "standard",
+   "title": "Post-quantum cryptography standards (FIPS 203, 204 and 205)",
+   "date": "2024-08-13",
+   "reference": "NIST",
+   "summary": "NIST's first finalized post-quantum encryption and signature standards, based on ML-KEM, ML-DSA and SLH-DSA.",
+   "url": "https://csrc.nist.gov/pubs/fips/203/final",
+   "companies": []
+  },
+  {
+   "id": "eo-14413",
+   "kind": "executive_order",
+   "title": "Ushering in the Next Frontier of Quantum Innovation",
+   "date": "2026-06-22",
+   "reference": "Executive Order 14413",
+   "summary": "Orders an updated National Quantum Strategy within 180 days, an effort to deliver a quantum computer for scientific discovery to a DOE facility, five-year quantum sensing and networking plans, and workforce and supply chain measures.",
+   "url": "https://www.whitehouse.gov/presidential-actions/2026/06/ushering-in-the-next-frontier-of-quantum-innovation/",
+   "companies": []
+  },
+  {
+   "id": "119-s-3597",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "s",
+   "number": 3597,
+   "title": "National Quantum Initiative Reauthorization Act of 2026",
+   "sponsor": "Sen. Todd Young [R-IN]",
+   "introduced": "2026-01-08",
+   "latest_action": {
+    "date": "2026-11-16",
+    "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 718."
+   },
+   "stage": "reported",
+   "summary": "Reauthorizes the National Quantum Initiative Act.",
+   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3597",
+   "companies": []
+  },
+  {
+   "id": "119-hr-8462",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "hr",
+   "number": 8462,
+   "title": "National Quantum Initiative Reauthorization Act",
+   "sponsor": "Rep. Randy K. Weber Sr. [R-TX-14]",
+   "introduced": "2026-04-23",
+   "latest_action": {
+    "date": "2026-04-29",
+    "text": "Ordered to be Reported (Amended) by Voice Vote."
+   },
+   "stage": "reported",
+   "summary": "House version of the reauthorization of the National Quantum Initiative Act.",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/8462",
+   "companies": []
+  },
+  {
+   "id": "119-s-579",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "s",
+   "number": 579,
+   "title": "Department of Energy Quantum Leadership Act of 2025",
+   "sponsor": "Sen. Richard J. Durbin [D-IL]",
+   "introduced": "2025-02-13",
+   "latest_action": {
+    "date": "2025-02-13",
+    "text": "Read twice and referred to the Committee on Energy and Natural Resources."
+   },
+   "stage": "committee",
+   "summary": "Expands DOE's quantum research program and reauthorizes the National Quantum Information Science Research Centers through FY2030.",
+   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/579",
+   "companies": []
+  },
+  {
+   "id": "119-hr-3220",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "hr",
+   "number": 3220,
+   "title": "Quantum Sandbox for Near-Term Applications Act of 2025",
+   "sponsor": "Rep. Jay Obernolte [R-CA-23]",
+   "introduced": "2025-05-06",
+   "latest_action": {
+    "date": "2025-05-06",
+    "text": "Referred to the House Committee on Science, Space, and Technology."
+   },
+   "stage": "committee",
+   "summary": "Sets up a public-private partnership to develop near-term quantum applications.",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/3220",
+   "companies": []
+  },
+  {
+   "id": "119-s-1344",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "s",
+   "number": 1344,
+   "title": "Quantum Sandbox for Near-Term Applications Act of 2025",
+   "sponsor": "Sen. Marsha Blackburn [R-TN]",
+   "introduced": "2025-04-08",
+   "latest_action": {
+    "date": "2025-04-08",
+    "text": "Read twice and referred to the Committee on Commerce, Science, and Transportation."
+   },
+   "stage": "committee",
+   "summary": "Senate companion to H.R. 3220.",
+   "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1344",
+   "companies": []
+  },
+  {
+   "id": "119-hr-9585",
+   "kind": "bill",
+   "congress": 119,
+   "bill_type": "hr",
+   "number": 9585,
+   "title": "Advancing American Quantum Leadership Act of 2026",
+   "sponsor": "Rep. Michael Lawler [R-NY-17]",
+   "introduced": "2026-07-02",
+   "latest_action": {
+    "date": "2026-07-02",
+    "text": "Referred to the House Committee on Financial Services."
+   },
+   "stage": "committee",
+   "summary": "Adds quantum technology to the Export-Import Bank's program on China and transformational exports.",
+   "url": "https://www.congress.gov/bill/119th-congress/house-bill/9585",
+   "companies": []
+  }
+ ],
+ "federal_register": []
+}
