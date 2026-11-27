@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, ExternalLink, FileText, Newspaper, TrendingUp, Building2 } from 'lucide-react'
 import PaperCard from '../components/PaperCard'
+import { NewsList } from './News'
+import { loadData, loadPapers, useData, type CompanyRecord, type NewsItem } from '../lib/data'
+import type { Paper } from '../components/PaperCard'
 import {
-  type CompanyDetail as CompanyDetailData,
   CATEGORY_LABELS,
   CATEGORY_STYLES,
   PLATFORM_LABELS,
@@ -11,29 +13,37 @@ import {
 
 export default function CompanyDetail() {
   const { slug } = useParams<{ slug: string }>()
-  const [company, setCompany] = useState<CompanyDetailData | null>(null)
-  const [error, setError] = useState('')
   const [tab, setTab] = useState<'papers' | 'news'>('papers')
+  const { data: all, error: loadError } = useData(
+    () => Promise.all([
+      loadData<CompanyRecord[]>('companies.json'),
+      loadPapers(),
+      loadData<NewsItem[]>('news.json'),
+    ]),
+  )
 
-  useEffect(() => {
-    if (!slug) return
-    setCompany(null)
-    setError('')
-    fetch(`/api/companies/${slug}`)
-      .then(async res => {
-        if (!res.ok) throw new Error(res.status === 404 ? 'Company not found' : `Error ${res.status}`)
-        return res.json()
-      })
-      .then(setCompany)
-      .catch(e => setError(e.message))
-  }, [slug])
-
-  const formatDate = (s: string) => {
-    if (!s) return ''
-    const d = new Date(s)
-    return isNaN(d.getTime())
-      ? s.slice(0, 16)
-      : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  const found = all?.[0].find(c => c.slug === slug)
+  const error = loadError || (all && !found ? 'Company not found' : '')
+  let company: (CompanyRecord & {
+    papers: Paper[]
+    news: NewsItem[]
+    related: { slug: string; name: string; relation: 'parent' | 'subsidiary' }[]
+  }) | null = null
+  if (all && found) {
+    const [companies, papers, news] = all
+    const paperById = new Map(papers.map(p => [p.id, p]))
+    const newsById = new Map(news.map(n => [n.id, n]))
+    company = {
+      ...found,
+      papers: found.paper_ids.map(id => paperById.get(id)).filter((p): p is Paper => !!p),
+      news: found.news_ids.map(id => newsById.get(id)).filter((n): n is NewsItem => !!n),
+      related: companies.flatMap((o): { slug: string; name: string; relation: 'parent' | 'subsidiary' }[] => {
+        if (o.slug === found.slug) return []
+        if (o.parent && o.parent === found.name) return [{ slug: o.slug, name: o.name, relation: 'subsidiary' }]
+        if (found.parent && o.name === found.parent) return [{ slug: o.slug, name: o.name, relation: 'parent' }]
+        return []
+      }),
+    }
   }
 
   const back = (
@@ -149,7 +159,7 @@ export default function CompanyDetail() {
         {tab === 'papers' ? (
           company.papers.length === 0 ? (
             <p className="text-sm text-gray-500 py-8 text-center">
-              No papers in your database mention {company.name} yet. Fetch more on the Papers page.
+              No papers in the collection mention {company.name} yet.
             </p>
           ) : (
             <div className="space-y-3">
@@ -158,30 +168,10 @@ export default function CompanyDetail() {
           )
         ) : company.news.length === 0 ? (
           <p className="text-sm text-gray-500 py-8 text-center">
-            No current news mentions {company.name}. Refresh the News page to pull the latest feeds.
+            No recent news mentions {company.name}.
           </p>
         ) : (
-          <div className="space-y-2">
-            {company.news.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 transition-colors group"
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1 text-xs text-gray-400">
-                    <span>{item.source}</span>
-                    {item.published && <span>{formatDate(item.published)}</span>}
-                  </div>
-                  <h3 className="font-medium text-gray-900 group-hover:text-teal-700 leading-snug">{item.title}</h3>
-                  {item.summary && <p className="text-sm text-gray-500 mt-1 line-clamp-2">{item.summary}</p>}
-                </div>
-                <ExternalLink className="w-4 h-4 text-gray-300 group-hover:text-gray-500 shrink-0 mt-1" />
-              </a>
-            ))}
-          </div>
+          <NewsList items={company.news} />
         )}
       </div>
     </div>

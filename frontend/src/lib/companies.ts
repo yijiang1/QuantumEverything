@@ -1,5 +1,3 @@
-import type { Paper } from '../components/PaperCard'
-
 export interface Company {
   slug: string
   name: string
@@ -15,25 +13,6 @@ export interface Company {
   description: string
   aliases: string[]
   is_public: boolean
-}
-
-export interface CompanyListItem extends Company {
-  mentions: { papers: number; news: number }
-}
-
-export interface NewsItem {
-  title: string
-  summary: string
-  link: string
-  published: string
-  source: string
-  category: string
-}
-
-export interface CompanyDetail extends Company {
-  related: { slug: string; name: string; relation: 'parent' | 'subsidiary' }[]
-  papers: Paper[]
-  news: NewsItem[]
 }
 
 export const CATEGORY_LABELS: Record<string, string> = {
