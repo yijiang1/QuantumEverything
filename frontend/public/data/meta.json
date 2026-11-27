@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T04:10:50+00:00",
+ "generated_at": "2026-11-27T05:00:34+00:00",
  "counts": {
   "papers": 0,
   "papers_scored": 0,
@@ -14,6 +14,8 @@
   "deals": 79,
   "machines": 43,
   "events": 32,
+  "learn": 70,
+  "trend_points": 144,
   "jobs": 0
  },
  "last_run": {

@@ -106,7 +106,7 @@ function niceTicks(min: number, max: number, count = 4): number[] {
   return ticks
 }
 
-function useWidth<T extends HTMLElement>() {
+export function useWidth<T extends HTMLElement>() {
   const ref = useRef<T>(null)
   const [width, setWidth] = useState(600)
   useEffect(() => {

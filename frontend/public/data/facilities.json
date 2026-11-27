@@ -15,7 +15,10 @@
   "program": "us-nqi",
   "url": "https://www.anl.gov/",
   "source_url": "https://www.energy.gov/articles/energy-department-announces-625-million-advance-next-phase-national-quantum-information",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2020,
+  "opened_confirmed": true,
+  "opened_source": "https://news.uchicago.edu/story/one-year-q-next-quantum-research-center-going-strong"
  },
  {
   "slug": "brookhaven-c2qa",
@@ -35,7 +38,10 @@
   "program": "us-nqi",
   "url": "https://www.bnl.gov/",
   "source_url": "https://www.energy.gov/articles/energy-department-announces-625-million-advance-next-phase-national-quantum-information",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2020,
+  "opened_confirmed": true,
+  "opened_source": "https://www.bnl.gov/newsroom/news.php?a=217392"
  },
  {
   "slug": "fermilab-sqms",
@@ -55,7 +61,10 @@
   "program": "us-nqi",
   "url": "https://www.fnal.gov/",
   "source_url": "https://www.energy.gov/articles/energy-department-announces-625-million-advance-next-phase-national-quantum-information",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2020,
+  "opened_confirmed": true,
+  "opened_source": "https://sqmscenter.fnal.gov/about/"
  },
  {
   "slug": "lbnl-qsa-aqt",
@@ -78,7 +87,10 @@
   "url": "https://www.lbl.gov/",
   "source_url": "https://www.energy.gov/articles/energy-department-announces-625-million-advance-next-phase-national-quantum-information",
   "confirmed": true,
-  "note": "The Advanced Quantum Testbed's open access wasn't confirmed from a source this run."
+  "note": "The Advanced Quantum Testbed's open access wasn't confirmed from a source this run.",
+  "opened": 2018,
+  "opened_confirmed": true,
+  "opened_source": "https://aqt.lbl.gov/"
  },
  {
   "slug": "ornl-qsc-qcup",
@@ -96,7 +108,10 @@
   "program": "us-nqi",
   "url": "https://www.olcf.ornl.gov/olcf-resources/compute-systems/quantum-computing-user-program/",
   "source_url": "https://www.olcf.ornl.gov/olcf-resources/compute-systems/quantum-computing-user-program/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2017,
+  "opened_confirmed": true,
+  "opened_source": "https://www.ornl.gov/news/ornl-leads-quantum-collaborations"
  },
  {
   "slug": "sandia-qscout",
@@ -116,7 +131,10 @@
   "program": "us-nqi",
   "url": "https://www.sandia.gov/quantum/",
   "source_url": "https://newsreleases.sandia.gov/quantum_testbed/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://newsreleases.sandia.gov/quantum_testbed/"
  },
  {
   "slug": "uk-nqcc",
@@ -134,7 +152,10 @@
   "program": "uk-nqs",
   "url": "https://www.nqcc.ac.uk/",
   "source_url": "https://www.nqcc.ac.uk/quantum-computing-testbeds/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2024,
+  "opened_confirmed": true,
+  "opened_source": "https://www.gov.uk/government/news/new-national-quantum-laboratory-to-open-up-access-to-quantum-computing-unleashing-a-revolution-in-ai-energy-healthcare-and-more"
  },
  {
   "slug": "julich-juniq",
@@ -152,7 +173,10 @@
   "program": "de-action-concept",
   "url": "https://fzj.de/en/ias/jsc/systems/quantum-computing/juniq-facility/juniq",
   "source_url": "https://fzj.de/en/ias/jsc/systems/quantum-computing/juniq-facility/access-service-and-support",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2019,
+  "opened_confirmed": true,
+  "opened_source": "https://www.fz-juelich.de/en/news/archive/press-release/2019/2019-10-25-juniq"
  },
  {
   "slug": "riken-rqc",
@@ -175,7 +199,10 @@
   "program": "jp-quantum",
   "url": "https://rqc.riken.jp/",
   "source_url": "https://www.sg.riken.jp/riken-established-riken-centre-for-quantum-computing-on-april-1-2021.html",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://www.riken.jp/en/news_pubs/news/2021/20210721_1/index.html"
  },
  {
   "slug": "qutech",
@@ -196,7 +223,10 @@
   "program": "nl-qdnl",
   "url": "https://qutech.nl/",
   "source_url": "https://qutech.nl/2025/02/25/quantum-inspire-2-0-is-live-with-updated-software-and-hardware/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2013,
+  "opened_confirmed": true,
+  "opened_source": "https://qutech.nl/history/"
  },
  {
   "slug": "waterloo-iqc",
@@ -214,7 +244,10 @@
   "program": "ca-nqs",
   "url": "https://uwaterloo.ca/institute-for-quantum-computing/",
   "source_url": "",
-  "confirmed": false
+  "confirmed": false,
+  "opened": 2002,
+  "opened_confirmed": true,
+  "opened_source": "https://uwaterloo.ca/institute-for-quantum-computing/about"
  },
  {
   "slug": "cqt-singapore",
@@ -234,7 +267,10 @@
   "program": "sg-nqs",
   "url": "https://www.cqt.sg/",
   "source_url": "",
-  "confirmed": false
+  "confirmed": false,
+  "opened": 2007,
+  "opened_confirmed": true,
+  "opened_source": "https://en.wikipedia.org/wiki/Centre_for_Quantum_Technologies"
  },
  {
   "slug": "ibm-poughkeepsie",
@@ -256,7 +292,10 @@
   "program": "",
   "url": "https://www.ibm.com/quantum",
   "source_url": "https://www.ibm.com/quantum/blog/quantum-computation-center-update",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2019,
+  "opened_confirmed": true,
+  "opened_source": "https://fortune.com/2019/09/18/ibm-opens-quantum-computer-center-in-poughkeepsie-n-y-home-of-the-mainframe-computer/"
  },
  {
   "slug": "google-santa-barbara",
@@ -278,7 +317,10 @@
   "program": "",
   "url": "https://quantumai.google/lab",
   "source_url": "https://blog.google/technology/ai/unveiling-our-new-quantum-ai-campus/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://blog.google/technology/ai/unveiling-our-new-quantum-ai-campus/"
  },
  {
   "slug": "aws-cqc",
@@ -301,7 +343,10 @@
   "program": "",
   "url": "https://aws.amazon.com/blogs/quantum-computing/announcing-the-opening-of-the-aws-center-for-quantum-computing",
   "source_url": "https://aws.amazon.com/blogs/quantum-computing/announcing-the-opening-of-the-aws-center-for-quantum-computing",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://thequantuminsider.com/2021/10/26/aws-opens-its-center-for-quantum-computing-on-caltech-campus/"
  },
  {
   "slug": "rigetti-fab1",
@@ -324,7 +369,10 @@
   "url": "https://www.rigetti.com/rigetti-quantum-foundry-services",
   "source_url": "https://www.rigetti.com/rigetti-quantum-foundry-services",
   "confirmed": true,
-  "note": "The Fremont location is from general knowledge; the source checked confirms the fab and foundry services."
+  "note": "The Fremont location is from general knowledge; the source checked confirms the fab and foundry services.",
+  "opened": 2017,
+  "opened_confirmed": true,
+  "opened_source": "https://spectrum.ieee.org/tech-talk/computing/software/rigetti-launches-fullstack-quantum-computing-service-and-quantum-ic-fab"
  },
  {
   "slug": "ionq-bothell",
@@ -346,7 +394,10 @@
   "program": "",
   "url": "https://www.ionq.com/",
   "source_url": "https://www.commerce.senate.gov/press/dem/release/cantwell-celebrates-grand-opening-of-nations-first-quantum-computing-manufacturing-facility-in-bothell-wa/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2024,
+  "opened_confirmed": false,
+  "opened_source": "https://www.businesswire.com/news/home/20240215594253/en/IonQ-Opens-Doors-to-First-Dedicated-Quantum-Computing-Manufacturing-Facility-in-the-U.S."
  },
  {
   "slug": "quantinuum-broomfield",
@@ -369,7 +420,10 @@
   "program": "",
   "url": "https://www.quantinuum.com/",
   "source_url": "https://www.quantinuum.com/news/quantinuum-announces-its-new-laboratory-space-in-broomfield",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2016,
+  "opened_confirmed": true,
+  "opened_source": "https://www.builtincolorado.com/2021/12/02/quantinuum-honeywell-quantum-merger-colorado"
  },
  {
   "slug": "quantinuum-new-mexico",
@@ -391,7 +445,10 @@
   "program": "",
   "url": "https://www.quantinuum.com/",
   "source_url": "https://edd.newmexico.gov/press-releases/quantinuum-announces-plans-to-build-a-new-quantum-rd-center-in-new-mexico-anchoring-the-states-quantum-technology-revolution/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2025,
+  "opened_confirmed": false,
+  "opened_source": "https://thequantuminsider.com/2026/08/20/quantinuum-expands-research-operations-albuquerque/"
  },
  {
   "slug": "psiquantum-chicago",
@@ -413,7 +470,10 @@
   "program": "",
   "url": "https://news.uchicago.edu/story/groundbreaking-illinois-quantum-and-microelectronics-park-creates-anchor-quantum-innovation",
   "source_url": "https://news.wttw.com/2024/07/25/quantum-computing-campus-touted-history-altering-picks-former-us-steel-south-works-site",
-  "confirmed": true
+  "confirmed": true,
+  "opened": null,
+  "opened_confirmed": false,
+  "opened_source": "https://news.uchicago.edu/story/groundbreaking-illinois-quantum-and-microelectronics-park-creates-anchor-quantum-innovation"
  },
  {
   "slug": "psiquantum-moreton-bay",
@@ -435,7 +495,10 @@
   "program": "au-nqs",
   "url": "https://www.psiquantum.com/",
   "source_url": "https://www.businesswire.com/news/home/20260520542043/en/PsiQuantum-Unveils-New-Australian-Site-at-Moreton-Bay-Central",
-  "confirmed": true
+  "confirmed": true,
+  "opened": null,
+  "opened_confirmed": false,
+  "opened_source": "https://www.businesswire.com/news/home/20260520542043/en/PsiQuantum-Unveils-New-Australian-Site-at-Moreton-Bay-Central"
  },
  {
   "slug": "iqm-espoo",
@@ -457,7 +520,10 @@
   "program": "eu-quantum",
   "url": "https://iqm.tech/company/about-iqm/",
   "source_url": "https://www.hpcwire.com/off-the-wire/iqm-quantum-computers-opens-a-new-fabrication-facility-in-finland/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": false,
+  "opened_source": "https://www.businesswire.com/news/home/20211112005477/en/IQM-Quantum-Computers-Opens-a-New-Fabrication-Facility-in-Finland"
  },
  {
   "slug": "hefei-national-lab",
@@ -479,7 +545,10 @@
   "url": "",
   "source_url": "https://itif.org/publications/2024/09/09/how-innovative-is-china-in-quantum/",
   "confirmed": true,
-  "note": "Reported funding ranges from about CNY 7 billion for construction to an unverified $10 billion."
+  "note": "Reported funding ranges from about CNY 7 billion for construction to an unverified $10 billion.",
+  "opened": 2021,
+  "opened_confirmed": false,
+  "opened_source": "https://postquantum.com/china-quantum-ambition/china-hefei-quantum/"
  },
  {
   "slug": "origin-quantum-hefei",
@@ -501,7 +570,10 @@
   "program": "cn-quantum",
   "url": "",
   "source_url": "https://en.people.cn/n3/2025/0508/c90000-20312145.html",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2017,
+  "opened_confirmed": true,
+  "opened_source": "https://thequantuminsider.com/2019/11/08/origin-quantums-year-of-the-pig/"
  },
  {
   "slug": "baqis-beijing",
@@ -521,7 +593,10 @@
   "program": "cn-quantum",
   "url": "",
   "source_url": "https://english.cas.cn/newsroom/cas_media/202305/t20230529_331086.shtml",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2017,
+  "opened_confirmed": true,
+  "opened_source": "https://rsj.beijing.gov.cn/english/focus/postdoctoralrecruitment/202603/t20260324_4564912.html"
  },
  {
   "slug": "aist-g-quat",
@@ -541,7 +616,10 @@
   "program": "jp-quantum",
   "url": "https://unit.aist.go.jp/g-quat/index_en.html",
   "source_url": "https://unit.aist.go.jp/g-quat/index_en.html",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2023,
+  "opened_confirmed": true,
+  "opened_source": "https://www.aist.go.jp/aist_e/humanres/8e_G-Quat.html"
  },
  {
   "slug": "kriss-daejeon",
@@ -562,7 +640,10 @@
   "url": "",
   "source_url": "https://www.asiae.co.kr/en/article/2024011108401562915",
   "confirmed": true,
-  "note": "The source places the system in Daejeon only by saying the demo linked Daejeon and Seoul."
+  "note": "The source places the system in Daejeon only by saying the demo linked Daejeon and Seoul.",
+  "opened": 2022,
+  "opened_confirmed": false,
+  "opened_source": "https://zdnet.co.kr/view/?no=20230903023029"
  },
  {
   "slug": "academia-sinica",
@@ -582,7 +663,10 @@
   "program": "tw-quantum",
   "url": "https://www.sinica.edu.tw/en",
   "source_url": "https://www.sinica.edu.tw/en/news_content/55/3655",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2023,
+  "opened_confirmed": true,
+  "opened_source": "https://www.sinica.edu.tw/en/News_Content/55/2256"
  },
  {
   "slug": "nnf-qcp-copenhagen",
@@ -600,7 +684,10 @@
   "program": "",
   "url": "https://novonordiskfonden.dk/en/projects/novo-nordisk-foundation-quantum-computing-programme/",
   "source_url": "https://novonordiskfonden.dk/en/projects/novo-nordisk-foundation-quantum-computing-programme/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2022,
+  "opened_confirmed": true,
+  "opened_source": "https://science.ku.dk/english/press/news/2022/major-investment-for-developing-denmarks-first-fully--functional-quantum-computer/"
  },
  {
   "slug": "vtt-espoo",
@@ -622,7 +709,10 @@
   "program": "fi-quantum",
   "url": "https://www.vttresearch.com/",
   "source_url": "https://iqm.tech/press-releases/vtt-and-iqm-launch-first-50-qubit-quantum-computer-developed-in-europe/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://vttresearch.com/en/news-and-ideas/finlands-first-5-qubit-quantum-computer-now-operational"
  },
  {
   "slug": "ethz-psi-hub",
@@ -643,7 +733,10 @@
   "program": "ch-sqi",
   "url": "https://www.psi.ch/en/qchub",
   "source_url": "https://www.psi.ch/en/qchub",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2021,
+  "opened_confirmed": true,
+  "opened_source": "https://www.psi.ch/en/news/psi-stories/eth-zurich-and-psi-found-quantum-computing-hub"
  },
  {
   "slug": "iqcc-tel-aviv",
@@ -668,7 +761,10 @@
   "program": "il-inqi",
   "url": "https://www.quantum-machines.co/",
   "source_url": "https://www.quantum-machines.co/press-release/quantum-machines-opens-the-israeli-quantum-computing-center/",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2024,
+  "opened_confirmed": true,
+  "opened_source": "https://prnewswire.com/news-releases/quantum-machines-opens-the-israeli-quantum-computing-center-302181680.html"
  },
  {
   "slug": "bsc-euroqcs-spain",
@@ -690,7 +786,10 @@
   "url": "https://www.bsc.es/",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
   "confirmed": true,
-  "note": "EuroHPC lists this system as still to be installed."
+  "note": "EuroHPC lists this system as still to be installed.",
+  "opened": 2026,
+  "opened_confirmed": true,
+  "opened_source": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-inaugurates-euroqcs-spain-barcelona-2026-05-28_en"
  },
  {
   "slug": "cineca-sol",
@@ -711,7 +810,10 @@
   "url": "https://www.cineca.it/en",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
   "confirmed": true,
-  "note": "EuroHPC lists this system as still to be installed."
+  "note": "EuroHPC lists this system as still to be installed.",
+  "opened": 2026,
+  "opened_confirmed": true,
+  "opened_source": "https://www.eurohpc-ju.europa.eu/inauguration-sol-new-quantum-computer-together-lisa-upgrade-leonardo-supercomputer-2026-06-11_en"
  },
  {
   "slug": "lrz-euro-q-exa",
@@ -731,7 +833,10 @@
   "program": "de-action-concept",
   "url": "https://www.lrz.de/",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2026,
+  "opened_confirmed": true,
+  "opened_source": "https://eurohpc-ju.europa.eu/inauguration-euro-q-exa-expanding-european-quantum-computing-infrastructure-2026-02-12_en"
  },
  {
   "slug": "cea-tgcc",
@@ -752,7 +857,10 @@
   "program": "fr-nqs",
   "url": "",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2025,
+  "opened_confirmed": true,
+  "opened_source": "https://www.cea.fr/english/Pages/News/inauguration-Ruby-quantum-computer.aspx"
  },
  {
   "slug": "pcss-piast-q",
@@ -772,7 +880,10 @@
   "program": "eu-quantum",
   "url": "https://www.pcss.pl/en/",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2025,
+  "opened_confirmed": true,
+  "opened_source": "https://www.eurohpc-ju.europa.eu/inauguration-piast-q-leap-european-quantum-computing-2025-06-23_en"
  },
  {
   "slug": "it4i-vlq",
@@ -792,7 +903,10 @@
   "program": "eu-quantum",
   "url": "https://www.it4i.cz/en",
   "source_url": "https://eurohpc-ju.europa.eu/eurohpc-quantum-computers/our-quantum-computers_en",
-  "confirmed": true
+  "confirmed": true,
+  "opened": 2025,
+  "opened_confirmed": true,
+  "opened_source": "https://eurohpc-ju.europa.eu/vlq-europes-next-leap-towards-quantum-powered-research-and-innovation-2025-09-23_en"
  },
  {
   "slug": "rqc-moscow",
@@ -813,7 +927,10 @@
   "url": "",
   "source_url": "https://thequantuminsider.com/2025/01/02/russian-quantum-center-founder-details-navigating-challenges-in-quantum-computing-quest-offers-glimpse-at-future-roadmap/",
   "confirmed": true,
-  "note": "Sources differ on the founding year (2010 or 2012); the pin marks Skolkovo, where it began."
+  "note": "Sources differ on the founding year (2010 or 2012); the pin marks Skolkovo, where it began.",
+  "opened": 2010,
+  "opened_confirmed": true,
+  "opened_source": "https://postquantum.com/quantum-computing/quantum-russia/"
  },
  {
   "slug": "iisc-nqm-hub",
@@ -832,6 +949,9 @@
   "url": "",
   "source_url": "https://thequantuminsider.com/2024/10/02/indias-national-quantum-mission-launches-four-thematic-hubs-to-encourage-development-in-quantum-technology-and-innovation/",
   "confirmed": false,
-  "note": "Not yet confirmed from an official source."
+  "note": "Not yet confirmed from an official source.",
+  "opened": 2024,
+  "opened_confirmed": true,
+  "opened_source": "https://thequantuminsider.com/2024/10/02/indias-national-quantum-mission-launches-four-thematic-hubs-to-encourage-development-in-quantum-technology-and-innovation/"
  }
 ]

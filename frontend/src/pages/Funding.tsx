@@ -13,9 +13,9 @@ export const DEAL_KINDS: Record<DealKind, string> = {
 }
 
 /** Capital raised (not acquisitions or grants), for the yearly chart. */
-const RAISES: DealKind[] = ['venture', 'public_offering', 'ipo', 'spac']
+export const RAISES: DealKind[] = ['venture', 'public_offering', 'ipo', 'spac']
 
-function formatMillions(m: number) {
+export function formatMillions(m: number) {
   return m >= 1000 ? `$${(m / 1000).toFixed(m >= 10000 ? 0 : 1)}B` : `$${Math.round(m)}M`
 }
 

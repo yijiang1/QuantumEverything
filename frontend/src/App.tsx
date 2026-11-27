@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route, NavLink, Link } from 'react-router-dom'
-import { Atom, FileText, Newspaper, Building2, LayoutGrid, BookOpen, Sparkles, LineChart, Landmark, MapPin, Banknote, Cpu, CalendarDays } from 'lucide-react'
+import { Atom, FileText, Newspaper, Building2, LayoutGrid, BookOpen, Sparkles, LineChart, Landmark, MapPin, Banknote, Cpu, CalendarDays, TrendingUp, GraduationCap } from 'lucide-react'
 import Overview from './pages/Overview'
 import Papers from './pages/Papers'
 import News from './pages/News'
@@ -11,11 +11,14 @@ import Facilities from './pages/Facilities'
 import Funding from './pages/Funding'
 import Hardware from './pages/Hardware'
 import EventsJobs from './pages/EventsJobs'
+import Trends from './pages/Trends'
+import Learn from './pages/Learn'
 import ReadingList from './pages/ReadingList'
 import { AnalysesList, AnalysisDetail } from './pages/Analyses'
 
 const NAV = [
   { to: '/', label: 'Overview', icon: LayoutGrid, end: true },
+  { to: '/trends', label: 'Trends', icon: TrendingUp },
   { to: '/papers', label: 'Papers', icon: FileText },
   { to: '/companies', label: 'Companies', icon: Building2 },
   { to: '/stocks', label: 'Stocks', icon: LineChart },
@@ -25,6 +28,7 @@ const NAV = [
   { to: '/facilities', label: 'Facilities', icon: MapPin },
   { to: '/news', label: 'News', icon: Newspaper },
   { to: '/events', label: 'Events & jobs', icon: CalendarDays },
+  { to: '/learn', label: 'Learn', icon: GraduationCap },
   { to: '/analyses', label: 'Analyses', icon: Sparkles },
   { to: '/reading-list', label: 'Reading list', icon: BookOpen },
 ]
@@ -68,6 +72,8 @@ export default function App() {
             <Route path="/funding" element={<Funding />} />
             <Route path="/hardware" element={<Hardware />} />
             <Route path="/events" element={<EventsJobs />} />
+            <Route path="/trends" element={<Trends />} />
+            <Route path="/learn" element={<Learn />} />
             <Route path="/news" element={<News />} />
             <Route path="/analyses" element={<AnalysesList />} />
             <Route path="/analyses/:slug" element={<AnalysisDetail />} />
@@ -77,7 +83,7 @@ export default function App() {
         </main>
 
         <footer className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 text-xs text-gray-400">
-          Papers from arXiv and OpenAlex. News from public RSS feeds. Policy from govinfo.gov and the Federal Register. Jobs from companies' public job boards. Deals, hardware and events are curated with sources. Company profiles are a curated list and may be incomplete. Share prices are daily closes and not investment advice.
+          Papers from arXiv and OpenAlex. News from public RSS feeds. Policy from govinfo.gov and the Federal Register. Jobs from companies' public job boards. Deals, hardware, events, learning resources and historical trends are curated with sources. Company profiles are a curated list and may be incomplete. Share prices are daily closes and not investment advice.
         </footer>
       </div>
     </HashRouter>

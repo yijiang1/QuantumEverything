@@ -16,6 +16,8 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs, on a world map | `backend/app/facilities/facilities.json` (curated); map tiles from OpenStreetMap |
 | Funding | Funding rounds, share offerings, IPOs, SPAC mergers and acquisitions, with a yearly total, linked to company profiles | `backend/app/funding/deals.json` (curated, each with a source) |
 | Hardware | Quantum computers with qubit counts and two-qubit fidelities, a qubits-over-time chart, and companies' published roadmap targets | `backend/app/hardware/hardware.json` (curated, each with a source) |
+| Trends | The field's history in charts: record qubit counts, two-qubit gate error, coherence times and quantum volume over time (log scales), error-correction milestones, papers per year, companies founded, capital raised, facilities opened, national programs and the stock index | `backend/app/trends/history.json` (curated, each point with a source) plus the site's own company, funding, facility, policy and stock data |
+| Learn | Free courses, lecture videos, notes and tutorials from beginner to advanced, filterable by level, format and topic | `backend/app/learn/resources.json` (curated links to providers' own pages; nothing is re-hosted) |
 | Events & jobs | Upcoming quantum conferences, and open roles at quantum companies | `backend/app/events/events.json` (curated); jobs from Greenhouse, Lever and Ashby public job-board APIs (free, no key), set up in `backend/app/jobs/job_boards.json` |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
 | Analyses | Research reports on quantum opportunities in a field | The Claude research agent, run on request |
@@ -96,6 +98,8 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 - **Funding:** edit `backend/app/funding/deals.json`. `company` is the slug of the company that raised money or was bought; `amount` is in millions of `currency` (leave it null to keep a deal out of the yearly total).
 - **Hardware:** edit `backend/app/hardware/hardware.json`. Each entry is a `machine` (qubits, fidelity as stated) or a roadmap `milestone` (target year and goal).
 - **Events:** edit `backend/app/events/events.json`. Events drop off the site after their end date.
+- **Trends:** edit `backend/app/trends/history.json`. Each point has a `series` (`qubits`, `two_qubit_fidelity` in percent, `coherence` in microseconds, `quantum_volume`, `qec_milestones` or `arxiv_quant_ph`), a `date` (`YYYY` or `YYYY-MM`), a `value`, and a source. Facility years come from `opened` in `backend/app/facilities/facilities.json`.
+- **Learn:** edit `backend/app/learn/resources.json`. Link only to free resources on the provider's own site or official channel; `level` is `beginner`, `intermediate` or `advanced`.
 - **Jobs:** add a company to `backend/app/jobs/job_boards.json` with `ats` set to `greenhouse`, `lever` or `ashby` and its board `token` (for Lever's EU host, add `"region": "eu"`). Companies on other systems are listed with a link to their careers page.
 - **Reading list:** edit `frontend/public/data/reading_list.json`.
 - **News feeds:** edit `RSS_FEEDS` in `backend/app/news/tracker.py`.

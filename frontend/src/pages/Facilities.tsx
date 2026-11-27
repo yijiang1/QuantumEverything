@@ -19,7 +19,7 @@ function FacilityCard({ f, names, programs }: {
         <div className="min-w-0">
           <h3 className="font-medium text-gray-900 leading-snug">{f.name}</h3>
           <p className="text-xs text-gray-400 flex items-center gap-1 mt-0.5">
-            <MapPin className="w-3 h-3" /> {f.city} · {f.operator}
+            <MapPin className="w-3 h-3" /> {f.city} · {f.operator}{f.opened ? ` · Since ${f.opened}` : ''}
           </p>
         </div>
         {f.url && (

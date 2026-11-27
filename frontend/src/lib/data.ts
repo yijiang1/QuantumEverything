@@ -168,6 +168,10 @@ export interface Facility {
   source_url: string
   confirmed: boolean
   note?: string
+  /** year it opened or was set up; for a hosted machine, the year it was installed */
+  opened?: number | null
+  opened_confirmed?: boolean
+  opened_source?: string
 }
 
 export interface AnalysisSummary {
@@ -279,6 +283,43 @@ export interface JobsData {
 }
 
 /** Month precision dates ("2026-05") display as "May 2026". */
+export type LearnLevel = 'beginner' | 'intermediate' | 'advanced'
+export type LearnFormat = 'course' | 'video' | 'lecture_notes' | 'book' | 'tutorial' | 'interactive'
+
+export interface LearnResource {
+  id: string
+  title: string
+  provider: string
+  people: string[]
+  level: LearnLevel
+  format: LearnFormat
+  topics: string[]
+  language: string
+  year: number | null
+  description: string
+  url: string
+  free_note: string
+  confirmed: boolean
+}
+
+export type TrendSeries = 'qubits' | 'two_qubit_fidelity' | 'coherence' | 'quantum_volume' | 'qec_milestones' | 'arxiv_quant_ph'
+
+export interface TrendPoint {
+  id: string
+  series: TrendSeries
+  date: string            // YYYY or YYYY-MM
+  label: string
+  platform: string
+  value: number | null
+  value_text: string
+  group: string
+  description: string
+  source_url: string
+  source_name: string
+  confirmed: boolean
+  note?: string
+}
+
 export function formatMonthOrDay(d: string) {
   if (/^\d{4}-\d{2}$/.test(d)) {
     return new Date(`${d}-15T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })

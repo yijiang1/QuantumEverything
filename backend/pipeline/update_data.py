@@ -19,6 +19,8 @@ company matching, then writes JSON back for the site:
     deals.json      funding rounds, acquisitions, SPACs and IPOs (curated, see curated.py)
     hardware.json   quantum computers and roadmap milestones (curated)
     events.json     upcoming conferences (curated)
+    learn.json      free courses, lectures and tutorials (curated)
+    trends.json     historical series for the Trends page (curated)
     jobs.json       open roles from public job-board APIs (see jobs.py)
     meta.json       when the data was built and what each source returned
 
@@ -240,6 +242,8 @@ async def main(offline: bool) -> None:
     deals = curated.export_deals(companies)
     hardware = curated.export_hardware(companies)
     events = curated.export_events()
+    learn = curated.export_learn()
+    trends = curated.export_trends()
     job_data, status["jobs"] = jobs.refresh(companies, _read("jobs.json", {}), offline)
 
     visible = [p for p in papers if p["status"] != "skipped"]
@@ -259,6 +263,8 @@ async def main(offline: bool) -> None:
             "deals": len(deals),
             "machines": sum(1 for h in hardware if h.get("kind") == "machine"),
             "events": len(events),
+            "learn": len(learn),
+            "trend_points": len(trends),
             "jobs": len(job_data["jobs"]),
         },
         "last_run": status,
@@ -273,6 +279,8 @@ async def main(offline: bool) -> None:
     _write("deals.json", deals)
     _write("hardware.json", hardware)
     _write("events.json", events)
+    _write("learn.json", learn)
+    _write("trends.json", trends)
     _write("jobs.json", job_data)
     _write("meta.json", meta)
     print(json.dumps(meta, indent=1))
