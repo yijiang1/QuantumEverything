@@ -1,7 +1,7 @@
 {
  "generated_at": "2026-11-27T19:50:01+00:00",
  "counts": {
-  "papers": 219,
+  "papers": 90,
   "papers_scored": 0,
   "news": 10,
   "companies": 68,
@@ -166,6 +166,10 @@
   "jobs": {
    "boards_fetched": 13,
    "boards_failed": []
+  },
+  "papers_hidden": {
+   "off_topic": 118,
+   "future_date": 11
   }
  }
 }

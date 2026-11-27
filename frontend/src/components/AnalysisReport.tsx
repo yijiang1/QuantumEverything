@@ -47,8 +47,8 @@ export default function AnalysisReport({ topic, result }: { topic: string; resul
 
   return (
     <div className="space-y-4">
-      <div className="bg-white border border-gray-200 rounded-xl p-6">
-        <div className="flex items-start justify-between gap-4 mb-4">
+      <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6">
+        <div className="flex flex-wrap items-start justify-between gap-3 sm:gap-4 mb-4">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-2">
               <Atom className="w-5 h-5 text-teal-600 shrink-0" />
@@ -74,7 +74,7 @@ export default function AnalysisReport({ topic, result }: { topic: string; resul
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 *:min-w-0">
         <div className="bg-white border border-gray-200 rounded-xl p-4">
           <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Timeline</h3>
           <p className="text-gray-800 text-sm">{result.timeline || 'N/A'}</p>

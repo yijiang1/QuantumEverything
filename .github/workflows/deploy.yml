@@ -46,6 +46,9 @@ jobs:
         env:
           # Optional. Without it, papers are fetched but left unscored.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional. OpenAlex shares a small daily budget among keyless requests
+          # from the same IP address, so a free key keeps paper fetches reliable.
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
         run: python -m pipeline.update_data
       - name: Commit data
         run: |

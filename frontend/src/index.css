@@ -4,6 +4,9 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+/* Long names, URLs and source titles wrap inside their card instead of spilling out of it */
+body { overflow-wrap: break-word; }
+
 /* Comfortable tap targets on touch screens */
 @media (pointer: coarse) {
   button, select, summary,

@@ -121,10 +121,10 @@ export default function PaperCard({ paper, onApprove, onSkip }: Props) {
             </div>
 
             <div className="flex items-center gap-2 mt-1 text-xs text-gray-500 flex-wrap">
-              {paper.authors && <span className="truncate max-w-xs">{paper.authors}</span>}
+              {paper.authors && <span className="truncate max-w-full sm:max-w-xs">{paper.authors}</span>}
               {paper.date && <><span>·</span><span>{paper.date.slice(0, 7)}</span></>}
               {paper.journal && paper.journal !== 'arXiv' && (
-                <><span>·</span><span className="italic truncate max-w-[180px]">{paper.journal}</span></>
+                <><span>·</span><span className="italic truncate max-w-full sm:max-w-[180px]">{paper.journal}</span></>
               )}
               {(onApprove || onSkip) && (
                 <span className={`px-1.5 py-0.5 rounded text-xs ${STATUS_STYLES[paper.status] ?? ''}`}>
@@ -179,7 +179,7 @@ export default function PaperCard({ paper, onApprove, onSkip }: Props) {
           )}
 
           {/* Metadata grid */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm *:min-w-0">
             {platforms.length > 0 && (
               <>
                 <span className="text-gray-400">Hardware</span>

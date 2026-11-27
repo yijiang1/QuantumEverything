@@ -60,7 +60,7 @@ function PriceCard({ stock, ticker, example }: { stock: StockTicker | undefined;
         <RangePicker value={range} onChange={setRange} />
       </div>
       <LineChart series={shown} format={v => formatPrice(v, stock.currency)} label={`${ticker} closing price`} />
-      <dl className="grid grid-cols-4 gap-2 text-sm">
+      <dl className="grid grid-cols-4 gap-2 text-sm *:min-w-0">
         {periods.map(([k, v]) => (
           <div key={k}>
             <dt className="text-xs text-gray-400">{k}</dt>
@@ -267,7 +267,7 @@ export default function CompanyDetail() {
       {/* Header */}
       <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
         <div className="flex items-start justify-between gap-4">
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-2xl font-bold text-gray-900">{company.name}</h1>
               <span className={`text-xs px-2 py-0.5 rounded-full border ${CATEGORY_STYLES[company.category] ?? 'bg-gray-100 text-gray-500 border-gray-200'}`}>
@@ -293,7 +293,7 @@ export default function CompanyDetail() {
           )}
         </div>
 
-        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm">
+        <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-sm *:min-w-0">
           {facts.map(([k, v]) => (
             <div key={k}>
               <dt className="text-xs text-gray-400 uppercase tracking-wider">{k}</dt>

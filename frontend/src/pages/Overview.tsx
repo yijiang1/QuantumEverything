@@ -86,7 +86,7 @@ export default function Overview() {
         <p className="text-xs text-gray-400 mt-2">Data updated {formatDate(meta.generated_at)}</p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 *:min-w-0">
         <Stat to="/papers" icon={FileText} value={meta.counts.papers} label="papers tracked" />
         <Stat to="/companies" icon={Building2} value={meta.counts.companies} label="companies" />
         <Stat to="/stocks" icon={TrendingUp} value={meta.counts.public_companies} label="publicly traded" />
@@ -96,7 +96,7 @@ export default function Overview() {
       {index.series.length > 1 && (
         <Section title="Quantum stocks" to="/stocks">
           {stocks.example && <ExampleNotice />}
-          <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-3 *:min-w-0">
             <Link to="/stocks" className="bg-white border border-gray-200 rounded-xl p-4 hover:border-teal-300 flex items-center justify-between gap-3">
               <div>
                 <div className="text-xs text-gray-500">{index.name}</div>
@@ -134,7 +134,7 @@ export default function Overview() {
               <Link
                 key={c.slug}
                 to={`/companies/${c.slug}`}
-                className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm hover:border-teal-300"
+                className="flex flex-wrap items-center gap-x-2 max-w-full bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm hover:border-teal-300"
               >
                 <span className="text-gray-900">{c.name}</span>
                 <span className="text-xs text-gray-400 tabular-nums">
@@ -150,10 +150,10 @@ export default function Overview() {
         <Section title="Latest deals" to="/funding">
           <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
             {deals.slice(0, 5).map(d => (
-              <Link key={d.id} to={`/companies/${d.company}`} className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
-                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{formatMonthOrDay(d.date)}</span>
+              <Link key={d.id} to={`/companies/${d.company}`} className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 sm:w-24 shrink-0 tabular-nums">{formatMonthOrDay(d.date)}</span>
                 <span className="text-sm text-gray-900 min-w-0 flex-1">{dealNames.get(d.company) ?? d.company}: {d.title}</span>
-                <span className="text-xs text-gray-600 shrink-0 tabular-nums">{d.amount_text}</span>
+                <span className="text-xs text-gray-600 tabular-nums sm:text-right sm:max-w-[40%]">{d.amount_text}</span>
               </Link>
             ))}
           </div>
@@ -164,8 +164,8 @@ export default function Overview() {
         <Section title="Upcoming events" to="/events">
           <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
             {events.slice(0, 4).map(e => (
-              <a key={e.id} href={e.url || e.source_url} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
-                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{formatDay(e.start)}</span>
+              <a key={e.id} href={e.url || e.source_url} target="_blank" rel="noopener noreferrer" className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 sm:w-24 shrink-0 tabular-nums">{formatDay(e.start)}</span>
                 <span className="text-sm text-gray-900 min-w-0 flex-1">{e.name}</span>
                 <span className="text-xs text-gray-400 shrink-0 hidden sm:inline">{[e.city, e.country].filter(Boolean).join(', ')}</span>
               </a>
@@ -178,8 +178,8 @@ export default function Overview() {
         <Section title="Latest in policy" to="/policy">
           <div className="bg-white border border-gray-200 rounded-xl divide-y divide-gray-100">
             {policyItems.map(item => (
-              <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="flex items-baseline gap-3 px-3 py-2 hover:bg-gray-50">
-                <span className="text-xs text-gray-400 w-24 shrink-0 tabular-nums">{item.date ? formatDay(item.date) : ""}</span>
+              <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer" className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-3 px-3 py-2 hover:bg-gray-50">
+                <span className="text-xs text-gray-400 sm:w-24 shrink-0 tabular-nums">{item.date ? formatDay(item.date) : ""}</span>
                 <span className="text-sm text-gray-900 min-w-0 flex-1">{item.title}</span>
                 <span className="text-xs text-gray-400 shrink-0 hidden sm:inline">{item.tag}</span>
               </a>
