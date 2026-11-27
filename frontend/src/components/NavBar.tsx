@@ -18,7 +18,7 @@ export const GROUPS: Group[] = [
     label: 'Industry',
     pages: [
       { to: '/companies', label: 'Companies', icon: Building2, blurb: 'Quantum companies and their profiles' },
-      { to: '/stocks', label: 'Stocks', icon: LineChart, blurb: 'Share prices and a quantum index' },
+      { to: '/stocks', label: 'Stocks', icon: LineChart, blurb: 'Listed companies, with live quote links' },
       { to: '/funding', label: 'Funding', icon: Banknote, blurb: 'Rounds, IPOs, SPACs and acquisitions' },
       { to: '/events', label: 'Events & jobs', icon: CalendarDays, blurb: 'Conferences and open roles' },
     ],

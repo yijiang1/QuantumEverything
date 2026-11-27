@@ -44,3 +44,14 @@ export const PLATFORM_LABELS: Record<string, string> = {
   bosonic:         'Bosonic / cat',
   diamond:         'Diamond NV',
 }
+
+// Categories whose share price mostly reflects quantum work.
+export const PURE_PLAY_CATEGORIES = new Set(['hardware', 'software', 'networking_security', 'sensing'])
+
+// Yahoo Finance symbols differ from the plain ticker on non-US exchanges.
+const YAHOO_SUFFIX: Record<string, string> = { LSE: '.L', TSX: '.TO', XETRA: '.DE', EPA: '.PA', ASX: '.AX' }
+
+/** Live quote page for a listed company. The site links out rather than hosting prices. */
+export function quoteUrl(ticker: string, exchange = ''): string {
+  return `https://finance.yahoo.com/quote/${encodeURIComponent(ticker.toUpperCase() + (YAHOO_SUFFIX[exchange] ?? ''))}`
+}

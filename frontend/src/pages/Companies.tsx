@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Building2, Search, FileText, Newspaper, TrendingUp } from 'lucide-react'
-import { loadData, loadStocks, useData, type CompanyRecord, type StocksData } from '../lib/data'
-import { Change } from '../components/StockChart'
+import { loadData, useData, type CompanyRecord } from '../lib/data'
 import {
   CATEGORY_LABELS,
   CATEGORY_STYLES,
@@ -11,7 +10,6 @@ import {
 
 export default function Companies() {
   const { data, error } = useData(() => loadData<CompanyRecord[]>('companies.json'))
-  const { data: stocks } = useData<StocksData>(loadStocks)
   const [search, setSearch] = useState('')
   const [category, setCategory] = useState('')
   const [platform, setPlatform] = useState('')
@@ -106,13 +104,8 @@ export default function Companies() {
                   </p>
                 </div>
                 {c.ticker && (
-                  <span className="flex flex-col items-end gap-0.5 shrink-0">
-                    <span className="flex items-center gap-1 text-xs font-mono px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
-                      <TrendingUp className="w-3 h-3" /> {c.ticker}
-                    </span>
-                    {stocks?.tickers[c.ticker.toUpperCase()]?.change['1d'] != null && (
-                      <Change value={stocks.tickers[c.ticker.toUpperCase()].change['1d']} className="text-[11px]" />
-                    )}
+                  <span className="flex items-center gap-1 shrink-0 text-xs font-mono px-2 py-0.5 rounded-full bg-gray-100 text-gray-700">
+                    <TrendingUp className="w-3 h-3" /> {c.ticker}
                   </span>
                 )}
               </div>

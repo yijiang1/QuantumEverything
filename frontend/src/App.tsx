@@ -63,7 +63,7 @@ export default function App() {
         </main>
 
         <footer className="max-w-[88rem] mx-auto px-4 sm:px-6 pb-8 text-xs text-gray-400">
-          Papers from arXiv and OpenAlex. News from public RSS feeds. Policy from govinfo.gov and the Federal Register. Jobs from companies' public job boards. Deals, hardware, events, learning resources and historical trends are curated with sources. Company profiles are a curated list and may be incomplete. Share prices are daily closes and not investment advice.
+          Papers from arXiv and OpenAlex. News from public RSS feeds. Policy from govinfo.gov and the Federal Register. Jobs from companies' public job boards. Deals, hardware, events, learning resources and historical trends are curated with sources. Company profiles are a curated list and may be incomplete. Stock quotes link to Yahoo Finance and are not investment advice.
         </footer>
       </div>
     </HashRouter>

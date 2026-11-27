@@ -5,7 +5,7 @@ import {
   loadData, loadPolicy, useData, billLabel,
   type BillStage, type CompanyRecord, type Facility, type FederalRegisterDoc, type PolicyProgram, type UsAction,
 } from '../lib/data'
-import { formatDay } from '../components/StockChart'
+import { formatDay } from '../lib/format'
 
 export const STAGES: { key: BillStage; label: string }[] = [
   { key: 'introduced', label: 'Introduced' },

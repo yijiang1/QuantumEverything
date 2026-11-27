@@ -3,11 +3,11 @@ import { ArrowRight, FileText, Building2, Newspaper, Atom, TrendingUp } from 'lu
 import PaperCard from '../components/PaperCard'
 import { NewsList } from './News'
 import {
-  loadData, loadPapers, loadPolicy, loadStocks, useData, formatDate, billLabel,
+  loadData, loadPapers, loadPolicy, useData, formatDate, billLabel,
   type CompanyRecord, type NewsItem, type Meta, type AnalysisSummary, type Deal, type EventItem,
   formatMonthOrDay,
 } from '../lib/data'
-import { Change, ExampleNotice, Sparkline, formatDay, formatPrice, sliceRange } from '../components/StockChart'
+import { formatDay } from '../lib/format'
 
 function Stat({ to, icon: Icon, value, label }: { to: string; icon: typeof FileText; value: number | string; label: string }) {
   return (
@@ -40,14 +40,13 @@ export default function Overview() {
     loadData<NewsItem[]>('news.json'),
     loadData<CompanyRecord[]>('companies.json'),
     loadData<AnalysisSummary[]>('analyses/index.json').catch(() => [] as AnalysisSummary[]),
-    loadStocks(),
     loadPolicy(),
     loadData<Deal[]>('deals.json').catch(() => [] as Deal[]),
     loadData<EventItem[]>('events.json').catch(() => [] as EventItem[]),
   ]))
 
   if (!data) return <p className="text-center text-gray-500 py-12">Loading…</p>
-  const [meta, papers, news, companies, analyses, stocks, policy, deals, events] = data
+  const [meta, papers, news, companies, analyses, policy, deals, events] = data
   const dealNames = new Map(companies.map(c => [c.slug, c.name]))
   const policyItems = [
     ...policy.us_actions.map(a => ({
@@ -59,11 +58,6 @@ export default function Overview() {
     })),
     ...policy.federal_register.map(d => ({ id: d.id, title: d.title, url: d.url, date: d.date, tag: d.type })),
   ].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 5)
-  const index = stocks.index
-  const movers = Object.values(stocks.tickers)
-    .filter(t => t.pure_play && t.change['1d'] != null)
-    .sort((a, b) => Math.abs(b.change['1d']!) - Math.abs(a.change['1d']!))
-    .slice(0, 4)
 
   const anyScored = papers.some(p => (p.relevance_score || 0) > 0)
   const topPapers = [...papers]
@@ -92,40 +86,6 @@ export default function Overview() {
         <Stat to="/stocks" icon={TrendingUp} value={meta.counts.public_companies} label="publicly traded" />
         <Stat to="/news" icon={Newspaper} value={meta.counts.news} label="news items" />
       </div>
-
-      {index.series.length > 1 && (
-        <Section title="Quantum stocks" to="/stocks">
-          {stocks.example && <ExampleNotice />}
-          <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-3 *:min-w-0">
-            <Link to="/stocks" className="bg-white border border-gray-200 rounded-xl p-4 hover:border-teal-300 flex items-center justify-between gap-3">
-              <div>
-                <div className="text-xs text-gray-500">{index.name}</div>
-                <div className="text-2xl font-bold text-gray-900 tabular-nums">{index.last?.toFixed(1)}</div>
-                <div className="text-xs text-gray-500 flex gap-1.5">
-                  <Change value={index.change['1d']} /> today · <Change value={index.change['1m']} /> 1M
-                </div>
-              </div>
-              <Sparkline series={sliceRange(index.series, '3M')} width={110} height={40} />
-            </Link>
-            <div className="bg-white border border-gray-200 rounded-xl p-3">
-              <div className="text-xs text-gray-500 px-1 mb-1">Biggest moves on the last trading day</div>
-              {movers.map(t => (
-                <Link
-                  key={t.ticker}
-                  to={`/companies/${t.companies[0]}`}
-                  className="flex items-center justify-between gap-2 px-1 py-1 rounded hover:bg-gray-50 text-sm"
-                >
-                  <span className="text-gray-900 truncate">{t.name} <span className="text-xs text-gray-400 font-mono">{t.ticker}</span></span>
-                  <span className="flex items-center gap-3 shrink-0">
-                    <span className="tabular-nums text-gray-600">{formatPrice(t.last, t.currency)}</span>
-                    <Change value={t.change['1d']} className="w-16 text-right" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </Section>
-      )}
 
       {inTheNews.length > 0 && (
         <Section title="Companies in the news and research" to="/companies">

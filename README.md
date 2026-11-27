@@ -11,12 +11,12 @@ It is a static site hosted on GitHub Pages. A scheduled GitHub Actions workflow 
 | Overview | Counts, top papers, latest news, companies in the news | All of the below |
 | Papers | Recent quantum papers, searchable, with relevance scores and topic tags | arXiv and OpenAlex, scored by Claude Haiku |
 | Companies | 68 quantum companies with profiles, linked to the papers and news that mention them | `backend/app/companies/seed_companies.json` (curated) |
-| Stocks | Daily closing prices for the listed companies, plus a quantum pure-play index built from them | Yahoo Finance chart data, with Stooq as a fallback (both free, no key) |
+| Stocks | The publicly traded companies in the directory, each linking to its live quote | Company directory; quotes open on Yahoo Finance |
 | Policy | National quantum programs and budgets, US bills and their status, US laws and executive orders, Federal Register rules and notices | `backend/app/policy/*.json` (curated), bill status from govinfo.gov, Federal Register API (both free, no key) |
 | Facilities | National labs, testbeds open to outside researchers, university institutes and company sites, linked to companies and national programs, on a world map | `backend/app/facilities/facilities.json` (curated); map tiles from OpenStreetMap |
 | Funding | Funding rounds, share offerings, IPOs, SPAC mergers and acquisitions, with a yearly total, linked to company profiles | `backend/app/funding/deals.json` (curated, each with a source) |
 | Hardware | Quantum computers with qubit counts and two-qubit fidelities, a qubits-over-time chart, and companies' published roadmap targets | `backend/app/hardware/hardware.json` (curated, each with a source) |
-| Trends | The field's history in charts: record qubit counts, two-qubit gate error, coherence times and quantum volume over time (log scales), error-correction milestones, papers per year, companies founded, capital raised, facilities opened, national programs and the stock index | `backend/app/trends/history.json` (curated, each point with a source) plus the site's own company, funding, facility, policy and stock data |
+| Trends | The field's history in charts: record qubit counts, two-qubit gate error, coherence times and quantum volume over time (log scales), error-correction milestones, papers per year, companies founded, capital raised, facilities opened and national programs | `backend/app/trends/history.json` (curated, each point with a source) plus the site's own company, funding, facility and policy data |
 | Learn | Free courses, lecture videos, notes and tutorials from beginner to advanced, filterable by level, format and topic | `backend/app/learn/resources.json` (curated links to providers' own pages; nothing is re-hosted) |
 | Events & jobs | Upcoming quantum conferences, and open roles at quantum companies | `backend/app/events/events.json` (curated); jobs from Greenhouse, Lever and Ashby public job-board APIs (free, no key), set up in `backend/app/jobs/job_boards.json` |
 | News | Headlines from quantum industry and research feeds | RSS feeds listed in `backend/app/news/tracker.py` |
@@ -51,9 +51,9 @@ The site has no server, so features that needed one now work differently:
 
 The FastAPI server in `backend/app` still runs, but the site no longer uses it. The pipeline reuses its fetchers, classifier and company matching.
 
-### Stocks and the quantum index
+### Stocks
 
-`backend/pipeline/stocks.py` fetches daily closes for every company in the directory that has a `ticker`. Each run merges new closes into `stocks.json`, so a day when the price sources fail loses nothing. The "Quantum pure-play index" is an equal-weight average of the hardware, software, networking and sensing stocks, chained daily and starting at 100 on the first day of data. Big tech and suppliers are shown but left out of the index. It's built by this site, not a published index, and none of it is investment advice.
+The site doesn't host share prices. Yahoo Finance refuses requests from GitHub's servers, Stooq now needs an API key, and the free plans of other price feeds don't allow their data on a public website. The Stocks page lists every company in the directory that has a `ticker` and links each one to its live quote on Yahoo Finance. None of it is investment advice.
 
 ## Setting up GitHub Pages
 
@@ -92,7 +92,7 @@ python -m pipeline.analyze_topic "drug molecule simulation"
 
 ## Editing content
 
-- **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to track a company's share price.
+- **Companies:** edit `backend/app/companies/seed_companies.json`. `aliases` are the exact, case-sensitive names used to link papers and news to a company. Set `ticker` and `exchange` (NYSE, NASDAQ or LSE) to list a company on the Stocks page with a link to its live quote.
 - **Policy:** edit `backend/app/policy/programs.json` (national programs) and `backend/app/policy/us_actions.json` (laws, executive orders, standards and tracked bills). For a bill, set `congress`, `bill_type` and `number`; the daily run fills in its latest action. For a country with no official total (China, Japan), give the reported figure or range and set `funding_basis` to `estimate`; use `proposed` for a recommended figure not yet allocated. A `note` shows under the card.
 - **Facilities:** edit `backend/app/facilities/facilities.json`. `companies` holds company slugs and `program` a slug from `programs.json`. `lat` and `lon` place the pin on the map (town or campus level is fine). Set `confirmed` to false for an entry you haven't checked against a source.
 - **Funding:** edit `backend/app/funding/deals.json`. `company` is the slug of the company that raised money or was bought; `amount` is in millions of `currency` (leave it null to keep a deal out of the yearly total).
