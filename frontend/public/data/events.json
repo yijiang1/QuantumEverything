@@ -1,19 +1,5 @@
 [
  {
-  "id": "iqt-korea-2026",
-  "name": "IQT Korea 2026",
-  "start": "2026-11-25",
-  "end": "2026-11-27",
-  "city": "Incheon",
-  "country": "South Korea",
-  "format": "in_person",
-  "kind": "industry",
-  "url": "https://iqtevent.com",
-  "source_url": "https://iqtevent.com",
-  "confirmed": true,
-  "note": "Final day is 2026-11-27"
- },
- {
   "id": "eqtc-2026",
   "name": "European Quantum Technologies Conference (EQTC) 2026",
   "start": "2026-11-30",

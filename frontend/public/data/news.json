@@ -1,5 +1,145 @@
 [
  {
+  "title": "BlueQubit Releases AI-Engineered State-Vector Simulator Outperforming NVIDIA cuStateVec Benchmarks",
+  "summary": "BlueQubit has developed bluesv, an AI-engineered quantum state-vector simulator that outperforms NVIDIA’s cuStateVec and Google's qsim in benchmark tests. It offers direct API compatibility with major quantum programming frameworks and will be released as open-source software, representing a significant advancement in quantum simulation technology.\nThe post BlueQubit Releases AI-Engineered State-Vector Simulator Outperforming NVIDIA cuStateVec Benchmarks appeared first on Quantum Computing Repor",
+  "link": "https://quantumcomputingreport.com/bluequbit-releases-ai-engineered-state-vector-simulator-outperforming-nvidia-custatevec-benchmarks/",
+  "published": "Sat, 28 Nov 2026 04:44:48 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "42d948fd14ab"
+ },
+ {
+  "title": "Researchers Propose Fault-Tolerant Quantum Processor Architecture Controlled by 20 or Fewer External Wires",
+  "summary": "Researchers have proposed a new fault-tolerant quantum processor architecture that uses 20 or fewer external wires, a significant reduction from current designs. This design features a fixed, clocked planar array where quantum data flows through hard-wired operation tiles. This advancement could lead to more scalable and robust quantum computers.\nThe post Researchers Propose Fault-Tolerant Quantum Processor Architecture Controlled by 20 or Fewer External Wires appeared first on Quantum Computing",
+  "link": "https://quantumcomputingreport.com/researchers-propose-fault-tolerant-quantum-processor-architecture-controlled-by-20-or-fewer-external-wires/",
+  "published": "Sat, 28 Nov 2026 04:17:13 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "131012959e16"
+ },
+ {
+  "title": "Algorithmiq and IBM Quantum Execute 40-Qubit Discrete-Time Quantum Walks on Biological Networks",
+  "summary": "Algorithmiq and IBM Quantum have successfully executed 40-qubit discrete-time quantum walks (DTQWs) on irregular protein-protein interaction networks, overcoming limitations of conventional dense encodings. They used a sparse single-excitation encoding and novel gate operations to significantly reduce circuit depth. This advancement was applied to a biomedical case study, where quantum walks helped prioritize an asthma risk gene more effectively than classical methods.\nThe post Algorithmiq and I",
+  "link": "https://quantumcomputingreport.com/algorithmiq-and-ibm-quantum-execute-40-qubit-discrete-time-quantum-walks-on-biological-networks/",
+  "published": "Sat, 28 Nov 2026 04:02:59 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "adc0b5159132"
+ },
+ {
+  "title": "QuTech Demonstrates Weight-Four Stabilizer Parity Checks in a Silicon Spin-Shuttling Processor",
+  "summary": "Researchers at QuTech have demonstrated significant advancements in quantum computing, showcasing weight-four X- and Z-type quantum error-correction parity checks and five-qubit Greenberger-Horne-Zeilinger (GHZ) entanglement in a silicon spin-shuttling processor. Their work highlights the successful use of coherent electron shuttling for remote tuning and multi-qubit operations, with an error analysis pointing to two-qubit exchange pulses as the primary source of residual error. These findings s",
+  "link": "https://quantumcomputingreport.com/qutech-demonstrates-weight-four-stabilizer-parity-checks-in-a-silicon-spin-shuttling-processor/",
+  "published": "Sat, 28 Nov 2026 03:47:47 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "011b04c1ff43"
+ },
+ {
+  "title": "QuTech Launches Quantum Systems Integration Unit to Build Open-Architecture Superconducting Systems",
+  "summary": "QuTech has launched a new Quantum Systems Integration Unit to build open-architecture superconducting quantum computers using a European supply chain. The unit aims to standardize modular system interfaces and integrate various hardware and software components, with a planned commercial spinout in 2028. This initiative builds on QuTech's Quantum Inspire platform and incorporates recent research from the DiCarlo Lab to advance quantum error correction.\nThe post QuTech Launches Quantum Systems Int",
+  "link": "https://quantumcomputingreport.com/qutech-launches-quantum-systems-integration-unit-to-build-open-architecture-superconducting-systems/",
+  "published": "Sat, 28 Nov 2026 03:13:18 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "894a0c1ef5db"
+ },
+ {
+  "title": "QuTech Coordinates €47.5 Million ($52 Million USD) European Quantum Internet Alliance Phase to Build Full-Stack Prototype",
+  "summary": "QuTech is coordinating the next 3.5-year phase of the Quantum Internet Alliance (QIA), backed by €47.5 million ($52 million USD) from the European Commission. The program will integrate quantum repeaters, integrated photonics, control electronics, and network software into a programmable full-stack quantum internet prototype.\nThe post QuTech Coordinates €47.5 Million ($52 Million USD) European Quantum Internet Alliance Phase to Build Full-Stack Prototype appeared first on Quantum Computing Repor",
+  "link": "https://quantumcomputingreport.com/qutech-coordinates-e47-5-million-52-million-usd-european-quantum-internet-alliance-phase-to-build-full-stack-prototype/",
+  "published": "Sat, 28 Nov 2026 02:40:53 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "7821e8c8266a"
+ },
+ {
+  "title": "Dutch HAIQ Consortium Awarded €7.4 Million ($8.1 Million USD) NWO Grant to Combine Human Intuition and AI for Quantum Control and Circuit Optimization",
+  "summary": "The Dutch HAIQ Consortium, led by Leiden University, secured a €7.4 million NWO grant for a project combining human intuition and AI to optimize quantum control and circuits. The 28-partner initiative will use human-in-the-loop gamification and machine learning to address quantum computing optimization challenges and upgrade QuTech's Quantum Inspire platform.\nThe post Dutch HAIQ Consortium Awarded €7.4 Million ($8.1 Million USD) NWO Grant to Combine Human Intuition and AI for Quantum Control and",
+  "link": "https://quantumcomputingreport.com/dutch-haiq-consortium-awarded-e7-4-million-8-1-million-usd-nwo-grant-to-combine-human-intuition-and-ai-for-quantum-control-and-circuit-optimization/",
+  "published": "Sat, 28 Nov 2026 02:33:50 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "d2d005862078"
+ },
+ {
+  "title": "TU Delft Demonstrates First Hybrid HPC-Quantum Workflow Linking DelftBlue Supercomputer and Tuna-17 Processor",
+  "summary": "TU Delft and QuTech have successfully linked the DelftBlue supercomputer with QuTech's Tuna-17 quantum processor, demonstrating the first hybrid HPC-quantum workflow. This integration was tested with an electrical power-flow calculation, utilizing the Quantum Approximate Optimization Algorithm (QAOA) to optimize circuit parameters and process quantum circuits.\nThe post TU Delft Demonstrates First Hybrid HPC-Quantum Workflow Linking DelftBlue Supercomputer and Tuna-17 Processor appeared first on ",
+  "link": "https://quantumcomputingreport.com/tu-delft-demonstrates-first-hybrid-hpc-quantum-workflow-linking-delftblue-supercomputer-and-tuna-17-processor/",
+  "published": "Sat, 28 Nov 2026 02:19:12 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "4c796b045524"
+ },
+ {
+  "title": "QuTech and TU Delft Researchers Awarded ERC Synergy Grant to Co-Integrate Spin Qubits and Cryo-CMOS Electronics",
+  "summary": "QuTech and TU Delft researchers received a six-year ERC Synergy Grant for their UniQ project to scale semiconductor spin-qubit processors. The project aims to overcome wiring and control bottlenecks by co-integrating spin qubits and cryo-CMOS electronics, enabling simplified control and increased qubit connectivity.\nThe post QuTech and TU Delft Researchers Awarded ERC Synergy Grant to Co-Integrate Spin Qubits and Cryo-CMOS Electronics appeared first on Quantum Computing Report.",
+  "link": "https://quantumcomputingreport.com/qutech-and-tu-delft-researchers-awarded-erc-synergy-grant-to-co-integrate-spin-qubits-and-cryo-cmos-electronics/",
+  "published": "Sat, 28 Nov 2026 02:12:48 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "bc943eda1499"
+ },
+ {
+  "title": "QuTech Demonstrates Coherent Control of a Majorana-Based Qubit in Coupled Kitaev Chains",
+  "summary": "Researchers at QuTech have successfully demonstrated coherent control of a Majorana-based qubit using coupled Kitaev chains. This qubit, fabricated in an indium antimonide nanowire, operates at 20 mK and exhibits Rabi frequencies of approximately 113-117 MHz. While current coherence times are limited, the team is working on extending the platform to longer chains to improve decoherence and enable advanced operations.\nThe post QuTech Demonstrates Coherent Control of a Majorana-Based Qubit in Coup",
+  "link": "https://quantumcomputingreport.com/qutech-demonstrates-coherent-control-of-a-majorana-based-qubit-in-coupled-kitaev-chains/",
+  "published": "Sat, 28 Nov 2026 01:22:22 +0000",
+  "source": "Quantum Computing Report",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "cd5a3c5e07b2"
+ },
+ {
+  "title": "Quantum Computing 101: Can a Cat be Alive and Dead at The Same Time?",
+  "summary": "What is a qubit, why do quantum computers need to be colder than outer space, and what will they really be able to do? A plain-English guide to quantum computing, from Schrödinger’s cat to post-quantum cryptography.",
+  "link": "https://thequantuminsider.com/2026/11/27/quantum-computing-101-can-a-cat-be-alive-and-dead-at-the-same-time/",
+  "published": "Fri, 27 Nov 2026 16:51:24 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "7b89e550aa90"
+ },
+ {
+  "title": "Gyeonggi Province Holds Forum on Quantum and Semiconductor Industry Cooperation",
+  "summary": "Insider Brief PRESS RELEASE &#8212; The ‘Gyeonggi Quantum Innovation Forum and 2026 Gyeonggi Quantum-Semiconductor Convergence Industry Networking Day’, hosted by Gyeonggi Province and the Gyeonggi Business and Science Accelerator and organised by Sungkyunkwan University’s Anchor Project Group and the Korea Nanotechnology Institute, was held on the 25th at the Novotel Ambassador Suwon. The event brought [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/gyeonggi-province-quantum-industry-development-forum/",
+  "published": "Fri, 27 Nov 2026 16:07:06 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "d1ea87a6fbcf"
+ },
+ {
+  "title": "Equal1 Selected to Advance in EIC STEP Scale Up Program For Potential Equity Investment of up to €30 Million",
+  "summary": "Insider Brief PRESS RELEASE &#8212; Equal1 today announced it has been selected to advance to the due-diligence phase with the European Innovation Council (EIC) Fund under the Strategic Technologies for Europe Platform (STEP) Scale Up program. The selection opens the path for a potential equity investment of up to €30 million. The prospective EIC investment [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/equal1-selected-to-advance-in-eic-step-scale-up-program-for-potential-equity-investment-of-up-to-e30-million/",
+  "published": "Fri, 27 Nov 2026 15:13:24 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "3f4c521dd034"
+ },
+ {
+  "title": "Guest Post: The Encryption Upgrade Needs a Backup Plan",
+  "summary": "Guest Post By Companies preparing for quantum computers may have to confront a threat that requires no quantum computer at all. For the operators of critical infrastructure, from electric utilities and water systems to hospitals and telecom networks, the lesson is simple: keep the move to quantum-resistant cryptography on schedule, but buy systems that can [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/encryption-upgrade-needs-backup-plan/",
+  "published": "Fri, 27 Nov 2026 13:27:38 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "9ec2e2bd0574"
+ },
+ {
   "title": "Diraq Finalizes $38 Million CHIPS R&D Award with U.S. Department of Commerce for Silicon Spin Quantum Chips",
   "summary": "Diraq secured a $38 million CHIPS R&#038;D award from the U.S. Department of Commerce to advance silicon spin quantum chips, establishing U.S. facilities and aiming for over two million physical qubits by 2031. This funding will accelerate U.S.-based fabrication, testing, and research for their CMOS-compatible quantum processors.\nThe post Diraq Finalizes $38 Million CHIPS R&#038;D Award with U.S. Department of Commerce for Silicon Spin Quantum Chips appeared first on Quantum Computing Report.",
   "link": "https://quantumcomputingreport.com/diraq-finalizes-38-million-chips-rd-award-with-u-s-department-of-commerce-for-silicon-spin-quantum-chips/",
@@ -8,6 +148,16 @@
   "category": "Industry",
   "fetched_at": 1795808976.6570985,
   "id": "e13e0eb7b0a5"
+ },
+ {
+  "title": "Wellington Community Foundation Receives $20,000 Quantum Foundation Grant",
+  "summary": "Insider Brief The Wellington Community Foundation (WCF) received a $20,000 grant at the sixth annual Quantum in the Community Breakfast on Tuesday, Nov. 17, the Town-Crier reported. The foundation was one of the nonprofit organizations recognized at the event. Nonprofit leaders, community advocates and philanthropic partners attended the breakfast. According to the source, the gathering [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/wellington-community-foundation-20000-quantum-foundation-grant/",
+  "published": "Fri, 27 Nov 2026 11:04:00 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "d051bf292b18"
  },
  {
   "title": "planqc Expands into the UK with Double-Digit Million-Euro Cambridge Optical-Lattice Facility",
@@ -20,6 +170,16 @@
   "id": "94d6bbc01005"
  },
  {
+  "title": "Ethereum Plans Shift to Hash-Based Signatures for Post-Quantum Security",
+  "summary": "Insider Brief Ethereum&#8217;s core developers are preparing to phase out the elliptic-curve cryptography that secures the network and switch to hash-based signatures, a change meant to protect against attacks powered by quantum computers or by advances in artificial intelligence, Crypto Briefing reported. The plan was set out in a series of blog posts under the [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/ethereum-shift-hash-based-signatures-post-quantum-security/",
+  "published": "Fri, 27 Nov 2026 10:51:41 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "719cb35376be"
+ },
+ {
   "title": "SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at Quantum Day Munich",
   "summary": "SAP and planqc showcased an end-to-end cloud integration at Quantum Day Munich, connecting SAP's enterprise software with planqc's quantum computing stack. They demonstrated a multi-constraint bin-packing logistics workflow optimized by planqc's quantum simulator, and SAP introduced Quantum Agents to manage business constraints and hybrid solvers.\nThe post SAP and planqc Demonstrate Enterprise Software Integration and Quantum Agents at Quantum Day Munich appeared first on Quantum Computing Repor",
   "link": "https://quantumcomputingreport.com/sap-and-planqc-demonstrate-enterprise-software-integration-and-quantum-agents-at-quantum-day-munich/",
@@ -28,6 +188,46 @@
   "category": "Industry",
   "fetched_at": 1795808976.6570985,
   "id": "01c7b16f8dfc"
+ },
+ {
+  "title": "Bank of England Urges Firms to Move Faster on Quantum Security",
+  "summary": "Insider Brief The Bank of England urged financial firms with the greatest impact on the stability of the U.K. financial system to move faster than the national timetable for adopting quantum-resistant cryptography, warning that delays at a single technology provider could disrupt services at several firms at once. In its November Financial Stability Report, the [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/27/bank-of-england-urges-firms-to-move-faster-on-quantum-security/",
+  "published": "Fri, 27 Nov 2026 09:12:21 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "3afbbe10ddee"
+ },
+ {
+  "title": "SAP and planqc Expand Quantum Computing Partnership, Plan Hardware Tests in 2027",
+  "summary": "Insider Brief PRESS RELEASE &#8212; SAP and planqc are expanding their collaboration in quantum computing. At the Quantum Day Munich by SAP, the two companies demonstrated the first live integration of a planqc neutral-atom quantum computer into an SAP environment. This marks an important step towards making quantum computing capabilities directly accessible to business applications.&#160; [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/26/sap-and-planqc-expand-quantum-computing-partnership-plan-hardware-tests-in-2027/",
+  "published": "Thu, 26 Nov 2026 14:30:00 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "505c7669b29d"
+ },
+ {
+  "title": "Stanford Physicist Uses AI to Tackle Quantum Gravity Problem",
+  "summary": "Insider Brief A Stanford physicist has proposed a quantum theory of gravity that uses the paths of light to get a finite answer for a calculation that can otherwise run to infinity. If the approach holds up, it could help reconcile quantum mechanics, which governs the behavior of matter and energy at small scales, with [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/26/stanford-physicist-uses-ai-to-tackle-quantum-gravity-problem/",
+  "published": "Thu, 26 Nov 2026 12:32:21 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "5f8d539e065a"
+ },
+ {
+  "title": "European Quantum Community Reacts to New Quantum Strategy",
+  "summary": "The European Commission proposed a Quantum Act yesterday to commercialize European quantum research, strengthen supply chains and coordinate the transition to post-quantum cryptography. The proposal would bring EU and national programs together to fund research, expand access to shared facilities and help companies bring quantum technologies to market. The act would also lay the groundwork [&#8230;]",
+  "link": "https://thequantuminsider.com/2026/11/26/european-quantum-community-reacts-to-new-quantum-strategy/",
+  "published": "Thu, 26 Nov 2026 09:40:04 +0000",
+  "source": "The Quantum Insider",
+  "category": "Industry",
+  "fetched_at": 1795891304.224376,
+  "id": "79e68f78d850"
  },
  {
   "title": "Riverlane and Nature Research Intelligence Release 2026 Quantum Error Correction Report Highlighting Shift to Full-Stack Engineering",
@@ -98,5 +298,235 @@
   "category": "Industry",
   "fetched_at": 1795808976.6570985,
   "id": "7e8211f068f5"
+ },
+ {
+  "title": "IBM quantum computer solves problem classical computers can’t in just 15 minutes",
+  "summary": "IBM and University of Chicago researchers have demonstrated that a quantum computer can complete an extraordinarily complex calculation in just 15 minutes, beyond the practical reach of leading classical computing methods. A novel error-detection technique also allows scientists to establish confidence in the accuracy of the results, overcoming a major hurdle in quantum computing.",
+  "link": "https://www.sciencedaily.com/releases/2026/11/261123231244.htm",
+  "published": "Mon, 23 Nov 2026 23:46:12 EST",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "3ab016542103"
+ },
+ {
+  "title": "Quantum computers are getting too powerful to check. Scientists have a solution",
+  "summary": "Scientists have developed a new way to determine whether quantum simulations can be trusted, solving a growing problem as quantum computers become too powerful for conventional machines to check. Demonstrated on a 51-qubit system, the technique measures uncertainty and provides verifiable error margins that could help unlock the full potential of quantum computing.",
+  "link": "https://www.sciencedaily.com/releases/2026/11/261115085557.htm",
+  "published": "Mon, 16 Nov 2026 19:20:40 EST",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "d2727c0a8b0e"
+ },
+ {
+  "title": "Tiny flaws in diamonds could unlock a quantum computing revolution",
+  "summary": "Scientists have discovered a faster way to identify diamond-based materials that could power quantum computers and sensors at room temperature. The breakthrough has already revealed promising new quantum building blocks that could help unlock computing capabilities far beyond those of today's supercomputers.",
+  "link": "https://www.sciencedaily.com/releases/2026/11/261111005855.htm",
+  "published": "Fri, 13 Nov 2026 00:26:41 EST",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "91ae39dd3186"
+ },
+ {
+  "title": "Inside this quantum computer, memory vibrates like a guitar string",
+  "summary": "Researchers have created a quantum computer that stores information in microscopic vibrations, potentially making quantum machines smaller, more powerful, and better at preserving information. The breakthrough successfully demonstrated advanced quantum calculations and could help overcome major barriers to practical quantum computing.",
+  "link": "https://www.sciencedaily.com/releases/2026/11/261109205416.htm",
+  "published": "Wed, 11 Nov 2026 21:35:20 EST",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "e15cdaf63282"
+ },
+ {
+  "title": "A tiny supercurrent could unlock quantum information without destroying it",
+  "summary": "Researchers have proposed a breakthrough technique for reading quantum information without destroying the delicate states that make quantum computers work. By detecting an electrical signal generated by the qubit itself, their method achieved up to 99.85% accuracy in simulations and could make future quantum computers simpler and more efficient.",
+  "link": "https://www.sciencedaily.com/releases/2026/11/261102202831.htm",
+  "published": "Wed, 04 Nov 2026 22:47:09 EST",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "f8800e3ec056"
+ },
+ {
+  "title": "Scientists overcome a hidden obstacle to more powerful quantum computers",
+  "summary": "Scientists have discovered a way to operate multiple silicon qubits simultaneously with remarkable accuracy, overcoming a major challenge in scaling up quantum computers. Their new technique maintained accuracy of approximately 99.9% even when all five qubits were running at once, opening the door to larger and more powerful quantum processors.",
+  "link": "https://www.sciencedaily.com/releases/2026/10/261024222024.htm",
+  "published": "Sun, 25 Oct 2026 21:42:48 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "7536d8cf95ef"
+ },
+ {
+  "title": "A tiny defect in a crystal reveals a big quantum surprise",
+  "summary": "Researchers have solved a long-standing challenge in understanding how tiny defects in materials like diamond and silicon carbide behave when exposed to light. Their new computational method revealed a surprisingly important energy-loss mechanism in silicon carbide that scientists had previously underestimated. The finding helps explain a mystery that has puzzled researchers for years and could improve the design of quantum computers and sensors.",
+  "link": "https://www.sciencedaily.com/releases/2026/10/261022081302.htm",
+  "published": "Fri, 23 Oct 2026 06:22:55 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "31295dfc3e91"
+ },
+ {
+  "title": "Scientists reach the ultimate quantum limit on a surface",
+  "summary": "Scientists have achieved a quantum breakthrough by creating an ultra-clean surface where individual molecules can maintain their delicate quantum properties at the fundamental limit. The discovery could unlock unprecedented control over molecules and help drive the next generation of quantum technologies.",
+  "link": "https://www.sciencedaily.com/releases/2026/10/261018205053.htm",
+  "published": "Mon, 19 Oct 2026 23:02:41 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "d14f6681eb78"
+ },
+ {
+  "title": "Scientists recreate a bizarre quantum effect that stops a particle cold",
+  "summary": "Oxford physicists have recreated a bizarre quantum effect in which a particle responds to a magnetic field without ever traveling through it. Using a hybrid quantum computer, they demonstrated how introducing a simulated magnetic flux could completely halt a particle's movement through quantum interference. The experiment brings a decades-old prediction into a new setting where matter and quantum fields influence one another.",
+  "link": "https://www.sciencedaily.com/releases/2026/10/261011211554.htm",
+  "published": "Tue, 13 Oct 2026 05:47:22 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "361040e238ee"
+ },
+ {
+  "title": "This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough",
+  "summary": "A proposed qubit made with superfluid helium could cut quantum computing error rates by around 100 times by shielding quantum information from common forms of electromagnetic noise. If experiments confirm the predictions, the technology could eventually work alongside today’s superconducting qubits or serve as a new kind of quantum memory.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260930020309.htm",
+  "published": "Thu, 01 Oct 2026 09:17:13 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "3eb370930bab"
+ },
+ {
+  "title": "Caltech physicists finally measure a quantum energy ladder predicted 40 years ago",
+  "summary": "Researchers have experimentally observed energy patterns that physicists have predicted for about 40 years. By arranging laser-trapped atoms into a quantum simulator, they recreated two different quantum tipping points and watched the atoms fall into the exact energy ratios predicted by theory. The technique could now be used to explore mysterious quantum systems where scientists do not already know the answer.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260928100554.htm",
+  "published": "Wed, 30 Sep 2026 23:06:56 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "e34e7c1a31b9"
+ },
+ {
+  "title": "Quantum teleportation breakthrough: Scientists crack a 25-year entanglement challenge",
+  "summary": "Scientists have developed and experimentally demonstrated a long-sought method for identifying W states, an important form of multi-photon quantum entanglement. The technique could make complex entangled systems much easier to measure, opening new possibilities for quantum teleportation, communication, and computing.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260929053550.htm",
+  "published": "Tue, 29 Sep 2026 08:02:30 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "47977778ffec"
+ },
+ {
+  "title": "Quantum computing’s “dark horse” just proved it can go universal",
+  "summary": "Researchers have shown that exotic quantum particles called non-Abelian anyons can perform the full range of operations needed for universal quantum computing. Using 54 qubits on Quantinuum’s H2 processor, they combined braiding and fusion to unlock capabilities that braiding alone could not provide.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260924020403.htm",
+  "published": "Fri, 25 Sep 2026 08:45:04 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "f962959d5eb5"
+ },
+ {
+  "title": "For the first time, scientists watch sound jump between quantum states",
+  "summary": "Stanford researchers have recorded the first real-time quantum jumps of sound, watching single phonons abruptly vanish from one energy state to another. The breakthrough could open new paths for quantum computing, error correction, highly sensitive biological sensors, and next-generation sound-based devices.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260921081054.htm",
+  "published": "Tue, 22 Sep 2026 09:17:20 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "80705d52b7c3"
+ },
+ {
+  "title": "Scientists are building a microscope powered by a quantum computer",
+  "summary": "Scientists are combining an electron microscope with a quantum computer to squeeze far more information from each electron. The approach could reveal faint details with fewer electrons, helping protect fragile samples that conventional microscopy can damage.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260912220038.htm",
+  "published": "Sun, 13 Sep 2026 08:03:59 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "17f4dd984af4"
+ },
+ {
+  "title": "Physicists discover a hidden “curveball” in quantum light",
+  "summary": "Researchers have experimentally demonstrated the optical Magnus effect for the first time, revealing that a tightly focused laser interacts most strongly with an atom slightly away from the beam’s center. The unexpected shift is similar to the physics that makes a spinning table tennis ball curve through the air. Because lasers are used to control qubits, the effect could create errors in quantum computers, but it might also provide a new way to couple qubits together.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260912220025.htm",
+  "published": "Sun, 13 Sep 2026 07:22:01 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "72276549d61f"
+ },
+ {
+  "title": "Tiny sound waves could help solve a major quantum computing problem",
+  "summary": "Researchers at Harvard have demonstrated a way to protect quantum information using microscopic sound waves. By continuously surrounding a diamond-based qubit with mechanical vibrations, they extended its coherence time by roughly threefold. The same phonons could eventually both transmit and protect quantum information, opening the door to compact sound-based quantum networks on chips.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260911214245.htm",
+  "published": "Sat, 12 Sep 2026 10:08:20 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "f6bdbbab27b9"
+ },
+ {
+  "title": "Scientists just made quantum computer operations 1,000 times faster",
+  "summary": "Researchers have found a way to perform certain quantum operations more than 1,000 times faster, cutting thousands of repeated control cycles down to just one. The advance could reduce errors and bring reliable, fault-tolerant quantum computers closer to reality.",
+  "link": "https://www.sciencedaily.com/releases/2026/09/260911003845.htm",
+  "published": "Fri, 11 Sep 2026 07:52:30 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "0bce200f926e"
+ },
+ {
+  "title": "A “quantum bath” puts quantum entanglement on autopilot",
+  "summary": "Physicists have demonstrated a new way to entangle distant quantum bits without the constant measurements and active control normally required. The team created a “quantum bath,” a shared environment filled with correlated microwave photons that automatically pushes separated qubits into an entangled state and helps keep them there. The experiment confirms a theoretical prediction made more than 20 years ago and could offer a simpler way to connect modules in future quantum computers.",
+  "link": "https://www.sciencedaily.com/releases/2026/08/260830000002.htm",
+  "published": "Mon, 31 Aug 2026 09:08:37 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "2ad8efced1fd"
+ },
+ {
+  "title": "IBM quantum computer solves classically intractable problem in 15 minutes",
+  "summary": "IBM and University of Chicago researchers have completed a quantum computation that leading classical methods could not practically reproduce. The system used 70 error-corrected logical qubits and finished the task in roughly 15 minutes while also providing statistical evidence that the result was reliable.",
+  "link": "https://www.sciencedaily.com/releases/2026/08/260829035219.htm",
+  "published": "Sun, 30 Aug 2026 10:08:13 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "17fd5267bb9e"
+ },
+ {
+  "title": "World’s first superconducting quantum heat engine could help unlock massive quantum computers",
+  "summary": "A tiny superconducting engine has successfully converted heat near absolute zero into useful work, demonstrating the first cyclic quantum heat engine of its kind. Future versions could operate autonomously inside quantum computers, potentially eliminating huge numbers of costly, noise-producing microwave cables.",
+  "link": "https://www.sciencedaily.com/releases/2026/08/260814011041.htm",
+  "published": "Fri, 14 Aug 2026 08:56:01 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "ca4b56a52530"
+ },
+ {
+  "title": "An ordinary laptop solved a problem thought to require a quantum computer",
+  "summary": "A quantum problem once described as impossible for classical computers has now been solved using relatively modest hardware. Researchers used tensor networks to compress the overwhelming wave function created by hundreds of entangled qubits, allowing some calculations to run on a laptop. Their results matched both theoretical predictions and simulations performed with a quantum computer. The method could open new paths for exploring quantum dynamics and materials.",
+  "link": "https://www.sciencedaily.com/releases/2026/07/260719040000.htm",
+  "published": "Mon, 20 Jul 2026 03:40:09 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "6369bd536783"
+ },
+ {
+  "title": "Tiny magnetic waves could unlock quantum computers the size of a penny",
+  "summary": "A major breakthrough in quantum technology has turned magnons, tiny magnetic waves once considered too short-lived for practical use, into promising carriers of quantum information. Researchers extended their lifetime by nearly 100 times, reaching up to 18 microseconds, and discovered that the main limitation is not a law of physics but the purity of the material itself. That means future improvements could come from better manufacturing rather than entirely new discoveries.",
+  "link": "https://www.sciencedaily.com/releases/2026/06/260626030431.htm",
+  "published": "Thu, 02 Jul 2026 02:48:14 EDT",
+  "source": "ScienceDaily",
+  "category": "Research",
+  "fetched_at": 1795891304.224376,
+  "id": "65363ffd6263"
  }
 ]

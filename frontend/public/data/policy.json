@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T19:49:53+00:00",
+ "generated_at": "2026-11-28T18:42:00+00:00",
  "programs": [
   {
    "slug": "us-nqi",
@@ -403,7 +403,7 @@
    "stage": "reported",
    "summary": "Reauthorizes the National Quantum Initiative Act.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3597",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   },
   {
@@ -422,7 +422,7 @@
    "stage": "reported",
    "summary": "House version of the reauthorization of the National Quantum Initiative Act.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/8462",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   },
   {
@@ -441,7 +441,7 @@
    "stage": "committee",
    "summary": "Expands DOE's quantum research program and reauthorizes the National Quantum Information Science Research Centers through FY2030.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/579",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   },
   {
@@ -460,7 +460,7 @@
    "stage": "committee",
    "summary": "Sets up a public-private partnership to develop near-term quantum applications.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/3220",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   },
   {
@@ -479,7 +479,7 @@
    "stage": "committee",
    "summary": "Senate companion to H.R. 3220.",
    "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1344",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   },
   {
@@ -498,7 +498,7 @@
    "stage": "committee",
    "summary": "Adds quantum technology to the Export-Import Bank's program on China and transformational exports.",
    "url": "https://www.congress.gov/bill/119th-congress/house-bill/9585",
-   "checked": "2026-11-27",
+   "checked": "2026-11-28",
    "companies": []
   }
  ],

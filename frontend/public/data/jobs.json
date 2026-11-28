@@ -1,26 +1,26 @@
 {
- "generated_at": "2026-11-27T19:50:01+00:00",
+ "generated_at": "2026-11-28T18:42:06+00:00",
  "boards": [
   {
    "company": "ionq",
    "ats": "greenhouse",
    "careers_url": "https://ionq.com/careers",
    "open_roles": 110,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "quantinuum",
    "ats": "lever",
    "careers_url": "https://www.quantinuum.com/careers",
    "open_roles": 118,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "rigetti",
    "ats": "lever",
    "careers_url": "https://www.rigetti.com/careers",
    "open_roles": 10,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "d-wave",
@@ -34,7 +34,7 @@
    "ats": "greenhouse",
    "careers_url": "https://www.psiquantum.com/careers",
    "open_roles": 108,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "xanadu",
@@ -48,7 +48,7 @@
    "ats": "greenhouse",
    "careers_url": "https://www.quera.com/careers",
    "open_roles": 82,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "pasqal",
@@ -62,7 +62,7 @@
    "ats": "lever",
    "careers_url": "https://atom-computing.com/careers/",
    "open_roles": 41,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "infleqtion",
@@ -83,7 +83,7 @@
    "ats": "lever",
    "careers_url": "https://alice-bob.com/careers/",
    "open_roles": 46,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "oqc",
@@ -132,7 +132,7 @@
    "ats": "greenhouse",
    "careers_url": "https://sqc.com/careers",
    "open_roles": 9,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "quantum-motion",
@@ -167,14 +167,14 @@
    "ats": "lever",
    "careers_url": "https://q-ctrl.com/careers",
    "open_roles": 32,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "riverlane",
    "ats": "greenhouse",
    "careers_url": "https://www.riverlane.com/careers",
    "open_roles": 29,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "phasecraft",
@@ -202,7 +202,7 @@
    "ats": "ashby",
    "careers_url": "https://www.sandboxaq.com/careers",
    "open_roles": 30,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "horizon-quantum",
@@ -244,14 +244,14 @@
    "ats": "lever",
    "careers_url": "https://www.zhinst.com/en/company/careers/",
    "open_roles": 9,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "pqshield",
    "ats": "greenhouse",
    "careers_url": "https://pqshield.com/careers/",
    "open_roles": 7,
-   "checked": "2026-11-27"
+   "checked": "2026-11-28"
   },
   {
    "company": "qunnect",
